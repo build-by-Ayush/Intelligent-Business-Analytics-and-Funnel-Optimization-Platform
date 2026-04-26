@@ -57,7 +57,7 @@ def render_header_with_nav(title: str, subtitle: str, active_page: str) -> None:
         )
 
     with right:
-        spacer, b1, b2, b3, b4, b5 = st.columns([2.8, 1, 1, 1, 1, 1], gap="small")
+        spacer, b1, b2, b3, b4 = st.columns([2.8, 1, 1, 1, 1], gap="small")
 
         with b1:
             if st.button("", icon=":material/home:", key="nav_overview", use_container_width=True, disabled=active_page == "Overview", help="Overview"):
@@ -74,7 +74,3 @@ def render_header_with_nav(title: str, subtitle: str, active_page: str) -> None:
         with b4:
             if st.button("", icon=":material/apps:", key="nav_products", use_container_width=True, disabled=active_page == "Products", help="Products"):
                 st.switch_page("pages/3_Products.py")
-
-        with b5:
-            if st.button("", icon=":material/info:", key="nav_info", use_container_width=True, disabled=active_page == "Info", help="Project info"):
-                st.switch_page("pages/4_Info.py")

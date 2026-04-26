@@ -808,7 +808,7 @@ def render():
     st.markdown('<div class="section-title">Product Health Table</div>', unsafe_allow_html=True)
     st.markdown('<div class="section-subtitle">Compact view of the products driving value and risk.</div>', unsafe_allow_html=True)
     if not product_health.empty:
-        table = build_top_products_table(product_health, ranking_metric, 10).copy()
+        table = build_top_products_table(product_health, ranking_metric, top_n).copy()
         display = table[[
             "product_name",
             "category",
