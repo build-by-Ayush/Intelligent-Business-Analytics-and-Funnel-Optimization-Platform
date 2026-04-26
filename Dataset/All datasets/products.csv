@@ -1,0 +1,201 @@
+product_id,product_name,category,subcategory,price,cost_price,brand,created_at
+P001,Samsung Charger,Electronics,Accessories,1356,706.04,Samsung,04-01-2026 08:21:51 AM
+P002,Nike Yoga Mat,Sports,Equipment,4345,2389.9,Nike,09-08-2025 02:32:50 PM
+P003,Nivea Shampoo,Beauty,Haircare,201,138.91,Nivea,07-01-2026 01:15:04 AM
+P004,UrbanCo Mixer,Home,Kitchen,3983,2024.77,UrbanCo,09-10-2025 04:00:29 AM
+P005,Nivea Face Wash,Beauty,Skincare,1130,688.04,Nivea,22-09-2025 10:25:57 PM
+P006,UrbanCo Lamp,Home,Decor,2790,2050.92,UrbanCo,02-02-2026 02:54:59 AM
+P007,Lakme Hair Oil,Beauty,Haircare,1471,853.72,Lakme,07-07-2025 12:23:12 PM
+P008,Sony Bluetooth Headphones,Electronics,Headphones,2561,1712.29,Sony,19-09-2025 06:39:42 AM
+P009,Nivea Lipstick,Beauty,Makeup,2838,1737.43,Nivea,06-07-2025 01:11:41 PM
+P010,Samsung Phone Case,Electronics,Accessories,1711,925.81,Samsung,14-02-2026 08:50:36 AM
+P011,UrbanCo Wooden Sofa Small,Home,Furniture,26505,13428.22,UrbanCo,03-10-2025 05:09:04 AM
+P012,Nivea Foundation,Beauty,Makeup,2237,1482.62,Nivea,07-08-2025 02:40:29 PM
+P013,OnePlus 13 256GB Black,Electronics,Smartphone,75619,39963.16,OnePlus,03-04-2026 01:58:57 AM
+P014,Nike Track Pants,Sports,Activewear,1075,711.07,Nike,16-08-2025 06:36:00 PM
+P015,Nike Dumbbells,Sports,Equipment,4660,2418.35,Nike,06-11-2025 10:17:51 AM
+P016,UrbanCo Cookware Set,Home,Kitchen,8363,4351.92,UrbanCo,27-01-2026 04:37:38 AM
+P017,Lakme Face Wash,Beauty,Skincare,1574,1036.8,Lakme,17-02-2026 10:55:05 PM
+P018,UrbanCo Metal Dining Table Large,Home,Furniture,24543,18959.1,UrbanCo,14-01-2026 01:00:54 AM
+P019,H&M Green Denim T-Shirt,Clothing,T-Shirts,934,514.16,H&M,27-11-2025 11:59:24 AM
+P020,Puma Yoga Mat,Sports,Equipment,12458,9726.13,Puma,06-07-2025 07:12:28 AM
+P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,370,257,H&M,14-05-2025 02:46:04 PM
+P022,H&M Red Cotton Shirt,Clothing,Shirts,2473,1686.28,H&M,22-09-2025 08:50:26 AM
+P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,474,242.72,Zara,28-08-2025 01:23:40 PM
+P024,UrbanCo Metal Chair Small,Home,Furniture,25406,13277.16,UrbanCo,22-07-2025 07:40:07 AM
+P025,Lakme Foundation,Beauty,Makeup,462,295.25,Lakme,07-12-2025 12:30:14 PM
+P026,UrbanCo Wall Art,Home,Decor,1607,1105.61,UrbanCo,24-09-2025 04:26:09 PM
+P027,Zara Black Cotton Shirt,Clothing,Shirts,836,588.38,Zara,28-05-2025 03:00:36 PM
+P028,Apple 11 256GB Red,Electronics,Smartphone,66459,39922.7,Apple,05-09-2025 10:26:10 AM
+P029,Adidas Running Shoes Size 8,Sports,Shoes,2068,1084.38,Adidas,12-04-2026 12:35:06 PM
+P030,Apple MacBook M2 8GB RAM 512GB SSD,Electronics,Laptop,84012,43554.8,Apple,12-10-2025 08:19:24 AM
+P031,Puma Sneakers Size 7,Sports,Shoes,7055,4148.05,Puma,16-09-2025 05:43:16 AM
+P032,Samsung Galaxy S21 256GB Red,Electronics,Smartphone,74099,38918.52,Samsung,28-02-2026 08:02:50 PM
+P033,UrbanCo Plastic Dining Table Small,Home,Furniture,7598,3876.67,UrbanCo,13-01-2026 05:07:00 PM
+P034,Lakme Lipstick,Beauty,Makeup,325,186.84,Lakme,03-06-2025 01:18:17 AM
+P035,Zara Red Denim Shirt,Clothing,Shirts,2759,2163.67,Zara,06-05-2025 08:01:43 PM
+P036,Nivea Hair Oil,Beauty,Haircare,877,686.64,Nivea,08-12-2025 11:23:58 AM
+P037,Apple MacBook Air 8GB RAM 512GB SSD,Electronics,Laptop,52804,38935.89,Apple,17-05-2025 05:35:52 AM
+P038,Adidas Running Shoes Size 9,Sports,Shoes,1414,894.46,Adidas,12-10-2025 09:35:33 PM
+P039,Puma Track Pants,Sports,Activewear,1372,1010.46,Puma,13-12-2025 08:05:28 AM
+P040,Samsung Power Bank,Electronics,Accessories,2575,1815.31,Samsung,10-12-2025 07:30:02 AM
+P041,H&M Green Cotton Jacket,Clothing,Jackets,7336,4626.79,H&M,05-09-2025 12:23:21 PM
+P042,Dell ion 32GB RAM 512GB SSD,Electronics,Laptop,44211,32671.9,Dell,02-07-2025 04:19:08 PM
+P043,JBL Bluetooth Headphones,Electronics,Headphones,1296,815.55,JBL,04-03-2026 10:33:50 PM
+P044,H&M White Denim Jacket,Clothing,Jackets,5683,3461.28,H&M,28-03-2026 05:37:34 PM
+P045,Puma Running Shoes Size 10,Sports,Shoes,6410,4446.3,Puma,16-11-2025 03:15:44 AM
+P046,Nike Running Shoes Size 8,Sports,Shoes,5354,3763.12,Nike,18-08-2025 10:39:40 PM
+P047,Dell XPS 32GB RAM 1TB SSD,Electronics,Laptop,119906,63044.54,Dell,25-12-2025 06:30:44 PM
+P048,Nivea Moisturizer,Beauty,Skincare,1859,1313.54,Nivea,08-06-2025 02:12:15 AM
+P049,Dell XPS 16GB RAM 512GB SSD,Electronics,Laptop,36316,21594.23,Dell,18-08-2025 11:29:24 AM
+P050,H&M Green Cotton Jeans,Clothing,Jeans,2713,1754.22,H&M,10-03-2026 10:44:35 PM
+P051,Zara Red Polyester T-Shirt,Clothing,T-Shirts,349,272.32,Zara,24-01-2026 12:11:46 PM
+P052,Apple Air 8GB RAM 1TB SSD,Electronics,Laptop,40493,27724.05,Apple,05-11-2025 06:40:57 AM
+P053,Puma Dumbbells,Sports,Equipment,14598,8437.32,Puma,18-11-2025 10:07:13 PM
+P054,Adidas Yoga Mat,Sports,Equipment,5689,3378.52,Adidas,30-07-2025 05:52:32 PM
+P055,Sony Wireless Earbuds,Electronics,Headphones,3070,1852.7,Sony,10-10-2025 08:20:14 PM
+P056,Lakme Shampoo,Beauty,Haircare,952,744.28,Lakme,28-11-2025 09:09:44 AM
+P057,H&M Blue Denim Jeans,Clothing,Jeans,1555,1160.76,H&M,13-05-2025 02:51:49 AM
+P058,Puma Running Shoes Size 8,Sports,Shoes,7047,5073.48,Puma,08-10-2025 01:23:13 PM
+P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,1070,615.67,H&M,07-06-2025 11:11:34 PM
+P060,Boat Bluetooth Headphones,Electronics,Headphones,4117,2126.11,Boat,21-10-2025 10:35:24 PM
+P061,H&M Black Polyester Shirt,Clothing,Shirts,1694,1052.33,H&M,19-12-2025 02:42:11 PM
+P062,H&M Green Polyester Jacket,Clothing,Jackets,6565,5196.88,H&M,08-05-2025 08:56:04 PM
+P063,UrbanCo Metal Chair Large,Home,Furniture,4232,2999.25,UrbanCo,09-10-2025 07:17:18 PM
+P064,Zara White Denim Shirt,Clothing,Shirts,2244,1405.3,Zara,08-12-2025 07:19:14 PM
+P065,HP Pavilion 16GB RAM 512GB SSD,Electronics,Laptop,39186,20037.76,HP,14-12-2025 05:36:13 AM
+P066,Puma Running Shoes Size 7,Sports,Shoes,6273,3212.25,Puma,05-04-2026 02:16:24 AM
+P067,Boat Wireless Earbuds,Electronics,Headphones,2941,1598.73,Boat,17-11-2025 01:53:59 PM
+P068,Puma Sports T-Shirt,Sports,Activewear,648,494.8,Puma,01-10-2025 04:55:26 AM
+P069,Apple iPhone 13 128GB Black,Electronics,Smartphone,65851,41209.75,Apple,13-08-2025 11:51:49 PM
+P070,H&M Black Cotton T-Shirt,Clothing,T-Shirts,1277,717.92,H&M,15-07-2025 02:26:38 PM
+P071,Nike Sneakers Size 8,Sports,Shoes,4895,3826.73,Nike,02-08-2025 03:09:39 AM
+P072,OnePlus Nord CE3 256GB Blue,Electronics,Smartphone,44563,29938.71,OnePlus,16-07-2025 09:49:27 AM
+P073,Zara Black Denim Shirt,Clothing,Shirts,663,426.86,Zara,24-04-2025 06:15:17 PM
+P074,Nike Running Shoes Size 9,Sports,Shoes,4123,2333.78,Nike,03-05-2025 02:15:40 PM
+P075,Apple 8 256GB Black,Electronics,Smartphone,66064,44386.21,Apple,30-08-2025 01:02:44 AM
+P076,Apple Macbook M1 16GB RAM 1TB SSD,Electronics,Laptop,102719,64999.22,Apple,28-12-2025 04:03:26 PM
+P077,OnePlus C1 13 64GB Red,Electronics,Smartphone,35454,28206.17,OnePlus,27-03-2026 04:04:21 PM
+P078,Zara Red Polyester Jeans,Clothing,Jeans,2265,1167.83,Zara,19-03-2026 12:31:57 PM
+P079,Boat Charger,Electronics,Accessories,379,242.64,Boat,07-10-2025 09:54:14 AM
+P080,Boat Phone Case,Electronics,Accessories,1006,683.96,Boat,12-11-2025 06:04:16 AM
+P081,Adidas Dumbbells,Sports,Equipment,5112,3246.1,Adidas,24-07-2025 06:36:37 AM
+P082,H&M Green Denim Jacket,Clothing,Jackets,3964,3119.07,H&M,08-03-2026 07:37:38 AM
+P083,OnePlus 3 128GB White,Electronics,Smartphone,63280,34777.64,OnePlus,10-03-2026 06:09:04 AM
+P084,H&M White Polyester Jeans,Clothing,Jeans,2041,1156.9,H&M,28-06-2025 10:50:26 PM
+P085,UrbanCo Plastic Dining Table Large,Home,Furniture,12303,7894.07,UrbanCo,25-07-2025 12:16:42 AM
+P086,Boat Power Bank,Electronics,Accessories,732,518.1,Boat,17-06-2025 07:17:24 PM
+P087,OnePlus 11 Pro Max 256GB Red,Electronics,Smartphone,35870,28032.95,OnePlus,13-03-2026 10:15:23 AM
+P088,Zara Red Denim Jeans,Clothing,Jeans,3394,1905.77,Zara,16-08-2025 03:27:09 PM
+P089,Apple Macbook Air 16GB RAM 256GB SSD,Electronics,Laptop,88750,47728.9,Apple,10-12-2025 12:58:21 AM
+P090,Zara Red Polyester Shirt,Clothing,Shirts,801,453.37,Zara,01-07-2025 02:05:25 AM
+P091,Samsung 11 128GB Green,Electronics,Smartphone,24796,17123.65,Samsung,26-03-2026 04:41:42 AM
+P092,UrbanCo Wooden Chair Small,Home,Furniture,17541,13767.12,UrbanCo,11-04-2026 10:07:30 AM
+P093,Zara Green Polyester Jeans,Clothing,Jeans,1066,636.25,Zara,30-09-2025 01:35:53 PM
+P094,Samsung Galaxy S21 128GB Black,Electronics,Smartphone,69095,52136.87,Samsung,10-11-2025 07:30:32 PM
+P095,H&M Black Denim Jeans,Clothing,Jeans,3649,2090.97,H&M,21-11-2025 06:23:04 AM
+P096,Apple H 32GB RAM 512GB SSD,Electronics,Laptop,70859,53409.7,Apple,05-05-2025 08:28:31 PM
+P097,Zara Blue Polyester Jacket,Clothing,Jackets,5366,2753.05,Zara,07-04-2026 12:39:57 AM
+P098,HP Air 32GB RAM 512GB SSD,Electronics,Laptop,75632,60131.14,HP,07-07-2025 11:38:52 PM
+P099,UrbanCo Wooden Dining Table Medium,Home,Furniture,15212,8624.06,UrbanCo,24-02-2026 07:30:43 PM
+P100,Zara Green Cotton Shirt,Clothing,Shirts,2505,1774.98,Zara,30-04-2025 04:56:08 PM
+P101,H&M Blue Cotton T-Shirt,Clothing,T-Shirts,1453,947.78,H&M,06-03-2026 10:05:52 AM
+P102,Samsung Galaxy S21 256GB Blue,Electronics,Smartphone,78241,44987.76,Samsung,20-09-2025 05:59:32 PM
+P103,Zara Red Cotton Jacket,Clothing,Jackets,2086,1470.36,Zara,09-03-2026 02:27:31 PM
+P104,OnePlus Galaxy S21 128GB Black,Electronics,Smartphone,20198,10278.57,OnePlus,13-12-2025 09:16:13 PM
+P105,Dell Pavilion 8GB RAM 256GB SSD,Electronics,Laptop,85616,47050.01,Dell,01-09-2025 09:18:46 AM
+P106,H&M Green Polyester T-Shirt,Clothing,T-Shirts,806,556.31,H&M,22-09-2025 01:21:11 PM
+P107,Zara Black Polyester T-Shirt,Clothing,T-Shirts,616,322.83,Zara,01-12-2025 10:14:31 AM
+P108,H&M White Denim T-Shirt,Clothing,T-Shirts,1041,713.01,H&M,02-09-2025 01:09:05 PM
+P109,UrbanCo Plastic Chair Large,Home,Furniture,29504,20480.37,UrbanCo,22-03-2026 09:07:53 PM
+P110,H&M White Polyester Shirt,Clothing,Shirts,1438,980.37,H&M,02-04-2026 06:02:47 AM
+P111,Zara Blue Cotton Jacket,Clothing,Jackets,4201,2496.7,Zara,10-12-2025 11:08:25 PM
+P112,HP Pavilion 32GB RAM 256GB SSD,Electronics,Laptop,45580,29593.8,HP,05-03-2026 08:20:45 PM
+P113,HP Pavilion 32GB RAM 1TB SSD,Electronics,Laptop,58935,44201.4,HP,30-12-2025 08:40:37 PM
+P114,JBL Wireless Earbuds,Electronics,Headphones,2898,1748.5,JBL,21-03-2026 06:13:15 PM
+P115,Nike Sports T-Shirt,Sports,Activewear,2606,2068.53,Nike,17-02-2026 07:08:51 AM
+P116,UrbanCo Plastic Chair Medium,Home,Furniture,20112,10232.61,UrbanCo,25-08-2025 11:15:31 PM
+P117,Nike Running Shoes Size 10,Sports,Shoes,5153,2835.27,Nike,26-11-2025 10:36:18 PM
+P118,H&M Black Denim Shirt,Clothing,Shirts,2807,1632.75,H&M,19-08-2025 07:26:37 AM
+P119,Lakme Moisturizer,Beauty,Skincare,1751,1221.69,Lakme,08-04-2026 04:10:13 PM
+P120,Zara Black Polyester Jacket,Clothing,Jackets,6542,3271.32,Zara,31-10-2025 10:21:01 AM
+P121,UrbanCo Plastic Sofa Large,Home,Furniture,21106,12286.56,UrbanCo,04-07-2025 03:41:44 AM
+P122,Dell Book 32GB RAM 256GB SSD,Electronics,Laptop,54670,27534.33,Dell,04-10-2025 11:53:39 AM
+P123,UrbanCo Wooden Dining Table Small,Home,Furniture,26420,14648.64,UrbanCo,10-04-2026 06:03:41 AM
+P124,H&M Red Cotton Jacket,Clothing,Jackets,4779,3787.04,H&M,21-11-2025 05:13:16 AM
+P125,Zara Blue Denim Jeans,Clothing,Jeans,2480,1371.2,Zara,23-05-2025 10:21:46 PM
+P126,UrbanCo Wooden Sofa Medium,Home,Furniture,5133,3630,UrbanCo,01-09-2025 05:31:34 PM
+P127,UrbanCo Metal Chair Medium,Home,Furniture,21994,16154.43,UrbanCo,02-01-2026 05:00:02 PM
+P128,Apple Mac Air 16GB RAM 512GB SSD,Electronics,Laptop,116557,64685.47,Apple,26-06-2025 08:21:19 PM
+P129,H&M Black Denim Jacket,Clothing,Jackets,4451,3003.78,H&M,04-07-2025 08:41:24 PM
+P130,Apple G21 128GB Black,Electronics,Smartphone,67400,44893.31,Apple,25-01-2026 07:42:00 AM
+P131,Samsung Galaxy S21 64GB Red,Electronics,Smartphone,21334,11210.05,Samsung,26-08-2025 01:00:26 PM
+P132,Adidas Running Shoes Size 7,Sports,Shoes,3001,2248.93,Adidas,13-04-2026 11:32:08 AM
+P133,H&M Green Polyester Jeans,Clothing,Jeans,1292,819.14,H&M,31-07-2025 11:36:11 PM
+P134,Dell H Pavilion 16GB RAM 256GB SSD,Electronics,Laptop,87510,59575.96,Dell,05-12-2025 10:25:37 AM
+P135,HP Book Air 16GB RAM 512GB SSD,Electronics,Laptop,39299,27401.89,HP,17-04-2026 11:16:18 PM
+P136,Zara Red Cotton Shirt,Clothing,Shirts,1369,973.67,Zara,17-12-2025 02:19:56 PM
+P137,H&M Red Denim T-Shirt,Clothing,T-Shirts,1174,716.2,H&M,14-08-2025 03:22:04 AM
+P138,Apple Plus 11 256GB Green,Electronics,Smartphone,69730,37602.72,Apple,28-10-2025 06:45:50 PM
+P139,UrbanCo Wooden Chair Large,Home,Furniture,8748,4491.19,UrbanCo,09-01-2026 12:39:58 PM
+P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,914,604.57,Zara,24-05-2025 03:08:34 PM
+P141,Samsung i13 64GB Red,Electronics,Smartphone,57174,41908.69,Samsung,25-05-2025 01:17:13 AM
+P142,UrbanCo Plastic Sofa Medium,Home,Furniture,10982,7514.09,UrbanCo,14-09-2025 12:31:08 AM
+P143,OnePlus G1 256GB Red,Electronics,Smartphone,15113,11133.69,OnePlus,25-09-2025 02:19:01 AM
+P144,UrbanCo Plastic Chair Small,Home,Furniture,6908,5323.52,UrbanCo,11-03-2026 08:24:54 PM
+P145,UrbanCo Metal Dining Table Medium,Home,Furniture,26201,20743.97,UrbanCo,09-10-2025 04:55:33 AM
+P146,H&M Blue Polyester Shirt,Clothing,Shirts,2713,2024.54,H&M,25-06-2025 08:51:48 AM
+P147,Apple 21 256GB Green,Electronics,Smartphone,33658,17217.28,Apple,30-06-2025 07:22:10 PM
+P148,Adidas Sneakers Size 7,Sports,Shoes,3461,2268.23,Adidas,11-01-2026 05:16:52 AM
+P149,Zara Blue Denim Jacket,Clothing,Jackets,7491,3766.63,Zara,19-07-2025 12:24:29 AM
+P150,Adidas Track Pants,Sports,Activewear,2331,1802.93,Adidas,13-07-2025 10:12:55 AM
+P151,Apple MacBook Air 32GB RAM 256GB SSD,Electronics,Laptop,109190,61238.29,Apple,17-01-2026 10:54:28 PM
+P152,Adidas Sneakers Size 9,Sports,Shoes,7939,4869.44,Adidas,30-09-2025 04:36:09 AM
+P153,UrbanCo Wooden Sofa Large,Home,Furniture,11898,7123.55,UrbanCo,18-01-2026 09:56:19 PM
+P154,OnePlus Nord 3 128GB Blue,Electronics,Smartphone,31820,15911.69,OnePlus,26-10-2025 07:37:45 PM
+P155,Adidas Sports T-Shirt,Sports,Activewear,1397,763.25,Adidas,20-07-2025 10:55:56 PM
+P156,HP Victus 32GB RAM 1TB SSD,Electronics,Laptop,80692,64124.78,HP,04-03-2026 12:24:07 PM
+P157,H&M White Polyester T-Shirt,Clothing,T-Shirts,801,539.57,H&M,02-10-2025 08:55:18 PM
+P158,HP Victus 16GB RAM 1TB SSD,Electronics,Laptop,89315,46475.39,HP,29-04-2025 01:35:12 PM
+P159,Puma Sneakers Size 10,Sports,Shoes,4766,3653.9,Puma,28-08-2025 02:37:00 AM
+P160,HP Pavilion Victus 8GB RAM 256GB SSD,Electronics,Laptop,102026,73769.35,HP,08-10-2025 06:24:53 PM
+P161,Apple Air 32GB RAM 512GB SSD,Electronics,Laptop,83250,60380.96,Apple,28-01-2026 03:54:42 PM
+P162,Zara Black Denim Jeans,Clothing,Jeans,3231,2552.12,Zara,18-06-2025 01:35:27 AM
+P163,Zara White Polyester Shirt,Clothing,Shirts,636,379.73,Zara,14-05-2025 12:20:29 PM
+P164,UrbanCo Metal Sofa Medium,Home,Furniture,15712,9390.46,UrbanCo,08-08-2025 11:46:20 AM
+P165,UrbanCo Metal Sofa Large,Home,Furniture,6328,4385.08,UrbanCo,24-05-2025 03:05:04 PM
+P166,H&M Black Cotton Jacket,Clothing,Jackets,4254,2726.6,H&M,12-04-2026 02:07:28 PM
+P167,Dell Aspire 8GB RAM 512GB SSD,Electronics,Laptop,62238,38571.54,Dell,16-11-2025 12:04:27 AM
+P168,Dell Aspire Air 16GB RAM 1TB SSD,Electronics,Laptop,91247,53178.29,Dell,15-10-2025 09:37:30 AM
+P169,Nike Sneakers Size 10,Sports,Shoes,1381,927.59,Nike,07-08-2025 09:01:21 PM
+P170,H&M Green Cotton Shirt,Clothing,Shirts,761,485.24,H&M,16-12-2025 11:47:01 PM
+P171,Dell Aspire 8GB RAM 1TB SSD,Electronics,Laptop,97434,76581.14,Dell,13-02-2026 10:17:18 AM
+P172,H&M Green Polyester Shirt,Clothing,Shirts,2109,1310.59,H&M,28-08-2025 12:33:46 AM
+P173,Zara Green Denim T-Shirt,Clothing,T-Shirts,473,350.31,Zara,19-07-2025 03:00:38 PM
+P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,724,442.66,Zara,10-07-2025 12:59:30 PM
+P175,Zara White Denim Jeans,Clothing,Jeans,2117,1496.01,Zara,04-03-2026 04:53:18 AM
+P176,Apple Mac Air 16GB RAM 256GB SSD,Electronics,Laptop,71910,48244.33,Apple,30-07-2025 10:09:21 AM
+P177,Puma Sneakers Size 9,Sports,Shoes,5810,3611.07,Puma,28-08-2025 03:55:07 AM
+P178,UrbanCo Metal Sofa Small,Home,Furniture,20907,11040.05,UrbanCo,02-06-2025 02:15:18 PM
+P179,Zara Black Polyester Shirt,Clothing,Shirts,2943,1669.5,Zara,01-03-2026 06:10:09 AM
+P180,Zara White Denim T-Shirt,Clothing,T-Shirts,1446,771.44,Zara,26-05-2025 03:40:22 AM
+P181,HP PS 16GB RAM 1TB SSD,Electronics,Laptop,42181,22358.03,HP,24-01-2026 03:15:12 PM
+P182,Zara Blue Cotton Shirt,Clothing,Shirts,1991,1444.56,Zara,12-09-2025 06:17:00 PM
+P183,Nike Sneakers Size 9,Sports,Shoes,1083,671.9,Nike,15-06-2025 01:30:10 AM
+P184,Dell HP Pavilion 8GB RAM 1TB SSD,Electronics,Laptop,115198,73487.67,Dell,03-06-2025 07:08:36 AM
+P185,Samsung Galaxy S21 64GB Blue,Electronics,Smartphone,34209,24784.05,Samsung,28-07-2025 09:32:29 AM
+P186,OnePlus 15 128GB Black,Electronics,Smartphone,50973,27589.64,OnePlus,09-08-2025 01:20:20 PM
+P187,OnePlus 1 64GB Green,Electronics,Smartphone,38758,20337.94,OnePlus,03-12-2025 08:12:55 AM
+P188,Adidas Sneakers Size 8,Sports,Shoes,7253,5242.96,Adidas,11-08-2025 08:24:39 PM
+P189,H&M Red Polyester Shirt,Clothing,Shirts,2483,1421.51,H&M,05-12-2025 12:58:51 PM
+P190,Zara Green Cotton Jacket,Clothing,Jackets,2207,1720.62,Zara,25-10-2025 10:10:34 AM
+P191,H&M White Cotton Shirt,Clothing,Shirts,983,715.01,H&M,24-11-2025 09:49:21 AM
+P192,Zara Black Cotton Jacket,Clothing,Jackets,2258,1199.66,Zara,16-09-2025 07:26:02 PM
+P193,H&M Red Cotton Jeans,Clothing,Jeans,1646,1168.29,H&M,14-07-2025 03:21:55 PM
+P194,Zara Blue Polyester Jeans,Clothing,Jeans,2697,1670.79,Zara,16-02-2026 01:08:46 AM
+P195,H&M Green Denim Jeans,Clothing,Jeans,1812,1337.52,H&M,04-10-2025 01:50:32 AM
+P196,Zara White Denim Jacket,Clothing,Jackets,4542,3186.09,Zara,29-12-2025 09:51:42 AM
+P197,Puma Sneakers Size 8,Sports,Shoes,6353,3237.18,Puma,29-04-2025 12:18:19 PM
+P198,Zara Black Polyester Jeans,Clothing,Jeans,2065,1300.02,Zara,30-11-2025 12:35:57 AM
+P199,Apple 18 128GB White,Electronics,Smartphone,44113,34002.62,Apple,07-02-2026 04:48:40 PM
+P200,H&M Blue Denim Shirt,Clothing,Shirts,519,301.14,H&M,22-01-2026 02:03:36 AM

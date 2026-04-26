@@ -1,0 +1,2264 @@
+order_item_id,order_id,product_id,product_name,category,subcategory,brand,quantity,unit_price,total_price
+OI00000001,ORD0000001,P018,UrbanCo Metal Dining Table Large,Home,Furniture,UrbanCo,1,24543.0,24543.0
+OI00000002,ORD0000002,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00000003,ORD0000003,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000004,ORD0000003,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,2,1751.0,3502.0
+OI00000005,ORD0000003,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000006,ORD0000004,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000007,ORD0000004,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000008,ORD0000005,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00000009,ORD0000005,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00000010,ORD0000005,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00000011,ORD0000006,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00000012,ORD0000006,P033,UrbanCo Plastic Dining Table Small,Home,Furniture,UrbanCo,1,7598.0,7598.0
+OI00000013,ORD0000007,P195,H&M Green Denim Jeans,Clothing,Jeans,H&M,1,1812.0,1812.0
+OI00000014,ORD0000007,P095,H&M Black Denim Jeans,Clothing,Jeans,H&M,1,3649.0,3649.0
+OI00000015,ORD0000008,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00000016,ORD0000008,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00000017,ORD0000008,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00000018,ORD0000009,P164,UrbanCo Metal Sofa Medium,Home,Furniture,UrbanCo,1,15712.0,15712.0
+OI00000019,ORD0000010,P088,Zara Red Denim Jeans,Clothing,Jeans,Zara,1,3394.0,3394.0
+OI00000020,ORD0000010,P182,Zara Blue Cotton Shirt,Clothing,Shirts,Zara,1,1991.0,1991.0
+OI00000021,ORD0000010,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00000022,ORD0000011,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,1,2943.0,2943.0
+OI00000023,ORD0000011,P175,Zara White Denim Jeans,Clothing,Jeans,Zara,1,2117.0,2117.0
+OI00000024,ORD0000012,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00000025,ORD0000012,P139,UrbanCo Wooden Chair Large,Home,Furniture,UrbanCo,1,8748.0,8748.0
+OI00000026,ORD0000013,P195,H&M Green Denim Jeans,Clothing,Jeans,H&M,1,1812.0,1812.0
+OI00000027,ORD0000013,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00000028,ORD0000014,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,1,474.0,474.0
+OI00000029,ORD0000014,P095,H&M Black Denim Jeans,Clothing,Jeans,H&M,1,3649.0,3649.0
+OI00000030,ORD0000015,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000031,ORD0000015,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000032,ORD0000015,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000033,ORD0000016,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000034,ORD0000017,P166,H&M Black Cotton Jacket,Clothing,Jackets,H&M,1,4254.0,4254.0
+OI00000035,ORD0000017,P173,Zara Green Denim T-Shirt,Clothing,T-Shirts,Zara,1,473.0,473.0
+OI00000036,ORD0000018,P010,Samsung Phone Case,Electronics,Accessories,Samsung,1,1711.0,1711.0
+OI00000037,ORD0000019,P093,Zara Green Polyester Jeans,Clothing,Jeans,Zara,1,1066.0,1066.0
+OI00000038,ORD0000019,P110,H&M White Polyester Shirt,Clothing,Shirts,H&M,1,1438.0,1438.0
+OI00000039,ORD0000019,P051,Zara Red Polyester T-Shirt,Clothing,T-Shirts,Zara,1,349.0,349.0
+OI00000040,ORD0000020,P100,Zara Green Cotton Shirt,Clothing,Shirts,Zara,1,2505.0,2505.0
+OI00000041,ORD0000020,P189,H&M Red Polyester Shirt,Clothing,Shirts,H&M,1,2483.0,2483.0
+OI00000042,ORD0000020,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,1,2086.0,2086.0
+OI00000043,ORD0000021,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000044,ORD0000021,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000045,ORD0000021,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000046,ORD0000022,P194,Zara Blue Polyester Jeans,Clothing,Jeans,Zara,1,2697.0,2697.0
+OI00000047,ORD0000022,P084,H&M White Polyester Jeans,Clothing,Jeans,H&M,2,2041.0,4082.0
+OI00000048,ORD0000023,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000049,ORD0000023,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000050,ORD0000024,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00000051,ORD0000024,P164,UrbanCo Metal Sofa Medium,Home,Furniture,UrbanCo,1,15712.0,15712.0
+OI00000052,ORD0000024,P085,UrbanCo Plastic Dining Table Large,Home,Furniture,UrbanCo,1,12303.0,12303.0
+OI00000053,ORD0000025,P001,Samsung Charger,Electronics,Accessories,Samsung,1,1356.0,1356.0
+OI00000054,ORD0000025,P060,Boat Bluetooth Headphones,Electronics,Headphones,Boat,1,4117.0,4117.0
+OI00000055,ORD0000026,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00000056,ORD0000026,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00000057,ORD0000026,P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,H&M,2,1070.0,2140.0
+OI00000058,ORD0000027,P115,Nike Sports T-Shirt,Sports,Activewear,Nike,1,2606.0,2606.0
+OI00000059,ORD0000028,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00000060,ORD0000028,P116,UrbanCo Plastic Chair Medium,Home,Furniture,UrbanCo,1,20112.0,20112.0
+OI00000061,ORD0000029,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000062,ORD0000029,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000063,ORD0000030,P161,Apple Air 32GB RAM 512GB SSD,Electronics,Laptop,Apple,1,83250.0,83250.0
+OI00000064,ORD0000031,P126,UrbanCo Wooden Sofa Medium,Home,Furniture,UrbanCo,1,5133.0,5133.0
+OI00000065,ORD0000032,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00000066,ORD0000032,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,2,1397.0,2794.0
+OI00000067,ORD0000032,P046,Nike Running Shoes Size 8,Sports,Shoes,Nike,1,5354.0,5354.0
+OI00000068,ORD0000033,P143,OnePlus G1 256GB Red,Electronics,Smartphone,OnePlus,1,15113.0,15113.0
+OI00000069,ORD0000034,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000070,ORD0000034,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000071,ORD0000035,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000072,ORD0000036,P144,UrbanCo Plastic Chair Small,Home,Furniture,UrbanCo,1,6908.0,6908.0
+OI00000073,ORD0000036,P126,UrbanCo Wooden Sofa Medium,Home,Furniture,UrbanCo,1,5133.0,5133.0
+OI00000074,ORD0000036,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00000075,ORD0000037,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000076,ORD0000037,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000077,ORD0000038,P008,Sony Bluetooth Headphones,Electronics,Headphones,Sony,1,2561.0,2561.0
+OI00000078,ORD0000038,P089,Apple Macbook Air 16GB RAM 256GB SSD,Electronics,Laptop,Apple,1,88750.0,88750.0
+OI00000079,ORD0000039,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00000080,ORD0000040,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00000081,ORD0000040,P169,Nike Sneakers Size 10,Sports,Shoes,Nike,1,1381.0,1381.0
+OI00000082,ORD0000041,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00000083,ORD0000041,P039,Puma Track Pants,Sports,Activewear,Puma,2,1372.0,2744.0
+OI00000084,ORD0000041,P159,Puma Sneakers Size 10,Sports,Shoes,Puma,1,4766.0,4766.0
+OI00000085,ORD0000042,P025,Lakme Foundation,Beauty,Makeup,Lakme,2,462.0,924.0
+OI00000086,ORD0000042,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000087,ORD0000042,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000088,ORD0000043,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,2,2943.0,5886.0
+OI00000089,ORD0000043,P070,H&M Black Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1277.0,1277.0
+OI00000090,ORD0000043,P093,Zara Green Polyester Jeans,Clothing,Jeans,Zara,1,1066.0,1066.0
+OI00000091,ORD0000044,P015,Nike Dumbbells,Sports,Equipment,Nike,2,4660.0,9320.0
+OI00000092,ORD0000044,P169,Nike Sneakers Size 10,Sports,Shoes,Nike,1,1381.0,1381.0
+OI00000093,ORD0000045,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000094,ORD0000046,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00000095,ORD0000046,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00000096,ORD0000047,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00000097,ORD0000047,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00000098,ORD0000048,P130,Apple G21 128GB Black,Electronics,Smartphone,Apple,1,67400.0,67400.0
+OI00000099,ORD0000049,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000100,ORD0000049,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000101,ORD0000049,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000102,ORD0000050,P198,Zara Black Polyester Jeans,Clothing,Jeans,Zara,1,2065.0,2065.0
+OI00000103,ORD0000050,P061,H&M Black Polyester Shirt,Clothing,Shirts,H&M,1,1694.0,1694.0
+OI00000104,ORD0000050,P163,Zara White Polyester Shirt,Clothing,Shirts,Zara,1,636.0,636.0
+OI00000105,ORD0000051,P057,H&M Blue Denim Jeans,Clothing,Jeans,H&M,1,1555.0,1555.0
+OI00000106,ORD0000051,P044,H&M White Denim Jacket,Clothing,Jackets,H&M,1,5683.0,5683.0
+OI00000107,ORD0000052,P159,Puma Sneakers Size 10,Sports,Shoes,Puma,1,4766.0,4766.0
+OI00000108,ORD0000053,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00000109,ORD0000053,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00000110,ORD0000053,P188,Adidas Sneakers Size 8,Sports,Shoes,Adidas,1,7253.0,7253.0
+OI00000111,ORD0000054,P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,H&M,1,1070.0,1070.0
+OI00000112,ORD0000054,P022,H&M Red Cotton Shirt,Clothing,Shirts,H&M,1,2473.0,2473.0
+OI00000113,ORD0000054,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00000114,ORD0000055,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00000115,ORD0000055,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00000116,ORD0000056,P073,Zara Black Denim Shirt,Clothing,Shirts,Zara,1,663.0,663.0
+OI00000117,ORD0000056,P088,Zara Red Denim Jeans,Clothing,Jeans,Zara,1,3394.0,3394.0
+OI00000118,ORD0000057,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00000119,ORD0000058,P040,Samsung Power Bank,Electronics,Accessories,Samsung,1,2575.0,2575.0
+OI00000120,ORD0000058,P187,OnePlus 1 64GB Green,Electronics,Smartphone,OnePlus,1,38758.0,38758.0
+OI00000121,ORD0000058,P168,Dell Aspire Air 16GB RAM 1TB SSD,Electronics,Laptop,Dell,1,91247.0,91247.0
+OI00000122,ORD0000059,P041,H&M Green Cotton Jacket,Clothing,Jackets,H&M,2,7336.0,14672.0
+OI00000123,ORD0000059,P189,H&M Red Polyester Shirt,Clothing,Shirts,H&M,1,2483.0,2483.0
+OI00000124,ORD0000060,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00000125,ORD0000060,P145,UrbanCo Metal Dining Table Medium,Home,Furniture,UrbanCo,1,26201.0,26201.0
+OI00000126,ORD0000060,P024,UrbanCo Metal Chair Small,Home,Furniture,UrbanCo,1,25406.0,25406.0
+OI00000127,ORD0000061,P061,H&M Black Polyester Shirt,Clothing,Shirts,H&M,1,1694.0,1694.0
+OI00000128,ORD0000062,P040,Samsung Power Bank,Electronics,Accessories,Samsung,1,2575.0,2575.0
+OI00000129,ORD0000062,P167,Dell Aspire 8GB RAM 512GB SSD,Electronics,Laptop,Dell,1,62238.0,62238.0
+OI00000130,ORD0000062,P069,Apple iPhone 13 128GB Black,Electronics,Smartphone,Apple,1,65851.0,65851.0
+OI00000131,ORD0000063,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00000132,ORD0000064,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000133,ORD0000064,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000134,ORD0000065,P165,UrbanCo Metal Sofa Large,Home,Furniture,UrbanCo,1,6328.0,6328.0
+OI00000135,ORD0000065,P121,UrbanCo Plastic Sofa Large,Home,Furniture,UrbanCo,1,21106.0,21106.0
+OI00000136,ORD0000065,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00000137,ORD0000066,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00000138,ORD0000066,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,1,474.0,474.0
+OI00000139,ORD0000067,P114,JBL Wireless Earbuds,Electronics,Headphones,JBL,1,2898.0,2898.0
+OI00000140,ORD0000067,P131,Samsung Galaxy S21 64GB Red,Electronics,Smartphone,Samsung,1,21334.0,21334.0
+OI00000141,ORD0000067,P098,HP Air 32GB RAM 512GB SSD,Electronics,Laptop,HP,1,75632.0,75632.0
+OI00000142,ORD0000068,P095,H&M Black Denim Jeans,Clothing,Jeans,H&M,1,3649.0,3649.0
+OI00000143,ORD0000069,P027,Zara Black Cotton Shirt,Clothing,Shirts,Zara,1,836.0,836.0
+OI00000144,ORD0000069,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00000145,ORD0000069,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00000146,ORD0000070,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00000147,ORD0000071,P101,H&M Blue Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1453.0,1453.0
+OI00000148,ORD0000071,P196,Zara White Denim Jacket,Clothing,Jackets,Zara,1,4542.0,4542.0
+OI00000149,ORD0000071,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,2,761.0,1522.0
+OI00000150,ORD0000072,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000151,ORD0000072,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000152,ORD0000073,P015,Nike Dumbbells,Sports,Equipment,Nike,1,4660.0,4660.0
+OI00000153,ORD0000073,P031,Puma Sneakers Size 7,Sports,Shoes,Puma,1,7055.0,7055.0
+OI00000154,ORD0000074,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000155,ORD0000074,P009,Nivea Lipstick,Beauty,Makeup,Nivea,2,2838.0,5676.0
+OI00000156,ORD0000075,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000157,ORD0000075,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000158,ORD0000075,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000159,ORD0000076,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000160,ORD0000077,P137,H&M Red Denim T-Shirt,Clothing,T-Shirts,H&M,1,1174.0,1174.0
+OI00000161,ORD0000077,P192,Zara Black Cotton Jacket,Clothing,Jackets,Zara,1,2258.0,2258.0
+OI00000162,ORD0000078,P093,Zara Green Polyester Jeans,Clothing,Jeans,Zara,1,1066.0,1066.0
+OI00000163,ORD0000078,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00000164,ORD0000078,P111,Zara Blue Cotton Jacket,Clothing,Jackets,Zara,1,4201.0,4201.0
+OI00000165,ORD0000079,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00000166,ORD0000079,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00000167,ORD0000079,P015,Nike Dumbbells,Sports,Equipment,Nike,1,4660.0,4660.0
+OI00000168,ORD0000080,P082,H&M Green Denim Jacket,Clothing,Jackets,H&M,1,3964.0,3964.0
+OI00000169,ORD0000081,P084,H&M White Polyester Jeans,Clothing,Jeans,H&M,1,2041.0,2041.0
+OI00000170,ORD0000081,P182,Zara Blue Cotton Shirt,Clothing,Shirts,Zara,1,1991.0,1991.0
+OI00000171,ORD0000081,P192,Zara Black Cotton Jacket,Clothing,Jackets,Zara,1,2258.0,2258.0
+OI00000172,ORD0000082,P073,Zara Black Denim Shirt,Clothing,Shirts,Zara,1,663.0,663.0
+OI00000173,ORD0000083,P082,H&M Green Denim Jacket,Clothing,Jackets,H&M,1,3964.0,3964.0
+OI00000174,ORD0000084,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000175,ORD0000084,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000176,ORD0000084,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000177,ORD0000085,P126,UrbanCo Wooden Sofa Medium,Home,Furniture,UrbanCo,1,5133.0,5133.0
+OI00000178,ORD0000086,P080,Boat Phone Case,Electronics,Accessories,Boat,1,1006.0,1006.0
+OI00000179,ORD0000086,P131,Samsung Galaxy S21 64GB Red,Electronics,Smartphone,Samsung,1,21334.0,21334.0
+OI00000180,ORD0000086,P089,Apple Macbook Air 16GB RAM 256GB SSD,Electronics,Laptop,Apple,1,88750.0,88750.0
+OI00000181,ORD0000087,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00000182,ORD0000087,P031,Puma Sneakers Size 7,Sports,Shoes,Puma,1,7055.0,7055.0
+OI00000183,ORD0000087,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00000184,ORD0000088,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000185,ORD0000089,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00000186,ORD0000089,P129,H&M Black Denim Jacket,Clothing,Jackets,H&M,1,4451.0,4451.0
+OI00000187,ORD0000089,P106,H&M Green Polyester T-Shirt,Clothing,T-Shirts,H&M,1,806.0,806.0
+OI00000188,ORD0000090,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00000189,ORD0000090,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00000190,ORD0000090,P133,H&M Green Polyester Jeans,Clothing,Jeans,H&M,1,1292.0,1292.0
+OI00000191,ORD0000091,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000192,ORD0000091,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000193,ORD0000092,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000194,ORD0000092,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000195,ORD0000093,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000196,ORD0000093,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000197,ORD0000094,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00000198,ORD0000094,P136,Zara Red Cotton Shirt,Clothing,Shirts,Zara,1,1369.0,1369.0
+OI00000199,ORD0000095,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000200,ORD0000095,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000201,ORD0000095,P056,Lakme Shampoo,Beauty,Haircare,Lakme,2,952.0,1904.0
+OI00000202,ORD0000096,P078,Zara Red Polyester Jeans,Clothing,Jeans,Zara,1,2265.0,2265.0
+OI00000203,ORD0000096,P107,Zara Black Polyester T-Shirt,Clothing,T-Shirts,Zara,1,616.0,616.0
+OI00000204,ORD0000096,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00000205,ORD0000097,P114,JBL Wireless Earbuds,Electronics,Headphones,JBL,1,2898.0,2898.0
+OI00000206,ORD0000097,P030,Apple MacBook M2 8GB RAM 512GB SSD,Electronics,Laptop,Apple,1,84012.0,84012.0
+OI00000207,ORD0000098,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000208,ORD0000098,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000209,ORD0000099,P173,Zara Green Denim T-Shirt,Clothing,T-Shirts,Zara,2,473.0,946.0
+OI00000210,ORD0000099,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00000211,ORD0000100,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000212,ORD0000101,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00000213,ORD0000101,P149,Zara Blue Denim Jacket,Clothing,Jackets,Zara,1,7491.0,7491.0
+OI00000214,ORD0000102,P188,Adidas Sneakers Size 8,Sports,Shoes,Adidas,1,7253.0,7253.0
+OI00000215,ORD0000103,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00000216,ORD0000104,P041,H&M Green Cotton Jacket,Clothing,Jackets,H&M,2,7336.0,14672.0
+OI00000217,ORD0000104,P027,Zara Black Cotton Shirt,Clothing,Shirts,Zara,1,836.0,836.0
+OI00000218,ORD0000104,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00000219,ORD0000105,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,1,6273.0,6273.0
+OI00000220,ORD0000105,P029,Adidas Running Shoes Size 8,Sports,Shoes,Adidas,1,2068.0,2068.0
+OI00000221,ORD0000106,P104,OnePlus Galaxy S21 128GB Black,Electronics,Smartphone,OnePlus,1,20198.0,20198.0
+OI00000222,ORD0000107,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00000223,ORD0000107,P029,Adidas Running Shoes Size 8,Sports,Shoes,Adidas,1,2068.0,2068.0
+OI00000224,ORD0000108,P189,H&M Red Polyester Shirt,Clothing,Shirts,H&M,1,2483.0,2483.0
+OI00000225,ORD0000109,P001,Samsung Charger,Electronics,Accessories,Samsung,1,1356.0,1356.0
+OI00000226,ORD0000109,P083,OnePlus 3 128GB White,Electronics,Smartphone,OnePlus,1,63280.0,63280.0
+OI00000227,ORD0000110,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000228,ORD0000110,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000229,ORD0000110,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000230,ORD0000111,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00000231,ORD0000111,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00000232,ORD0000111,P169,Nike Sneakers Size 10,Sports,Shoes,Nike,1,1381.0,1381.0
+OI00000233,ORD0000112,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000234,ORD0000113,P011,UrbanCo Wooden Sofa Small,Home,Furniture,UrbanCo,1,26505.0,26505.0
+OI00000235,ORD0000113,P109,UrbanCo Plastic Chair Large,Home,Furniture,UrbanCo,1,29504.0,29504.0
+OI00000236,ORD0000113,P121,UrbanCo Plastic Sofa Large,Home,Furniture,UrbanCo,1,21106.0,21106.0
+OI00000237,ORD0000114,P121,UrbanCo Plastic Sofa Large,Home,Furniture,UrbanCo,1,21106.0,21106.0
+OI00000238,ORD0000115,P189,H&M Red Polyester Shirt,Clothing,Shirts,H&M,1,2483.0,2483.0
+OI00000239,ORD0000115,P137,H&M Red Denim T-Shirt,Clothing,T-Shirts,H&M,1,1174.0,1174.0
+OI00000240,ORD0000116,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00000241,ORD0000117,P046,Nike Running Shoes Size 8,Sports,Shoes,Nike,1,5354.0,5354.0
+OI00000242,ORD0000117,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00000243,ORD0000118,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00000244,ORD0000118,P196,Zara White Denim Jacket,Clothing,Jackets,Zara,1,4542.0,4542.0
+OI00000245,ORD0000119,P117,Nike Running Shoes Size 10,Sports,Shoes,Nike,1,5153.0,5153.0
+OI00000246,ORD0000120,P064,Zara White Denim Shirt,Clothing,Shirts,Zara,1,2244.0,2244.0
+OI00000247,ORD0000120,P163,Zara White Polyester Shirt,Clothing,Shirts,Zara,1,636.0,636.0
+OI00000248,ORD0000121,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000249,ORD0000121,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000250,ORD0000122,P050,H&M Green Cotton Jeans,Clothing,Jeans,H&M,1,2713.0,2713.0
+OI00000251,ORD0000123,P176,Apple Mac Air 16GB RAM 256GB SSD,Electronics,Laptop,Apple,1,71910.0,71910.0
+OI00000252,ORD0000124,P086,Boat Power Bank,Electronics,Accessories,Boat,1,732.0,732.0
+OI00000253,ORD0000124,P113,HP Pavilion 32GB RAM 1TB SSD,Electronics,Laptop,HP,1,58935.0,58935.0
+OI00000254,ORD0000125,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00000255,ORD0000125,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00000256,ORD0000126,P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,H&M,1,1070.0,1070.0
+OI00000257,ORD0000127,P137,H&M Red Denim T-Shirt,Clothing,T-Shirts,H&M,2,1174.0,2348.0
+OI00000258,ORD0000127,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00000259,ORD0000128,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00000260,ORD0000128,P188,Adidas Sneakers Size 8,Sports,Shoes,Adidas,1,7253.0,7253.0
+OI00000261,ORD0000128,P015,Nike Dumbbells,Sports,Equipment,Nike,1,4660.0,4660.0
+OI00000262,ORD0000129,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,2,877.0,1754.0
+OI00000263,ORD0000129,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000264,ORD0000130,P008,Sony Bluetooth Headphones,Electronics,Headphones,Sony,1,2561.0,2561.0
+OI00000265,ORD0000131,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00000266,ORD0000132,P142,UrbanCo Plastic Sofa Medium,Home,Furniture,UrbanCo,1,10982.0,10982.0
+OI00000267,ORD0000133,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000268,ORD0000134,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000269,ORD0000134,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000270,ORD0000135,P010,Samsung Phone Case,Electronics,Accessories,Samsung,1,1711.0,1711.0
+OI00000271,ORD0000135,P060,Boat Bluetooth Headphones,Electronics,Headphones,Boat,1,4117.0,4117.0
+OI00000272,ORD0000135,P138,Apple Plus 11 256GB Green,Electronics,Smartphone,Apple,1,69730.0,69730.0
+OI00000273,ORD0000136,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000274,ORD0000136,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000275,ORD0000137,P086,Boat Power Bank,Electronics,Accessories,Boat,1,732.0,732.0
+OI00000276,ORD0000137,P052,Apple Air 8GB RAM 1TB SSD,Electronics,Laptop,Apple,1,40493.0,40493.0
+OI00000277,ORD0000137,P089,Apple Macbook Air 16GB RAM 256GB SSD,Electronics,Laptop,Apple,1,88750.0,88750.0
+OI00000278,ORD0000138,P015,Nike Dumbbells,Sports,Equipment,Nike,1,4660.0,4660.0
+OI00000279,ORD0000139,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000280,ORD0000139,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000281,ORD0000140,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00000282,ORD0000141,P166,H&M Black Cotton Jacket,Clothing,Jackets,H&M,1,4254.0,4254.0
+OI00000283,ORD0000142,P058,Puma Running Shoes Size 8,Sports,Shoes,Puma,1,7047.0,7047.0
+OI00000284,ORD0000142,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00000285,ORD0000142,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00000286,ORD0000143,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000287,ORD0000143,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000288,ORD0000143,P012,Nivea Foundation,Beauty,Makeup,Nivea,2,2237.0,4474.0
+OI00000289,ORD0000144,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000290,ORD0000145,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00000291,ORD0000145,P115,Nike Sports T-Shirt,Sports,Activewear,Nike,1,2606.0,2606.0
+OI00000292,ORD0000145,P117,Nike Running Shoes Size 10,Sports,Shoes,Nike,1,5153.0,5153.0
+OI00000293,ORD0000146,P025,Lakme Foundation,Beauty,Makeup,Lakme,2,462.0,924.0
+OI00000294,ORD0000146,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000295,ORD0000146,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000296,ORD0000147,P052,Apple Air 8GB RAM 1TB SSD,Electronics,Laptop,Apple,1,40493.0,40493.0
+OI00000297,ORD0000148,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000298,ORD0000148,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000299,ORD0000148,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000300,ORD0000149,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000301,ORD0000149,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000302,ORD0000149,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000303,ORD0000150,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000304,ORD0000150,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000305,ORD0000151,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000306,ORD0000151,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000307,ORD0000151,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000308,ORD0000152,P009,Nivea Lipstick,Beauty,Makeup,Nivea,2,2838.0,5676.0
+OI00000309,ORD0000152,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000310,ORD0000153,P001,Samsung Charger,Electronics,Accessories,Samsung,1,1356.0,1356.0
+OI00000311,ORD0000153,P079,Boat Charger,Electronics,Accessories,Boat,1,379.0,379.0
+OI00000312,ORD0000154,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000313,ORD0000154,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000314,ORD0000155,P189,H&M Red Polyester Shirt,Clothing,Shirts,H&M,1,2483.0,2483.0
+OI00000315,ORD0000155,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00000316,ORD0000156,P143,OnePlus G1 256GB Red,Electronics,Smartphone,OnePlus,1,15113.0,15113.0
+OI00000317,ORD0000157,P029,Adidas Running Shoes Size 8,Sports,Shoes,Adidas,1,2068.0,2068.0
+OI00000318,ORD0000158,P079,Boat Charger,Electronics,Accessories,Boat,1,379.0,379.0
+OI00000319,ORD0000159,P148,Adidas Sneakers Size 7,Sports,Shoes,Adidas,1,3461.0,3461.0
+OI00000320,ORD0000159,P031,Puma Sneakers Size 7,Sports,Shoes,Puma,1,7055.0,7055.0
+OI00000321,ORD0000159,P115,Nike Sports T-Shirt,Sports,Activewear,Nike,1,2606.0,2606.0
+OI00000322,ORD0000160,P126,UrbanCo Wooden Sofa Medium,Home,Furniture,UrbanCo,1,5133.0,5133.0
+OI00000323,ORD0000160,P018,UrbanCo Metal Dining Table Large,Home,Furniture,UrbanCo,1,24543.0,24543.0
+OI00000324,ORD0000161,P051,Zara Red Polyester T-Shirt,Clothing,T-Shirts,Zara,1,349.0,349.0
+OI00000325,ORD0000162,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00000326,ORD0000162,P110,H&M White Polyester Shirt,Clothing,Shirts,H&M,1,1438.0,1438.0
+OI00000327,ORD0000162,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,1,2086.0,2086.0
+OI00000328,ORD0000163,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00000329,ORD0000163,P099,UrbanCo Wooden Dining Table Medium,Home,Furniture,UrbanCo,1,15212.0,15212.0
+OI00000330,ORD0000163,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00000331,ORD0000164,P070,H&M Black Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1277.0,1277.0
+OI00000332,ORD0000164,P137,H&M Red Denim T-Shirt,Clothing,T-Shirts,H&M,1,1174.0,1174.0
+OI00000333,ORD0000165,P043,JBL Bluetooth Headphones,Electronics,Headphones,JBL,1,1296.0,1296.0
+OI00000334,ORD0000165,P098,HP Air 32GB RAM 512GB SSD,Electronics,Laptop,HP,1,75632.0,75632.0
+OI00000335,ORD0000166,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00000336,ORD0000166,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00000337,ORD0000166,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00000338,ORD0000167,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000339,ORD0000167,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000340,ORD0000168,P005,Nivea Face Wash,Beauty,Skincare,Nivea,2,1130.0,2260.0
+OI00000341,ORD0000168,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000342,ORD0000168,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000343,ORD0000169,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000344,ORD0000170,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00000345,ORD0000171,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000346,ORD0000172,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000347,ORD0000172,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000348,ORD0000173,P185,Samsung Galaxy S21 64GB Blue,Electronics,Smartphone,Samsung,1,34209.0,34209.0
+OI00000349,ORD0000174,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,3,1751.0,5253.0
+OI00000350,ORD0000174,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000351,ORD0000174,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000352,ORD0000175,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000353,ORD0000176,P029,Adidas Running Shoes Size 8,Sports,Shoes,Adidas,1,2068.0,2068.0
+OI00000354,ORD0000176,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,2,1397.0,2794.0
+OI00000355,ORD0000177,P060,Boat Bluetooth Headphones,Electronics,Headphones,Boat,1,4117.0,4117.0
+OI00000356,ORD0000178,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00000357,ORD0000179,P033,UrbanCo Plastic Dining Table Small,Home,Furniture,UrbanCo,1,7598.0,7598.0
+OI00000358,ORD0000180,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000359,ORD0000180,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000360,ORD0000181,P051,Zara Red Polyester T-Shirt,Clothing,T-Shirts,Zara,1,349.0,349.0
+OI00000361,ORD0000181,P162,Zara Black Denim Jeans,Clothing,Jeans,Zara,1,3231.0,3231.0
+OI00000362,ORD0000182,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00000363,ORD0000182,P109,UrbanCo Plastic Chair Large,Home,Furniture,UrbanCo,1,29504.0,29504.0
+OI00000364,ORD0000182,P024,UrbanCo Metal Chair Small,Home,Furniture,UrbanCo,1,25406.0,25406.0
+OI00000365,ORD0000183,P156,HP Victus 32GB RAM 1TB SSD,Electronics,Laptop,HP,1,80692.0,80692.0
+OI00000366,ORD0000183,P135,HP Book Air 16GB RAM 512GB SSD,Electronics,Laptop,HP,1,39299.0,39299.0
+OI00000367,ORD0000184,P150,Adidas Track Pants,Sports,Activewear,Adidas,1,2331.0,2331.0
+OI00000368,ORD0000184,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00000369,ORD0000185,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000370,ORD0000185,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000371,ORD0000186,P169,Nike Sneakers Size 10,Sports,Shoes,Nike,1,1381.0,1381.0
+OI00000372,ORD0000187,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00000373,ORD0000187,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00000374,ORD0000187,P053,Puma Dumbbells,Sports,Equipment,Puma,1,14598.0,14598.0
+OI00000375,ORD0000188,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00000376,ORD0000188,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00000377,ORD0000188,P085,UrbanCo Plastic Dining Table Large,Home,Furniture,UrbanCo,1,12303.0,12303.0
+OI00000378,ORD0000189,P019,H&M Green Denim T-Shirt,Clothing,T-Shirts,H&M,1,934.0,934.0
+OI00000379,ORD0000189,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00000380,ORD0000190,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00000381,ORD0000190,P120,Zara Black Polyester Jacket,Clothing,Jackets,Zara,1,6542.0,6542.0
+OI00000382,ORD0000191,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00000383,ORD0000191,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,2,474.0,948.0
+OI00000384,ORD0000192,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00000385,ORD0000192,P101,H&M Blue Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1453.0,1453.0
+OI00000386,ORD0000193,P041,H&M Green Cotton Jacket,Clothing,Jackets,H&M,1,7336.0,7336.0
+OI00000387,ORD0000193,P192,Zara Black Cotton Jacket,Clothing,Jackets,Zara,1,2258.0,2258.0
+OI00000388,ORD0000194,P082,H&M Green Denim Jacket,Clothing,Jackets,H&M,1,3964.0,3964.0
+OI00000389,ORD0000195,P180,Zara White Denim T-Shirt,Clothing,T-Shirts,Zara,1,1446.0,1446.0
+OI00000390,ORD0000195,P120,Zara Black Polyester Jacket,Clothing,Jackets,Zara,1,6542.0,6542.0
+OI00000391,ORD0000195,P172,H&M Green Polyester Shirt,Clothing,Shirts,H&M,1,2109.0,2109.0
+OI00000392,ORD0000196,P067,Boat Wireless Earbuds,Electronics,Headphones,Boat,1,2941.0,2941.0
+OI00000393,ORD0000196,P013,OnePlus 13 256GB Black,Electronics,Smartphone,OnePlus,1,75619.0,75619.0
+OI00000394,ORD0000197,P200,H&M Blue Denim Shirt,Clothing,Shirts,H&M,1,519.0,519.0
+OI00000395,ORD0000197,P041,H&M Green Cotton Jacket,Clothing,Jackets,H&M,1,7336.0,7336.0
+OI00000396,ORD0000198,P078,Zara Red Polyester Jeans,Clothing,Jeans,Zara,1,2265.0,2265.0
+OI00000397,ORD0000198,P196,Zara White Denim Jacket,Clothing,Jackets,Zara,1,4542.0,4542.0
+OI00000398,ORD0000199,P182,Zara Blue Cotton Shirt,Clothing,Shirts,Zara,2,1991.0,3982.0
+OI00000399,ORD0000199,P111,Zara Blue Cotton Jacket,Clothing,Jackets,Zara,1,4201.0,4201.0
+OI00000400,ORD0000199,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,1,474.0,474.0
+OI00000401,ORD0000200,P145,UrbanCo Metal Dining Table Medium,Home,Furniture,UrbanCo,1,26201.0,26201.0
+OI00000402,ORD0000201,P104,OnePlus Galaxy S21 128GB Black,Electronics,Smartphone,OnePlus,1,20198.0,20198.0
+OI00000403,ORD0000202,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000404,ORD0000202,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000405,ORD0000202,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000406,ORD0000203,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000407,ORD0000203,P034,Lakme Lipstick,Beauty,Makeup,Lakme,2,325.0,650.0
+OI00000408,ORD0000204,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,1,6273.0,6273.0
+OI00000409,ORD0000205,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000410,ORD0000205,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000411,ORD0000206,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00000412,ORD0000206,P019,H&M Green Denim T-Shirt,Clothing,T-Shirts,H&M,1,934.0,934.0
+OI00000413,ORD0000206,P172,H&M Green Polyester Shirt,Clothing,Shirts,H&M,1,2109.0,2109.0
+OI00000414,ORD0000207,P150,Adidas Track Pants,Sports,Activewear,Adidas,1,2331.0,2331.0
+OI00000415,ORD0000207,P132,Adidas Running Shoes Size 7,Sports,Shoes,Adidas,1,3001.0,3001.0
+OI00000416,ORD0000208,P046,Nike Running Shoes Size 8,Sports,Shoes,Nike,1,5354.0,5354.0
+OI00000417,ORD0000208,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00000418,ORD0000209,P061,H&M Black Polyester Shirt,Clothing,Shirts,H&M,2,1694.0,3388.0
+OI00000419,ORD0000209,P200,H&M Blue Denim Shirt,Clothing,Shirts,H&M,1,519.0,519.0
+OI00000420,ORD0000209,P190,Zara Green Cotton Jacket,Clothing,Jackets,Zara,1,2207.0,2207.0
+OI00000421,ORD0000210,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00000422,ORD0000211,P064,Zara White Denim Shirt,Clothing,Shirts,Zara,1,2244.0,2244.0
+OI00000423,ORD0000211,P196,Zara White Denim Jacket,Clothing,Jackets,Zara,1,4542.0,4542.0
+OI00000424,ORD0000211,P073,Zara Black Denim Shirt,Clothing,Shirts,Zara,2,663.0,1326.0
+OI00000425,ORD0000212,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00000426,ORD0000213,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00000427,ORD0000213,P131,Samsung Galaxy S21 64GB Red,Electronics,Smartphone,Samsung,1,21334.0,21334.0
+OI00000428,ORD0000214,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000429,ORD0000214,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000430,ORD0000214,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000431,ORD0000215,P150,Adidas Track Pants,Sports,Activewear,Adidas,1,2331.0,2331.0
+OI00000432,ORD0000215,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00000433,ORD0000216,P062,H&M Green Polyester Jacket,Clothing,Jackets,H&M,1,6565.0,6565.0
+OI00000434,ORD0000217,P117,Nike Running Shoes Size 10,Sports,Shoes,Nike,1,5153.0,5153.0
+OI00000435,ORD0000218,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000436,ORD0000218,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000437,ORD0000219,P150,Adidas Track Pants,Sports,Activewear,Adidas,1,2331.0,2331.0
+OI00000438,ORD0000219,P029,Adidas Running Shoes Size 8,Sports,Shoes,Adidas,1,2068.0,2068.0
+OI00000439,ORD0000219,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00000440,ORD0000220,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000441,ORD0000220,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000442,ORD0000221,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000443,ORD0000221,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000444,ORD0000222,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000445,ORD0000222,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000446,ORD0000223,P042,Dell ion 32GB RAM 512GB SSD,Electronics,Laptop,Dell,1,44211.0,44211.0
+OI00000447,ORD0000224,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000448,ORD0000224,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000449,ORD0000225,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000450,ORD0000225,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000451,ORD0000225,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000452,ORD0000226,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00000453,ORD0000227,P159,Puma Sneakers Size 10,Sports,Shoes,Puma,1,4766.0,4766.0
+OI00000454,ORD0000227,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,1,6273.0,6273.0
+OI00000455,ORD0000227,P029,Adidas Running Shoes Size 8,Sports,Shoes,Adidas,1,2068.0,2068.0
+OI00000456,ORD0000228,P051,Zara Red Polyester T-Shirt,Clothing,T-Shirts,Zara,1,349.0,349.0
+OI00000457,ORD0000228,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00000458,ORD0000229,P127,UrbanCo Metal Chair Medium,Home,Furniture,UrbanCo,1,21994.0,21994.0
+OI00000459,ORD0000230,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00000460,ORD0000230,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,2,6273.0,12546.0
+OI00000461,ORD0000230,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00000462,ORD0000231,P083,OnePlus 3 128GB White,Electronics,Smartphone,OnePlus,1,63280.0,63280.0
+OI00000463,ORD0000232,P166,H&M Black Cotton Jacket,Clothing,Jackets,H&M,1,4254.0,4254.0
+OI00000464,ORD0000233,P153,UrbanCo Wooden Sofa Large,Home,Furniture,UrbanCo,1,11898.0,11898.0
+OI00000465,ORD0000234,P009,Nivea Lipstick,Beauty,Makeup,Nivea,2,2838.0,5676.0
+OI00000466,ORD0000234,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000467,ORD0000234,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000468,ORD0000235,P132,Adidas Running Shoes Size 7,Sports,Shoes,Adidas,1,3001.0,3001.0
+OI00000469,ORD0000236,P149,Zara Blue Denim Jacket,Clothing,Jackets,Zara,1,7491.0,7491.0
+OI00000470,ORD0000237,P114,JBL Wireless Earbuds,Electronics,Headphones,JBL,1,2898.0,2898.0
+OI00000471,ORD0000238,P153,UrbanCo Wooden Sofa Large,Home,Furniture,UrbanCo,1,11898.0,11898.0
+OI00000472,ORD0000239,P080,Boat Phone Case,Electronics,Accessories,Boat,1,1006.0,1006.0
+OI00000473,ORD0000240,P117,Nike Running Shoes Size 10,Sports,Shoes,Nike,1,5153.0,5153.0
+OI00000474,ORD0000240,P046,Nike Running Shoes Size 8,Sports,Shoes,Nike,1,5354.0,5354.0
+OI00000475,ORD0000241,P040,Samsung Power Bank,Electronics,Accessories,Samsung,1,2575.0,2575.0
+OI00000476,ORD0000241,P147,Apple 21 256GB Green,Electronics,Smartphone,Apple,1,33658.0,33658.0
+OI00000477,ORD0000242,P099,UrbanCo Wooden Dining Table Medium,Home,Furniture,UrbanCo,1,15212.0,15212.0
+OI00000478,ORD0000243,P079,Boat Charger,Electronics,Accessories,Boat,1,379.0,379.0
+OI00000479,ORD0000244,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00000480,ORD0000244,P129,H&M Black Denim Jacket,Clothing,Jackets,H&M,1,4451.0,4451.0
+OI00000481,ORD0000244,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00000482,ORD0000245,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00000483,ORD0000246,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00000484,ORD0000246,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00000485,ORD0000247,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000486,ORD0000248,P100,Zara Green Cotton Shirt,Clothing,Shirts,Zara,1,2505.0,2505.0
+OI00000487,ORD0000248,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00000488,ORD0000248,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00000489,ORD0000249,P019,H&M Green Denim T-Shirt,Clothing,T-Shirts,H&M,1,934.0,934.0
+OI00000490,ORD0000249,P195,H&M Green Denim Jeans,Clothing,Jeans,H&M,1,1812.0,1812.0
+OI00000491,ORD0000250,P163,Zara White Polyester Shirt,Clothing,Shirts,Zara,1,636.0,636.0
+OI00000492,ORD0000250,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,1,2943.0,2943.0
+OI00000493,ORD0000251,P115,Nike Sports T-Shirt,Sports,Activewear,Nike,1,2606.0,2606.0
+OI00000494,ORD0000252,P031,Puma Sneakers Size 7,Sports,Shoes,Puma,1,7055.0,7055.0
+OI00000495,ORD0000252,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00000496,ORD0000253,P159,Puma Sneakers Size 10,Sports,Shoes,Puma,1,4766.0,4766.0
+OI00000497,ORD0000253,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00000498,ORD0000253,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00000499,ORD0000254,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00000500,ORD0000254,P046,Nike Running Shoes Size 8,Sports,Shoes,Nike,1,5354.0,5354.0
+OI00000501,ORD0000254,P132,Adidas Running Shoes Size 7,Sports,Shoes,Adidas,1,3001.0,3001.0
+OI00000502,ORD0000255,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000503,ORD0000255,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000504,ORD0000256,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00000505,ORD0000256,P169,Nike Sneakers Size 10,Sports,Shoes,Nike,1,1381.0,1381.0
+OI00000506,ORD0000257,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00000507,ORD0000257,P015,Nike Dumbbells,Sports,Equipment,Nike,1,4660.0,4660.0
+OI00000508,ORD0000257,P031,Puma Sneakers Size 7,Sports,Shoes,Puma,1,7055.0,7055.0
+OI00000509,ORD0000258,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00000510,ORD0000258,P027,Zara Black Cotton Shirt,Clothing,Shirts,Zara,1,836.0,836.0
+OI00000511,ORD0000258,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00000512,ORD0000259,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00000513,ORD0000260,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000514,ORD0000260,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000515,ORD0000260,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,2,877.0,1754.0
+OI00000516,ORD0000261,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00000517,ORD0000261,P142,UrbanCo Plastic Sofa Medium,Home,Furniture,UrbanCo,1,10982.0,10982.0
+OI00000518,ORD0000262,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00000519,ORD0000263,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000520,ORD0000263,P012,Nivea Foundation,Beauty,Makeup,Nivea,2,2237.0,4474.0
+OI00000521,ORD0000264,P053,Puma Dumbbells,Sports,Equipment,Puma,1,14598.0,14598.0
+OI00000522,ORD0000265,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00000523,ORD0000266,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000524,ORD0000266,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000525,ORD0000267,P082,H&M Green Denim Jacket,Clothing,Jackets,H&M,1,3964.0,3964.0
+OI00000526,ORD0000268,P191,H&M White Cotton Shirt,Clothing,Shirts,H&M,1,983.0,983.0
+OI00000527,ORD0000268,P064,Zara White Denim Shirt,Clothing,Shirts,Zara,1,2244.0,2244.0
+OI00000528,ORD0000268,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,2,724.0,1448.0
+OI00000529,ORD0000269,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,2,2759.0,5518.0
+OI00000530,ORD0000269,P070,H&M Black Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1277.0,1277.0
+OI00000531,ORD0000269,P084,H&M White Polyester Jeans,Clothing,Jeans,H&M,1,2041.0,2041.0
+OI00000532,ORD0000270,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00000533,ORD0000270,P188,Adidas Sneakers Size 8,Sports,Shoes,Adidas,1,7253.0,7253.0
+OI00000534,ORD0000271,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000535,ORD0000271,P056,Lakme Shampoo,Beauty,Haircare,Lakme,2,952.0,1904.0
+OI00000536,ORD0000272,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00000537,ORD0000272,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00000538,ORD0000273,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00000539,ORD0000273,P194,Zara Blue Polyester Jeans,Clothing,Jeans,Zara,1,2697.0,2697.0
+OI00000540,ORD0000274,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00000541,ORD0000274,P152,Adidas Sneakers Size 9,Sports,Shoes,Adidas,1,7939.0,7939.0
+OI00000542,ORD0000275,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00000543,ORD0000275,P141,Samsung i13 64GB Red,Electronics,Smartphone,Samsung,1,57174.0,57174.0
+OI00000544,ORD0000276,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00000545,ORD0000276,P121,UrbanCo Plastic Sofa Large,Home,Furniture,UrbanCo,1,21106.0,21106.0
+OI00000546,ORD0000277,P112,HP Pavilion 32GB RAM 256GB SSD,Electronics,Laptop,HP,1,45580.0,45580.0
+OI00000547,ORD0000278,P095,H&M Black Denim Jeans,Clothing,Jeans,H&M,1,3649.0,3649.0
+OI00000548,ORD0000278,P084,H&M White Polyester Jeans,Clothing,Jeans,H&M,1,2041.0,2041.0
+OI00000549,ORD0000278,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,2,2759.0,5518.0
+OI00000550,ORD0000279,P067,Boat Wireless Earbuds,Electronics,Headphones,Boat,1,2941.0,2941.0
+OI00000551,ORD0000280,P148,Adidas Sneakers Size 7,Sports,Shoes,Adidas,1,3461.0,3461.0
+OI00000552,ORD0000280,P117,Nike Running Shoes Size 10,Sports,Shoes,Nike,1,5153.0,5153.0
+OI00000553,ORD0000281,P107,Zara Black Polyester T-Shirt,Clothing,T-Shirts,Zara,1,616.0,616.0
+OI00000554,ORD0000281,P078,Zara Red Polyester Jeans,Clothing,Jeans,Zara,1,2265.0,2265.0
+OI00000555,ORD0000282,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000556,ORD0000282,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000557,ORD0000283,P169,Nike Sneakers Size 10,Sports,Shoes,Nike,1,1381.0,1381.0
+OI00000558,ORD0000283,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00000559,ORD0000283,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00000560,ORD0000284,P086,Boat Power Bank,Electronics,Accessories,Boat,1,732.0,732.0
+OI00000561,ORD0000284,P185,Samsung Galaxy S21 64GB Blue,Electronics,Smartphone,Samsung,1,34209.0,34209.0
+OI00000562,ORD0000284,P151,Apple MacBook Air 32GB RAM 256GB SSD,Electronics,Laptop,Apple,1,109190.0,109190.0
+OI00000563,ORD0000285,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00000564,ORD0000285,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00000565,ORD0000285,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00000566,ORD0000286,P178,UrbanCo Metal Sofa Small,Home,Furniture,UrbanCo,1,20907.0,20907.0
+OI00000567,ORD0000287,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000568,ORD0000288,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000569,ORD0000288,P003,Nivea Shampoo,Beauty,Haircare,Nivea,2,201.0,402.0
+OI00000570,ORD0000288,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000571,ORD0000289,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00000572,ORD0000289,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00000573,ORD0000290,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000574,ORD0000290,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000575,ORD0000291,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000576,ORD0000291,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000577,ORD0000292,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00000578,ORD0000292,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00000579,ORD0000293,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00000580,ORD0000294,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000581,ORD0000294,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000582,ORD0000295,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000583,ORD0000295,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,2,1471.0,2942.0
+OI00000584,ORD0000296,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00000585,ORD0000296,P033,UrbanCo Plastic Dining Table Small,Home,Furniture,UrbanCo,1,7598.0,7598.0
+OI00000586,ORD0000297,P084,H&M White Polyester Jeans,Clothing,Jeans,H&M,1,2041.0,2041.0
+OI00000587,ORD0000298,P088,Zara Red Denim Jeans,Clothing,Jeans,Zara,1,3394.0,3394.0
+OI00000588,ORD0000299,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00000589,ORD0000299,P085,UrbanCo Plastic Dining Table Large,Home,Furniture,UrbanCo,1,12303.0,12303.0
+OI00000590,ORD0000300,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00000591,ORD0000301,P078,Zara Red Polyester Jeans,Clothing,Jeans,Zara,1,2265.0,2265.0
+OI00000592,ORD0000302,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000593,ORD0000302,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000594,ORD0000303,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000595,ORD0000303,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000596,ORD0000303,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000597,ORD0000304,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00000598,ORD0000305,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,1,2086.0,2086.0
+OI00000599,ORD0000305,P166,H&M Black Cotton Jacket,Clothing,Jackets,H&M,1,4254.0,4254.0
+OI00000600,ORD0000305,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00000601,ORD0000306,P111,Zara Blue Cotton Jacket,Clothing,Jackets,Zara,1,4201.0,4201.0
+OI00000602,ORD0000306,P120,Zara Black Polyester Jacket,Clothing,Jackets,Zara,1,6542.0,6542.0
+OI00000603,ORD0000307,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000604,ORD0000307,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000605,ORD0000307,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000606,ORD0000308,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000607,ORD0000308,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000608,ORD0000308,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000609,ORD0000309,P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,H&M,1,1070.0,1070.0
+OI00000610,ORD0000309,P149,Zara Blue Denim Jacket,Clothing,Jackets,Zara,1,7491.0,7491.0
+OI00000611,ORD0000310,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00000612,ORD0000310,P062,H&M Green Polyester Jacket,Clothing,Jackets,H&M,1,6565.0,6565.0
+OI00000613,ORD0000311,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00000614,ORD0000312,P079,Boat Charger,Electronics,Accessories,Boat,1,379.0,379.0
+OI00000615,ORD0000313,P003,Nivea Shampoo,Beauty,Haircare,Nivea,2,201.0,402.0
+OI00000616,ORD0000313,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000617,ORD0000314,P093,Zara Green Polyester Jeans,Clothing,Jeans,Zara,1,1066.0,1066.0
+OI00000618,ORD0000314,P070,H&M Black Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1277.0,1277.0
+OI00000619,ORD0000315,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00000620,ORD0000315,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00000621,ORD0000315,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00000622,ORD0000316,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000623,ORD0000316,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000624,ORD0000317,P153,UrbanCo Wooden Sofa Large,Home,Furniture,UrbanCo,1,11898.0,11898.0
+OI00000625,ORD0000318,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000626,ORD0000319,P029,Adidas Running Shoes Size 8,Sports,Shoes,Adidas,1,2068.0,2068.0
+OI00000627,ORD0000319,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00000628,ORD0000320,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00000629,ORD0000321,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000630,ORD0000321,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000631,ORD0000321,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000632,ORD0000322,P001,Samsung Charger,Electronics,Accessories,Samsung,1,1356.0,1356.0
+OI00000633,ORD0000322,P171,Dell Aspire 8GB RAM 1TB SSD,Electronics,Laptop,Dell,1,97434.0,97434.0
+OI00000634,ORD0000323,P139,UrbanCo Wooden Chair Large,Home,Furniture,UrbanCo,1,8748.0,8748.0
+OI00000635,ORD0000324,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000636,ORD0000324,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000637,ORD0000324,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,2,877.0,1754.0
+OI00000638,ORD0000325,P163,Zara White Polyester Shirt,Clothing,Shirts,Zara,1,636.0,636.0
+OI00000639,ORD0000326,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00000640,ORD0000326,P046,Nike Running Shoes Size 8,Sports,Shoes,Nike,1,5354.0,5354.0
+OI00000641,ORD0000327,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00000642,ORD0000328,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000643,ORD0000329,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000644,ORD0000330,P135,HP Book Air 16GB RAM 512GB SSD,Electronics,Laptop,HP,1,39299.0,39299.0
+OI00000645,ORD0000331,P092,UrbanCo Wooden Chair Small,Home,Furniture,UrbanCo,1,17541.0,17541.0
+OI00000646,ORD0000331,P165,UrbanCo Metal Sofa Large,Home,Furniture,UrbanCo,1,6328.0,6328.0
+OI00000647,ORD0000332,P107,Zara Black Polyester T-Shirt,Clothing,T-Shirts,Zara,1,616.0,616.0
+OI00000648,ORD0000332,P088,Zara Red Denim Jeans,Clothing,Jeans,Zara,1,3394.0,3394.0
+OI00000649,ORD0000332,P198,Zara Black Polyester Jeans,Clothing,Jeans,Zara,1,2065.0,2065.0
+OI00000650,ORD0000333,P015,Nike Dumbbells,Sports,Equipment,Nike,1,4660.0,4660.0
+OI00000651,ORD0000333,P188,Adidas Sneakers Size 8,Sports,Shoes,Adidas,1,7253.0,7253.0
+OI00000652,ORD0000333,P117,Nike Running Shoes Size 10,Sports,Shoes,Nike,1,5153.0,5153.0
+OI00000653,ORD0000334,P031,Puma Sneakers Size 7,Sports,Shoes,Puma,1,7055.0,7055.0
+OI00000654,ORD0000334,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00000655,ORD0000334,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,1,6273.0,6273.0
+OI00000656,ORD0000335,P176,Apple Mac Air 16GB RAM 256GB SSD,Electronics,Laptop,Apple,1,71910.0,71910.0
+OI00000657,ORD0000336,P022,H&M Red Cotton Shirt,Clothing,Shirts,H&M,1,2473.0,2473.0
+OI00000658,ORD0000337,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000659,ORD0000337,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000660,ORD0000338,P172,H&M Green Polyester Shirt,Clothing,Shirts,H&M,1,2109.0,2109.0
+OI00000661,ORD0000339,P169,Nike Sneakers Size 10,Sports,Shoes,Nike,1,1381.0,1381.0
+OI00000662,ORD0000340,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000663,ORD0000340,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000664,ORD0000340,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000665,ORD0000341,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000666,ORD0000342,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00000667,ORD0000342,P166,H&M Black Cotton Jacket,Clothing,Jackets,H&M,1,4254.0,4254.0
+OI00000668,ORD0000343,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000669,ORD0000343,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000670,ORD0000344,P126,UrbanCo Wooden Sofa Medium,Home,Furniture,UrbanCo,1,5133.0,5133.0
+OI00000671,ORD0000344,P109,UrbanCo Plastic Chair Large,Home,Furniture,UrbanCo,1,29504.0,29504.0
+OI00000672,ORD0000345,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000673,ORD0000345,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000674,ORD0000346,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00000675,ORD0000346,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,1,6273.0,6273.0
+OI00000676,ORD0000347,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00000677,ORD0000347,P061,H&M Black Polyester Shirt,Clothing,Shirts,H&M,1,1694.0,1694.0
+OI00000678,ORD0000348,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00000679,ORD0000348,P109,UrbanCo Plastic Chair Large,Home,Furniture,UrbanCo,1,29504.0,29504.0
+OI00000680,ORD0000348,P123,UrbanCo Wooden Dining Table Small,Home,Furniture,UrbanCo,1,26420.0,26420.0
+OI00000681,ORD0000349,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,1,474.0,474.0
+OI00000682,ORD0000350,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000683,ORD0000350,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000684,ORD0000350,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000685,ORD0000351,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00000686,ORD0000352,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00000687,ORD0000352,P148,Adidas Sneakers Size 7,Sports,Shoes,Adidas,1,3461.0,3461.0
+OI00000688,ORD0000352,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00000689,ORD0000353,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00000690,ORD0000353,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00000691,ORD0000354,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000692,ORD0000354,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000693,ORD0000355,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00000694,ORD0000355,P152,Adidas Sneakers Size 9,Sports,Shoes,Adidas,1,7939.0,7939.0
+OI00000695,ORD0000355,P117,Nike Running Shoes Size 10,Sports,Shoes,Nike,1,5153.0,5153.0
+OI00000696,ORD0000356,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000697,ORD0000356,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000698,ORD0000357,P028,Apple 11 256GB Red,Electronics,Smartphone,Apple,1,66459.0,66459.0
+OI00000699,ORD0000358,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00000700,ORD0000358,P006,UrbanCo Lamp,Home,Decor,UrbanCo,2,2790.0,5580.0
+OI00000701,ORD0000358,P116,UrbanCo Plastic Chair Medium,Home,Furniture,UrbanCo,1,20112.0,20112.0
+OI00000702,ORD0000359,P056,Lakme Shampoo,Beauty,Haircare,Lakme,2,952.0,1904.0
+OI00000703,ORD0000359,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000704,ORD0000360,P173,Zara Green Denim T-Shirt,Clothing,T-Shirts,Zara,1,473.0,473.0
+OI00000705,ORD0000360,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,1,474.0,474.0
+OI00000706,ORD0000360,P101,H&M Blue Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1453.0,1453.0
+OI00000707,ORD0000361,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00000708,ORD0000361,P152,Adidas Sneakers Size 9,Sports,Shoes,Adidas,1,7939.0,7939.0
+OI00000709,ORD0000362,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000710,ORD0000362,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000711,ORD0000363,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000712,ORD0000363,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000713,ORD0000363,P034,Lakme Lipstick,Beauty,Makeup,Lakme,2,325.0,650.0
+OI00000714,ORD0000364,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00000715,ORD0000364,P082,H&M Green Denim Jacket,Clothing,Jackets,H&M,1,3964.0,3964.0
+OI00000716,ORD0000364,P190,Zara Green Cotton Jacket,Clothing,Jackets,Zara,1,2207.0,2207.0
+OI00000717,ORD0000365,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00000718,ORD0000365,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00000719,ORD0000366,P136,Zara Red Cotton Shirt,Clothing,Shirts,Zara,1,1369.0,1369.0
+OI00000720,ORD0000366,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00000721,ORD0000367,P194,Zara Blue Polyester Jeans,Clothing,Jeans,Zara,1,2697.0,2697.0
+OI00000722,ORD0000367,P044,H&M White Denim Jacket,Clothing,Jackets,H&M,1,5683.0,5683.0
+OI00000723,ORD0000367,P106,H&M Green Polyester T-Shirt,Clothing,T-Shirts,H&M,1,806.0,806.0
+OI00000724,ORD0000368,P087,OnePlus 11 Pro Max 256GB Red,Electronics,Smartphone,OnePlus,1,35870.0,35870.0
+OI00000725,ORD0000369,P144,UrbanCo Plastic Chair Small,Home,Furniture,UrbanCo,1,6908.0,6908.0
+OI00000726,ORD0000370,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000727,ORD0000371,P050,H&M Green Cotton Jeans,Clothing,Jeans,H&M,1,2713.0,2713.0
+OI00000728,ORD0000372,P012,Nivea Foundation,Beauty,Makeup,Nivea,2,2237.0,4474.0
+OI00000729,ORD0000372,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000730,ORD0000372,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000731,ORD0000373,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000732,ORD0000373,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000733,ORD0000374,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00000734,ORD0000374,P165,UrbanCo Metal Sofa Large,Home,Furniture,UrbanCo,1,6328.0,6328.0
+OI00000735,ORD0000374,P011,UrbanCo Wooden Sofa Small,Home,Furniture,UrbanCo,1,26505.0,26505.0
+OI00000736,ORD0000375,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000737,ORD0000375,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000738,ORD0000375,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000739,ORD0000376,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000740,ORD0000376,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000741,ORD0000377,P040,Samsung Power Bank,Electronics,Accessories,Samsung,1,2575.0,2575.0
+OI00000742,ORD0000377,P037,Apple MacBook Air 8GB RAM 512GB SSD,Electronics,Laptop,Apple,1,52804.0,52804.0
+OI00000743,ORD0000377,P065,HP Pavilion 16GB RAM 512GB SSD,Electronics,Laptop,HP,1,39186.0,39186.0
+OI00000744,ORD0000378,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000745,ORD0000378,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000746,ORD0000379,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000747,ORD0000380,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000748,ORD0000380,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,2,1859.0,3718.0
+OI00000749,ORD0000381,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00000750,ORD0000381,P142,UrbanCo Plastic Sofa Medium,Home,Furniture,UrbanCo,1,10982.0,10982.0
+OI00000751,ORD0000382,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00000752,ORD0000382,P018,UrbanCo Metal Dining Table Large,Home,Furniture,UrbanCo,1,24543.0,24543.0
+OI00000753,ORD0000382,P164,UrbanCo Metal Sofa Medium,Home,Furniture,UrbanCo,1,15712.0,15712.0
+OI00000754,ORD0000383,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00000755,ORD0000384,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000756,ORD0000385,P060,Boat Bluetooth Headphones,Electronics,Headphones,Boat,1,4117.0,4117.0
+OI00000757,ORD0000385,P052,Apple Air 8GB RAM 1TB SSD,Electronics,Laptop,Apple,1,40493.0,40493.0
+OI00000758,ORD0000385,P086,Boat Power Bank,Electronics,Accessories,Boat,1,732.0,732.0
+OI00000759,ORD0000386,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00000760,ORD0000387,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00000761,ORD0000387,P115,Nike Sports T-Shirt,Sports,Activewear,Nike,1,2606.0,2606.0
+OI00000762,ORD0000388,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000763,ORD0000388,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000764,ORD0000389,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,1,2943.0,2943.0
+OI00000765,ORD0000390,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,1,2086.0,2086.0
+OI00000766,ORD0000390,P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,H&M,1,1070.0,1070.0
+OI00000767,ORD0000390,P175,Zara White Denim Jeans,Clothing,Jeans,Zara,1,2117.0,2117.0
+OI00000768,ORD0000391,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00000769,ORD0000391,P120,Zara Black Polyester Jacket,Clothing,Jackets,Zara,1,6542.0,6542.0
+OI00000770,ORD0000392,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000771,ORD0000392,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,2,877.0,1754.0
+OI00000772,ORD0000392,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000773,ORD0000393,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000774,ORD0000393,P056,Lakme Shampoo,Beauty,Haircare,Lakme,2,952.0,1904.0
+OI00000775,ORD0000393,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000776,ORD0000394,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000777,ORD0000394,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000778,ORD0000395,P052,Apple Air 8GB RAM 1TB SSD,Electronics,Laptop,Apple,1,40493.0,40493.0
+OI00000779,ORD0000396,P086,Boat Power Bank,Electronics,Accessories,Boat,1,732.0,732.0
+OI00000780,ORD0000396,P043,JBL Bluetooth Headphones,Electronics,Headphones,JBL,1,1296.0,1296.0
+OI00000781,ORD0000397,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,2,1859.0,3718.0
+OI00000782,ORD0000397,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000783,ORD0000397,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000784,ORD0000398,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00000785,ORD0000398,P178,UrbanCo Metal Sofa Small,Home,Furniture,UrbanCo,1,20907.0,20907.0
+OI00000786,ORD0000399,P106,H&M Green Polyester T-Shirt,Clothing,T-Shirts,H&M,1,806.0,806.0
+OI00000787,ORD0000399,P041,H&M Green Cotton Jacket,Clothing,Jackets,H&M,1,7336.0,7336.0
+OI00000788,ORD0000400,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000789,ORD0000400,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000790,ORD0000400,P012,Nivea Foundation,Beauty,Makeup,Nivea,2,2237.0,4474.0
+OI00000791,ORD0000401,P080,Boat Phone Case,Electronics,Accessories,Boat,1,1006.0,1006.0
+OI00000792,ORD0000402,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000793,ORD0000402,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000794,ORD0000403,P150,Adidas Track Pants,Sports,Activewear,Adidas,1,2331.0,2331.0
+OI00000795,ORD0000403,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00000796,ORD0000404,P120,Zara Black Polyester Jacket,Clothing,Jackets,Zara,1,6542.0,6542.0
+OI00000797,ORD0000405,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000798,ORD0000405,P005,Nivea Face Wash,Beauty,Skincare,Nivea,2,1130.0,2260.0
+OI00000799,ORD0000405,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000800,ORD0000406,P159,Puma Sneakers Size 10,Sports,Shoes,Puma,1,4766.0,4766.0
+OI00000801,ORD0000406,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00000802,ORD0000406,P053,Puma Dumbbells,Sports,Equipment,Puma,1,14598.0,14598.0
+OI00000803,ORD0000407,P077,OnePlus C1 13 64GB Red,Electronics,Smartphone,OnePlus,1,35454.0,35454.0
+OI00000804,ORD0000408,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000805,ORD0000408,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000806,ORD0000408,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000807,ORD0000409,P142,UrbanCo Plastic Sofa Medium,Home,Furniture,UrbanCo,1,10982.0,10982.0
+OI00000808,ORD0000409,P092,UrbanCo Wooden Chair Small,Home,Furniture,UrbanCo,1,17541.0,17541.0
+OI00000809,ORD0000410,P022,H&M Red Cotton Shirt,Clothing,Shirts,H&M,1,2473.0,2473.0
+OI00000810,ORD0000411,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00000811,ORD0000412,P064,Zara White Denim Shirt,Clothing,Shirts,Zara,1,2244.0,2244.0
+OI00000812,ORD0000412,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,2,724.0,1448.0
+OI00000813,ORD0000412,P180,Zara White Denim T-Shirt,Clothing,T-Shirts,Zara,1,1446.0,1446.0
+OI00000814,ORD0000413,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00000815,ORD0000414,P117,Nike Running Shoes Size 10,Sports,Shoes,Nike,1,5153.0,5153.0
+OI00000816,ORD0000415,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000817,ORD0000415,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000818,ORD0000416,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000819,ORD0000416,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000820,ORD0000417,P082,H&M Green Denim Jacket,Clothing,Jackets,H&M,1,3964.0,3964.0
+OI00000821,ORD0000417,P041,H&M Green Cotton Jacket,Clothing,Jackets,H&M,1,7336.0,7336.0
+OI00000822,ORD0000417,P172,H&M Green Polyester Shirt,Clothing,Shirts,H&M,1,2109.0,2109.0
+OI00000823,ORD0000418,P010,Samsung Phone Case,Electronics,Accessories,Samsung,1,1711.0,1711.0
+OI00000824,ORD0000418,P043,JBL Bluetooth Headphones,Electronics,Headphones,JBL,1,1296.0,1296.0
+OI00000825,ORD0000419,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000826,ORD0000419,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000827,ORD0000419,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000828,ORD0000420,P001,Samsung Charger,Electronics,Accessories,Samsung,1,1356.0,1356.0
+OI00000829,ORD0000420,P154,OnePlus Nord 3 128GB Blue,Electronics,Smartphone,OnePlus,1,31820.0,31820.0
+OI00000830,ORD0000420,P184,Dell HP Pavilion 8GB RAM 1TB SSD,Electronics,Laptop,Dell,1,115198.0,115198.0
+OI00000831,ORD0000421,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000832,ORD0000421,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000833,ORD0000421,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000834,ORD0000422,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00000835,ORD0000423,P126,UrbanCo Wooden Sofa Medium,Home,Furniture,UrbanCo,1,5133.0,5133.0
+OI00000836,ORD0000424,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00000837,ORD0000424,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00000838,ORD0000424,P046,Nike Running Shoes Size 8,Sports,Shoes,Nike,1,5354.0,5354.0
+OI00000839,ORD0000425,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000840,ORD0000425,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000841,ORD0000425,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000842,ORD0000426,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00000843,ORD0000427,P157,H&M White Polyester T-Shirt,Clothing,T-Shirts,H&M,1,801.0,801.0
+OI00000844,ORD0000427,P124,H&M Red Cotton Jacket,Clothing,Jackets,H&M,1,4779.0,4779.0
+OI00000845,ORD0000428,P017,Lakme Face Wash,Beauty,Skincare,Lakme,2,1574.0,3148.0
+OI00000846,ORD0000428,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000847,ORD0000428,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000848,ORD0000429,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00000849,ORD0000430,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,1,6273.0,6273.0
+OI00000850,ORD0000430,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00000851,ORD0000431,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000852,ORD0000432,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000853,ORD0000433,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00000854,ORD0000433,P115,Nike Sports T-Shirt,Sports,Activewear,Nike,1,2606.0,2606.0
+OI00000855,ORD0000434,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000856,ORD0000434,P009,Nivea Lipstick,Beauty,Makeup,Nivea,2,2838.0,5676.0
+OI00000857,ORD0000435,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00000858,ORD0000436,P115,Nike Sports T-Shirt,Sports,Activewear,Nike,1,2606.0,2606.0
+OI00000859,ORD0000436,P150,Adidas Track Pants,Sports,Activewear,Adidas,2,2331.0,4662.0
+OI00000860,ORD0000436,P148,Adidas Sneakers Size 7,Sports,Shoes,Adidas,1,3461.0,3461.0
+OI00000861,ORD0000437,P121,UrbanCo Plastic Sofa Large,Home,Furniture,UrbanCo,1,21106.0,21106.0
+OI00000862,ORD0000438,P090,Zara Red Polyester Shirt,Clothing,Shirts,Zara,2,801.0,1602.0
+OI00000863,ORD0000438,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00000864,ORD0000439,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00000865,ORD0000439,P099,UrbanCo Wooden Dining Table Medium,Home,Furniture,UrbanCo,1,15212.0,15212.0
+OI00000866,ORD0000440,P017,Lakme Face Wash,Beauty,Skincare,Lakme,2,1574.0,3148.0
+OI00000867,ORD0000440,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000868,ORD0000440,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000869,ORD0000441,P175,Zara White Denim Jeans,Clothing,Jeans,Zara,1,2117.0,2117.0
+OI00000870,ORD0000441,P182,Zara Blue Cotton Shirt,Clothing,Shirts,Zara,1,1991.0,1991.0
+OI00000871,ORD0000441,P180,Zara White Denim T-Shirt,Clothing,T-Shirts,Zara,1,1446.0,1446.0
+OI00000872,ORD0000442,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000873,ORD0000443,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00000874,ORD0000443,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00000875,ORD0000443,P150,Adidas Track Pants,Sports,Activewear,Adidas,1,2331.0,2331.0
+OI00000876,ORD0000444,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00000877,ORD0000444,P010,Samsung Phone Case,Electronics,Accessories,Samsung,1,1711.0,1711.0
+OI00000878,ORD0000444,P072,OnePlus Nord CE3 256GB Blue,Electronics,Smartphone,OnePlus,1,44563.0,44563.0
+OI00000879,ORD0000445,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00000880,ORD0000446,P133,H&M Green Polyester Jeans,Clothing,Jeans,H&M,1,1292.0,1292.0
+OI00000881,ORD0000446,P061,H&M Black Polyester Shirt,Clothing,Shirts,H&M,1,1694.0,1694.0
+OI00000882,ORD0000447,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000883,ORD0000447,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000884,ORD0000448,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00000885,ORD0000448,P101,H&M Blue Cotton T-Shirt,Clothing,T-Shirts,H&M,2,1453.0,2906.0
+OI00000886,ORD0000448,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00000887,ORD0000449,P051,Zara Red Polyester T-Shirt,Clothing,T-Shirts,Zara,1,349.0,349.0
+OI00000888,ORD0000449,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00000889,ORD0000450,P194,Zara Blue Polyester Jeans,Clothing,Jeans,Zara,1,2697.0,2697.0
+OI00000890,ORD0000450,P070,H&M Black Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1277.0,1277.0
+OI00000891,ORD0000450,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00000892,ORD0000451,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00000893,ORD0000451,P053,Puma Dumbbells,Sports,Equipment,Puma,1,14598.0,14598.0
+OI00000894,ORD0000452,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00000895,ORD0000453,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00000896,ORD0000453,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00000897,ORD0000454,P079,Boat Charger,Electronics,Accessories,Boat,1,379.0,379.0
+OI00000898,ORD0000455,P001,Samsung Charger,Electronics,Accessories,Samsung,1,1356.0,1356.0
+OI00000899,ORD0000456,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,2,877.0,1754.0
+OI00000900,ORD0000456,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000901,ORD0000457,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00000902,ORD0000457,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00000903,ORD0000458,P001,Samsung Charger,Electronics,Accessories,Samsung,1,1356.0,1356.0
+OI00000904,ORD0000458,P138,Apple Plus 11 256GB Green,Electronics,Smartphone,Apple,1,69730.0,69730.0
+OI00000905,ORD0000458,P199,Apple 18 128GB White,Electronics,Smartphone,Apple,1,44113.0,44113.0
+OI00000906,ORD0000459,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000907,ORD0000460,P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,H&M,1,1070.0,1070.0
+OI00000908,ORD0000461,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000909,ORD0000462,P017,Lakme Face Wash,Beauty,Skincare,Lakme,2,1574.0,3148.0
+OI00000910,ORD0000462,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000911,ORD0000463,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00000912,ORD0000464,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00000913,ORD0000464,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00000914,ORD0000465,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000915,ORD0000465,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000916,ORD0000466,P129,H&M Black Denim Jacket,Clothing,Jackets,H&M,1,4451.0,4451.0
+OI00000917,ORD0000467,P090,Zara Red Polyester Shirt,Clothing,Shirts,Zara,1,801.0,801.0
+OI00000918,ORD0000467,P196,Zara White Denim Jacket,Clothing,Jackets,Zara,1,4542.0,4542.0
+OI00000919,ORD0000467,P149,Zara Blue Denim Jacket,Clothing,Jackets,Zara,1,7491.0,7491.0
+OI00000920,ORD0000468,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000921,ORD0000469,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000922,ORD0000470,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00000923,ORD0000470,P198,Zara Black Polyester Jeans,Clothing,Jeans,Zara,1,2065.0,2065.0
+OI00000924,ORD0000470,P157,H&M White Polyester T-Shirt,Clothing,T-Shirts,H&M,1,801.0,801.0
+OI00000925,ORD0000471,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00000926,ORD0000472,P086,Boat Power Bank,Electronics,Accessories,Boat,1,732.0,732.0
+OI00000927,ORD0000473,P180,Zara White Denim T-Shirt,Clothing,T-Shirts,Zara,1,1446.0,1446.0
+OI00000928,ORD0000474,P057,H&M Blue Denim Jeans,Clothing,Jeans,H&M,1,1555.0,1555.0
+OI00000929,ORD0000474,P107,Zara Black Polyester T-Shirt,Clothing,T-Shirts,Zara,1,616.0,616.0
+OI00000930,ORD0000475,P056,Lakme Shampoo,Beauty,Haircare,Lakme,2,952.0,1904.0
+OI00000931,ORD0000475,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000932,ORD0000476,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000933,ORD0000476,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000934,ORD0000477,P034,Lakme Lipstick,Beauty,Makeup,Lakme,2,325.0,650.0
+OI00000935,ORD0000477,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000936,ORD0000477,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000937,ORD0000478,P139,UrbanCo Wooden Chair Large,Home,Furniture,UrbanCo,1,8748.0,8748.0
+OI00000938,ORD0000478,P085,UrbanCo Plastic Dining Table Large,Home,Furniture,UrbanCo,1,12303.0,12303.0
+OI00000939,ORD0000479,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00000940,ORD0000479,P109,UrbanCo Plastic Chair Large,Home,Furniture,UrbanCo,1,29504.0,29504.0
+OI00000941,ORD0000480,P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,H&M,1,1070.0,1070.0
+OI00000942,ORD0000481,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00000943,ORD0000481,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000944,ORD0000481,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000945,ORD0000482,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000946,ORD0000483,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000947,ORD0000483,P003,Nivea Shampoo,Beauty,Haircare,Nivea,2,201.0,402.0
+OI00000948,ORD0000483,P012,Nivea Foundation,Beauty,Makeup,Nivea,2,2237.0,4474.0
+OI00000949,ORD0000484,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000950,ORD0000484,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00000951,ORD0000485,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,1,474.0,474.0
+OI00000952,ORD0000486,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00000953,ORD0000486,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,2,1471.0,2942.0
+OI00000954,ORD0000486,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00000955,ORD0000487,P157,H&M White Polyester T-Shirt,Clothing,T-Shirts,H&M,1,801.0,801.0
+OI00000956,ORD0000488,P088,Zara Red Denim Jeans,Clothing,Jeans,Zara,1,3394.0,3394.0
+OI00000957,ORD0000489,P086,Boat Power Bank,Electronics,Accessories,Boat,1,732.0,732.0
+OI00000958,ORD0000490,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00000959,ORD0000490,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00000960,ORD0000491,P062,H&M Green Polyester Jacket,Clothing,Jackets,H&M,1,6565.0,6565.0
+OI00000961,ORD0000491,P166,H&M Black Cotton Jacket,Clothing,Jackets,H&M,1,4254.0,4254.0
+OI00000962,ORD0000492,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000963,ORD0000493,P175,Zara White Denim Jeans,Clothing,Jeans,Zara,1,2117.0,2117.0
+OI00000964,ORD0000493,P111,Zara Blue Cotton Jacket,Clothing,Jackets,Zara,1,4201.0,4201.0
+OI00000965,ORD0000493,P182,Zara Blue Cotton Shirt,Clothing,Shirts,Zara,1,1991.0,1991.0
+OI00000966,ORD0000494,P107,Zara Black Polyester T-Shirt,Clothing,T-Shirts,Zara,1,616.0,616.0
+OI00000967,ORD0000495,P164,UrbanCo Metal Sofa Medium,Home,Furniture,UrbanCo,1,15712.0,15712.0
+OI00000968,ORD0000496,P157,H&M White Polyester T-Shirt,Clothing,T-Shirts,H&M,1,801.0,801.0
+OI00000969,ORD0000496,P057,H&M Blue Denim Jeans,Clothing,Jeans,H&M,1,1555.0,1555.0
+OI00000970,ORD0000497,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00000971,ORD0000497,P191,H&M White Cotton Shirt,Clothing,Shirts,H&M,1,983.0,983.0
+OI00000972,ORD0000497,P044,H&M White Denim Jacket,Clothing,Jackets,H&M,1,5683.0,5683.0
+OI00000973,ORD0000498,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00000974,ORD0000498,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000975,ORD0000498,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00000976,ORD0000499,P136,Zara Red Cotton Shirt,Clothing,Shirts,Zara,1,1369.0,1369.0
+OI00000977,ORD0000500,P067,Boat Wireless Earbuds,Electronics,Headphones,Boat,1,2941.0,2941.0
+OI00000978,ORD0000501,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00000979,ORD0000501,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00000980,ORD0000502,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00000981,ORD0000503,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000982,ORD0000503,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00000983,ORD0000503,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000984,ORD0000504,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00000985,ORD0000505,P114,JBL Wireless Earbuds,Electronics,Headphones,JBL,1,2898.0,2898.0
+OI00000986,ORD0000505,P168,Dell Aspire Air 16GB RAM 1TB SSD,Electronics,Laptop,Dell,1,91247.0,91247.0
+OI00000987,ORD0000505,P154,OnePlus Nord 3 128GB Blue,Electronics,Smartphone,OnePlus,1,31820.0,31820.0
+OI00000988,ORD0000506,P001,Samsung Charger,Electronics,Accessories,Samsung,1,1356.0,1356.0
+OI00000989,ORD0000506,P113,HP Pavilion 32GB RAM 1TB SSD,Electronics,Laptop,HP,1,58935.0,58935.0
+OI00000990,ORD0000506,P089,Apple Macbook Air 16GB RAM 256GB SSD,Electronics,Laptop,Apple,1,88750.0,88750.0
+OI00000991,ORD0000507,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00000992,ORD0000507,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00000993,ORD0000507,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00000994,ORD0000508,P136,Zara Red Cotton Shirt,Clothing,Shirts,Zara,1,1369.0,1369.0
+OI00000995,ORD0000508,P082,H&M Green Denim Jacket,Clothing,Jackets,H&M,1,3964.0,3964.0
+OI00000996,ORD0000508,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,1,2086.0,2086.0
+OI00000997,ORD0000509,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00000998,ORD0000510,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00000999,ORD0000510,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00001000,ORD0000510,P050,H&M Green Cotton Jeans,Clothing,Jeans,H&M,2,2713.0,5426.0
+OI00001001,ORD0000511,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,1,474.0,474.0
+OI00001002,ORD0000511,P095,H&M Black Denim Jeans,Clothing,Jeans,H&M,1,3649.0,3649.0
+OI00001003,ORD0000512,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001004,ORD0000512,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001005,ORD0000513,P161,Apple Air 32GB RAM 512GB SSD,Electronics,Laptop,Apple,1,83250.0,83250.0
+OI00001006,ORD0000514,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001007,ORD0000515,P018,UrbanCo Metal Dining Table Large,Home,Furniture,UrbanCo,1,24543.0,24543.0
+OI00001008,ORD0000516,P085,UrbanCo Plastic Dining Table Large,Home,Furniture,UrbanCo,1,12303.0,12303.0
+OI00001009,ORD0000517,P008,Sony Bluetooth Headphones,Electronics,Headphones,Sony,1,2561.0,2561.0
+OI00001010,ORD0000517,P047,Dell XPS 32GB RAM 1TB SSD,Electronics,Laptop,Dell,1,119906.0,119906.0
+OI00001011,ORD0000517,P102,Samsung Galaxy S21 256GB Blue,Electronics,Smartphone,Samsung,1,78241.0,78241.0
+OI00001012,ORD0000518,P120,Zara Black Polyester Jacket,Clothing,Jackets,Zara,1,6542.0,6542.0
+OI00001013,ORD0000519,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,1,2086.0,2086.0
+OI00001014,ORD0000519,P191,H&M White Cotton Shirt,Clothing,Shirts,H&M,1,983.0,983.0
+OI00001015,ORD0000519,P027,Zara Black Cotton Shirt,Clothing,Shirts,Zara,2,836.0,1672.0
+OI00001016,ORD0000520,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00001017,ORD0000521,P138,Apple Plus 11 256GB Green,Electronics,Smartphone,Apple,1,69730.0,69730.0
+OI00001018,ORD0000522,P050,H&M Green Cotton Jeans,Clothing,Jeans,H&M,1,2713.0,2713.0
+OI00001019,ORD0000522,P111,Zara Blue Cotton Jacket,Clothing,Jackets,Zara,1,4201.0,4201.0
+OI00001020,ORD0000522,P093,Zara Green Polyester Jeans,Clothing,Jeans,Zara,1,1066.0,1066.0
+OI00001021,ORD0000523,P033,UrbanCo Plastic Dining Table Small,Home,Furniture,UrbanCo,1,7598.0,7598.0
+OI00001022,ORD0000524,P162,Zara Black Denim Jeans,Clothing,Jeans,Zara,1,3231.0,3231.0
+OI00001023,ORD0000525,P124,H&M Red Cotton Jacket,Clothing,Jackets,H&M,1,4779.0,4779.0
+OI00001024,ORD0000525,P172,H&M Green Polyester Shirt,Clothing,Shirts,H&M,1,2109.0,2109.0
+OI00001025,ORD0000526,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001026,ORD0000526,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001027,ORD0000527,P114,JBL Wireless Earbuds,Electronics,Headphones,JBL,1,2898.0,2898.0
+OI00001028,ORD0000528,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00001029,ORD0000529,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00001030,ORD0000530,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00001031,ORD0000530,P132,Adidas Running Shoes Size 7,Sports,Shoes,Adidas,1,3001.0,3001.0
+OI00001032,ORD0000531,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001033,ORD0000531,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001034,ORD0000532,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00001035,ORD0000532,P087,OnePlus 11 Pro Max 256GB Red,Electronics,Smartphone,OnePlus,1,35870.0,35870.0
+OI00001036,ORD0000533,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001037,ORD0000533,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,2,1859.0,3718.0
+OI00001038,ORD0000534,P043,JBL Bluetooth Headphones,Electronics,Headphones,JBL,1,1296.0,1296.0
+OI00001039,ORD0000534,P113,HP Pavilion 32GB RAM 1TB SSD,Electronics,Laptop,HP,1,58935.0,58935.0
+OI00001040,ORD0000534,P089,Apple Macbook Air 16GB RAM 256GB SSD,Electronics,Laptop,Apple,1,88750.0,88750.0
+OI00001041,ORD0000535,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001042,ORD0000536,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00001043,ORD0000536,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00001044,ORD0000537,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00001045,ORD0000537,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00001046,ORD0000537,P164,UrbanCo Metal Sofa Medium,Home,Furniture,UrbanCo,1,15712.0,15712.0
+OI00001047,ORD0000538,P117,Nike Running Shoes Size 10,Sports,Shoes,Nike,1,5153.0,5153.0
+OI00001048,ORD0000538,P053,Puma Dumbbells,Sports,Equipment,Puma,1,14598.0,14598.0
+OI00001049,ORD0000539,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001050,ORD0000539,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001051,ORD0000539,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001052,ORD0000540,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00001053,ORD0000540,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00001054,ORD0000540,P115,Nike Sports T-Shirt,Sports,Activewear,Nike,1,2606.0,2606.0
+OI00001055,ORD0000541,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,1,2943.0,2943.0
+OI00001056,ORD0000541,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00001057,ORD0000542,P188,Adidas Sneakers Size 8,Sports,Shoes,Adidas,1,7253.0,7253.0
+OI00001058,ORD0000543,P139,UrbanCo Wooden Chair Large,Home,Furniture,UrbanCo,1,8748.0,8748.0
+OI00001059,ORD0000544,P073,Zara Black Denim Shirt,Clothing,Shirts,Zara,2,663.0,1326.0
+OI00001060,ORD0000544,P173,Zara Green Denim T-Shirt,Clothing,T-Shirts,Zara,1,473.0,473.0
+OI00001061,ORD0000545,P150,Adidas Track Pants,Sports,Activewear,Adidas,1,2331.0,2331.0
+OI00001062,ORD0000546,P022,H&M Red Cotton Shirt,Clothing,Shirts,H&M,1,2473.0,2473.0
+OI00001063,ORD0000546,P196,Zara White Denim Jacket,Clothing,Jackets,Zara,1,4542.0,4542.0
+OI00001064,ORD0000546,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00001065,ORD0000547,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001066,ORD0000547,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001067,ORD0000547,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001068,ORD0000548,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001069,ORD0000548,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001070,ORD0000549,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001071,ORD0000550,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001072,ORD0000550,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001073,ORD0000550,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001074,ORD0000551,P027,Zara Black Cotton Shirt,Clothing,Shirts,Zara,1,836.0,836.0
+OI00001075,ORD0000551,P124,H&M Red Cotton Jacket,Clothing,Jackets,H&M,1,4779.0,4779.0
+OI00001076,ORD0000551,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00001077,ORD0000552,P073,Zara Black Denim Shirt,Clothing,Shirts,Zara,1,663.0,663.0
+OI00001078,ORD0000552,P180,Zara White Denim T-Shirt,Clothing,T-Shirts,Zara,1,1446.0,1446.0
+OI00001079,ORD0000553,P165,UrbanCo Metal Sofa Large,Home,Furniture,UrbanCo,1,6328.0,6328.0
+OI00001080,ORD0000554,P153,UrbanCo Wooden Sofa Large,Home,Furniture,UrbanCo,1,11898.0,11898.0
+OI00001081,ORD0000555,P029,Adidas Running Shoes Size 8,Sports,Shoes,Adidas,1,2068.0,2068.0
+OI00001082,ORD0000556,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,2,1646.0,3292.0
+OI00001083,ORD0000556,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,1,2943.0,2943.0
+OI00001084,ORD0000557,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00001085,ORD0000557,P107,Zara Black Polyester T-Shirt,Clothing,T-Shirts,Zara,1,616.0,616.0
+OI00001086,ORD0000557,P078,Zara Red Polyester Jeans,Clothing,Jeans,Zara,1,2265.0,2265.0
+OI00001087,ORD0000558,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00001088,ORD0000558,P033,UrbanCo Plastic Dining Table Small,Home,Furniture,UrbanCo,1,7598.0,7598.0
+OI00001089,ORD0000559,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001090,ORD0000560,P165,UrbanCo Metal Sofa Large,Home,Furniture,UrbanCo,1,6328.0,6328.0
+OI00001091,ORD0000561,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00001092,ORD0000561,P172,H&M Green Polyester Shirt,Clothing,Shirts,H&M,1,2109.0,2109.0
+OI00001093,ORD0000562,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00001094,ORD0000562,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00001095,ORD0000562,P123,UrbanCo Wooden Dining Table Small,Home,Furniture,UrbanCo,1,26420.0,26420.0
+OI00001096,ORD0000563,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001097,ORD0000563,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001098,ORD0000564,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001099,ORD0000564,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,2,1751.0,3502.0
+OI00001100,ORD0000564,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001101,ORD0000565,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00001102,ORD0000565,P196,Zara White Denim Jacket,Clothing,Jackets,Zara,1,4542.0,4542.0
+OI00001103,ORD0000565,P200,H&M Blue Denim Shirt,Clothing,Shirts,H&M,1,519.0,519.0
+OI00001104,ORD0000566,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001105,ORD0000567,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00001106,ORD0000567,P118,H&M Black Denim Shirt,Clothing,Shirts,H&M,1,2807.0,2807.0
+OI00001107,ORD0000567,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,2,2086.0,4172.0
+OI00001108,ORD0000568,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001109,ORD0000568,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001110,ORD0000569,P141,Samsung i13 64GB Red,Electronics,Smartphone,Samsung,1,57174.0,57174.0
+OI00001111,ORD0000570,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00001112,ORD0000570,P132,Adidas Running Shoes Size 7,Sports,Shoes,Adidas,1,3001.0,3001.0
+OI00001113,ORD0000571,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001114,ORD0000571,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001115,ORD0000571,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001116,ORD0000572,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001117,ORD0000572,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,2,1751.0,3502.0
+OI00001118,ORD0000572,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001119,ORD0000573,P153,UrbanCo Wooden Sofa Large,Home,Furniture,UrbanCo,1,11898.0,11898.0
+OI00001120,ORD0000573,P142,UrbanCo Plastic Sofa Medium,Home,Furniture,UrbanCo,1,10982.0,10982.0
+OI00001121,ORD0000573,P127,UrbanCo Metal Chair Medium,Home,Furniture,UrbanCo,1,21994.0,21994.0
+OI00001122,ORD0000574,P142,UrbanCo Plastic Sofa Medium,Home,Furniture,UrbanCo,1,10982.0,10982.0
+OI00001123,ORD0000574,P165,UrbanCo Metal Sofa Large,Home,Furniture,UrbanCo,1,6328.0,6328.0
+OI00001124,ORD0000575,P126,UrbanCo Wooden Sofa Medium,Home,Furniture,UrbanCo,1,5133.0,5133.0
+OI00001125,ORD0000575,P011,UrbanCo Wooden Sofa Small,Home,Furniture,UrbanCo,1,26505.0,26505.0
+OI00001126,ORD0000576,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00001127,ORD0000576,P118,H&M Black Denim Shirt,Clothing,Shirts,H&M,1,2807.0,2807.0
+OI00001128,ORD0000576,P172,H&M Green Polyester Shirt,Clothing,Shirts,H&M,1,2109.0,2109.0
+OI00001129,ORD0000577,P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,H&M,2,1070.0,2140.0
+OI00001130,ORD0000577,P057,H&M Blue Denim Jeans,Clothing,Jeans,H&M,1,1555.0,1555.0
+OI00001131,ORD0000578,P166,H&M Black Cotton Jacket,Clothing,Jackets,H&M,1,4254.0,4254.0
+OI00001132,ORD0000578,P064,Zara White Denim Shirt,Clothing,Shirts,Zara,1,2244.0,2244.0
+OI00001133,ORD0000579,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00001134,ORD0000579,P159,Puma Sneakers Size 10,Sports,Shoes,Puma,1,4766.0,4766.0
+OI00001135,ORD0000580,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001136,ORD0000580,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001137,ORD0000580,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001138,ORD0000581,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001139,ORD0000581,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001140,ORD0000581,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,2,1751.0,3502.0
+OI00001141,ORD0000582,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00001142,ORD0000583,P032,Samsung Galaxy S21 256GB Red,Electronics,Smartphone,Samsung,1,74099.0,74099.0
+OI00001143,ORD0000584,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00001144,ORD0000585,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,2,877.0,1754.0
+OI00001145,ORD0000585,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001146,ORD0000586,P095,H&M Black Denim Jeans,Clothing,Jeans,H&M,1,3649.0,3649.0
+OI00001147,ORD0000586,P137,H&M Red Denim T-Shirt,Clothing,T-Shirts,H&M,2,1174.0,2348.0
+OI00001148,ORD0000587,P001,Samsung Charger,Electronics,Accessories,Samsung,1,1356.0,1356.0
+OI00001149,ORD0000587,P138,Apple Plus 11 256GB Green,Electronics,Smartphone,Apple,1,69730.0,69730.0
+OI00001150,ORD0000588,P027,Zara Black Cotton Shirt,Clothing,Shirts,Zara,1,836.0,836.0
+OI00001151,ORD0000588,P073,Zara Black Denim Shirt,Clothing,Shirts,Zara,1,663.0,663.0
+OI00001152,ORD0000589,P070,H&M Black Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1277.0,1277.0
+OI00001153,ORD0000589,P101,H&M Blue Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1453.0,1453.0
+OI00001154,ORD0000590,P173,Zara Green Denim T-Shirt,Clothing,T-Shirts,Zara,1,473.0,473.0
+OI00001155,ORD0000591,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00001156,ORD0000591,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00001157,ORD0000592,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00001158,ORD0000592,P008,Sony Bluetooth Headphones,Electronics,Headphones,Sony,1,2561.0,2561.0
+OI00001159,ORD0000593,P086,Boat Power Bank,Electronics,Accessories,Boat,1,732.0,732.0
+OI00001160,ORD0000593,P072,OnePlus Nord CE3 256GB Blue,Electronics,Smartphone,OnePlus,1,44563.0,44563.0
+OI00001161,ORD0000594,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00001162,ORD0000595,P165,UrbanCo Metal Sofa Large,Home,Furniture,UrbanCo,1,6328.0,6328.0
+OI00001163,ORD0000596,P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,H&M,1,1070.0,1070.0
+OI00001164,ORD0000597,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00001165,ORD0000597,P024,UrbanCo Metal Chair Small,Home,Furniture,UrbanCo,1,25406.0,25406.0
+OI00001166,ORD0000597,P099,UrbanCo Wooden Dining Table Medium,Home,Furniture,UrbanCo,1,15212.0,15212.0
+OI00001167,ORD0000598,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001168,ORD0000599,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00001169,ORD0000599,P046,Nike Running Shoes Size 8,Sports,Shoes,Nike,1,5354.0,5354.0
+OI00001170,ORD0000600,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00001171,ORD0000600,P115,Nike Sports T-Shirt,Sports,Activewear,Nike,1,2606.0,2606.0
+OI00001172,ORD0000600,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00001173,ORD0000601,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00001174,ORD0000602,P195,H&M Green Denim Jeans,Clothing,Jeans,H&M,1,1812.0,1812.0
+OI00001175,ORD0000602,P041,H&M Green Cotton Jacket,Clothing,Jackets,H&M,1,7336.0,7336.0
+OI00001176,ORD0000602,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00001177,ORD0000603,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00001178,ORD0000604,P134,Dell H Pavilion 16GB RAM 256GB SSD,Electronics,Laptop,Dell,1,87510.0,87510.0
+OI00001179,ORD0000605,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00001180,ORD0000605,P150,Adidas Track Pants,Sports,Activewear,Adidas,1,2331.0,2331.0
+OI00001181,ORD0000606,P120,Zara Black Polyester Jacket,Clothing,Jackets,Zara,1,6542.0,6542.0
+OI00001182,ORD0000607,P040,Samsung Power Bank,Electronics,Accessories,Samsung,1,2575.0,2575.0
+OI00001183,ORD0000608,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,2,877.0,1754.0
+OI00001184,ORD0000608,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001185,ORD0000609,P200,H&M Blue Denim Shirt,Clothing,Shirts,H&M,1,519.0,519.0
+OI00001186,ORD0000609,P189,H&M Red Polyester Shirt,Clothing,Shirts,H&M,1,2483.0,2483.0
+OI00001187,ORD0000610,P043,JBL Bluetooth Headphones,Electronics,Headphones,JBL,1,1296.0,1296.0
+OI00001188,ORD0000610,P042,Dell ion 32GB RAM 512GB SSD,Electronics,Laptop,Dell,1,44211.0,44211.0
+OI00001189,ORD0000611,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001190,ORD0000611,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001191,ORD0000611,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001192,ORD0000612,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001193,ORD0000612,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001194,ORD0000612,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001195,ORD0000613,P192,Zara Black Cotton Jacket,Clothing,Jackets,Zara,1,2258.0,2258.0
+OI00001196,ORD0000613,P149,Zara Blue Denim Jacket,Clothing,Jackets,Zara,1,7491.0,7491.0
+OI00001197,ORD0000614,P027,Zara Black Cotton Shirt,Clothing,Shirts,Zara,2,836.0,1672.0
+OI00001198,ORD0000614,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00001199,ORD0000615,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00001200,ORD0000616,P144,UrbanCo Plastic Chair Small,Home,Furniture,UrbanCo,1,6908.0,6908.0
+OI00001201,ORD0000617,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00001202,ORD0000617,P029,Adidas Running Shoes Size 8,Sports,Shoes,Adidas,1,2068.0,2068.0
+OI00001203,ORD0000617,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00001204,ORD0000618,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00001205,ORD0000619,P043,JBL Bluetooth Headphones,Electronics,Headphones,JBL,1,1296.0,1296.0
+OI00001206,ORD0000620,P133,H&M Green Polyester Jeans,Clothing,Jeans,H&M,1,1292.0,1292.0
+OI00001207,ORD0000620,P095,H&M Black Denim Jeans,Clothing,Jeans,H&M,1,3649.0,3649.0
+OI00001208,ORD0000621,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001209,ORD0000622,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00001210,ORD0000623,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00001211,ORD0000623,P137,H&M Red Denim T-Shirt,Clothing,T-Shirts,H&M,2,1174.0,2348.0
+OI00001212,ORD0000624,P142,UrbanCo Plastic Sofa Medium,Home,Furniture,UrbanCo,1,10982.0,10982.0
+OI00001213,ORD0000624,P018,UrbanCo Metal Dining Table Large,Home,Furniture,UrbanCo,1,24543.0,24543.0
+OI00001214,ORD0000624,P144,UrbanCo Plastic Chair Small,Home,Furniture,UrbanCo,1,6908.0,6908.0
+OI00001215,ORD0000625,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001216,ORD0000625,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001217,ORD0000626,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001218,ORD0000626,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001219,ORD0000626,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001220,ORD0000627,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00001221,ORD0000627,P033,UrbanCo Plastic Dining Table Small,Home,Furniture,UrbanCo,1,7598.0,7598.0
+OI00001222,ORD0000628,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00001223,ORD0000629,P085,UrbanCo Plastic Dining Table Large,Home,Furniture,UrbanCo,1,12303.0,12303.0
+OI00001224,ORD0000630,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00001225,ORD0000631,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001226,ORD0000631,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001227,ORD0000632,P101,H&M Blue Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1453.0,1453.0
+OI00001228,ORD0000633,P009,Nivea Lipstick,Beauty,Makeup,Nivea,2,2838.0,5676.0
+OI00001229,ORD0000633,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001230,ORD0000633,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001231,ORD0000634,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00001232,ORD0000635,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001233,ORD0000635,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001234,ORD0000635,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001235,ORD0000636,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00001236,ORD0000636,P110,H&M White Polyester Shirt,Clothing,Shirts,H&M,1,1438.0,1438.0
+OI00001237,ORD0000636,P172,H&M Green Polyester Shirt,Clothing,Shirts,H&M,1,2109.0,2109.0
+OI00001238,ORD0000637,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001239,ORD0000637,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001240,ORD0000637,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001241,ORD0000638,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001242,ORD0000638,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001243,ORD0000639,P136,Zara Red Cotton Shirt,Clothing,Shirts,Zara,1,1369.0,1369.0
+OI00001244,ORD0000639,P044,H&M White Denim Jacket,Clothing,Jackets,H&M,1,5683.0,5683.0
+OI00001245,ORD0000639,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,1,474.0,474.0
+OI00001246,ORD0000640,P053,Puma Dumbbells,Sports,Equipment,Puma,1,14598.0,14598.0
+OI00001247,ORD0000641,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001248,ORD0000641,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001249,ORD0000641,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001250,ORD0000642,P043,JBL Bluetooth Headphones,Electronics,Headphones,JBL,1,1296.0,1296.0
+OI00001251,ORD0000642,P176,Apple Mac Air 16GB RAM 256GB SSD,Electronics,Laptop,Apple,1,71910.0,71910.0
+OI00001252,ORD0000642,P080,Boat Phone Case,Electronics,Accessories,Boat,1,1006.0,1006.0
+OI00001253,ORD0000643,P134,Dell H Pavilion 16GB RAM 256GB SSD,Electronics,Laptop,Dell,1,87510.0,87510.0
+OI00001254,ORD0000643,P143,OnePlus G1 256GB Red,Electronics,Smartphone,OnePlus,1,15113.0,15113.0
+OI00001255,ORD0000644,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001256,ORD0000644,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001257,ORD0000644,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001258,ORD0000645,P112,HP Pavilion 32GB RAM 256GB SSD,Electronics,Laptop,HP,1,45580.0,45580.0
+OI00001259,ORD0000645,P105,Dell Pavilion 8GB RAM 256GB SSD,Electronics,Laptop,Dell,1,85616.0,85616.0
+OI00001260,ORD0000646,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001261,ORD0000646,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001262,ORD0000647,P165,UrbanCo Metal Sofa Large,Home,Furniture,UrbanCo,1,6328.0,6328.0
+OI00001263,ORD0000647,P178,UrbanCo Metal Sofa Small,Home,Furniture,UrbanCo,1,20907.0,20907.0
+OI00001264,ORD0000648,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,2,370.0,740.0
+OI00001265,ORD0000648,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00001266,ORD0000649,P079,Boat Charger,Electronics,Accessories,Boat,1,379.0,379.0
+OI00001267,ORD0000649,P096,Apple H 32GB RAM 512GB SSD,Electronics,Laptop,Apple,1,70859.0,70859.0
+OI00001268,ORD0000650,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001269,ORD0000650,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001270,ORD0000651,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00001271,ORD0000652,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00001272,ORD0000652,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00001273,ORD0000652,P093,Zara Green Polyester Jeans,Clothing,Jeans,Zara,1,1066.0,1066.0
+OI00001274,ORD0000653,P019,H&M Green Denim T-Shirt,Clothing,T-Shirts,H&M,1,934.0,934.0
+OI00001275,ORD0000653,P149,Zara Blue Denim Jacket,Clothing,Jackets,Zara,1,7491.0,7491.0
+OI00001276,ORD0000654,P064,Zara White Denim Shirt,Clothing,Shirts,Zara,1,2244.0,2244.0
+OI00001277,ORD0000654,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00001278,ORD0000654,P175,Zara White Denim Jeans,Clothing,Jeans,Zara,1,2117.0,2117.0
+OI00001279,ORD0000655,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00001280,ORD0000655,P058,Puma Running Shoes Size 8,Sports,Shoes,Puma,1,7047.0,7047.0
+OI00001281,ORD0000656,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00001282,ORD0000657,P010,Samsung Phone Case,Electronics,Accessories,Samsung,1,1711.0,1711.0
+OI00001283,ORD0000657,P049,Dell XPS 16GB RAM 512GB SSD,Electronics,Laptop,Dell,1,36316.0,36316.0
+OI00001284,ORD0000657,P089,Apple Macbook Air 16GB RAM 256GB SSD,Electronics,Laptop,Apple,1,88750.0,88750.0
+OI00001285,ORD0000658,P172,H&M Green Polyester Shirt,Clothing,Shirts,H&M,1,2109.0,2109.0
+OI00001286,ORD0000658,P078,Zara Red Polyester Jeans,Clothing,Jeans,Zara,1,2265.0,2265.0
+OI00001287,ORD0000659,P173,Zara Green Denim T-Shirt,Clothing,T-Shirts,Zara,1,473.0,473.0
+OI00001288,ORD0000659,P200,H&M Blue Denim Shirt,Clothing,Shirts,H&M,1,519.0,519.0
+OI00001289,ORD0000660,P033,UrbanCo Plastic Dining Table Small,Home,Furniture,UrbanCo,1,7598.0,7598.0
+OI00001290,ORD0000660,P011,UrbanCo Wooden Sofa Small,Home,Furniture,UrbanCo,1,26505.0,26505.0
+OI00001291,ORD0000661,P145,UrbanCo Metal Dining Table Medium,Home,Furniture,UrbanCo,1,26201.0,26201.0
+OI00001292,ORD0000661,P127,UrbanCo Metal Chair Medium,Home,Furniture,UrbanCo,1,21994.0,21994.0
+OI00001293,ORD0000662,P191,H&M White Cotton Shirt,Clothing,Shirts,H&M,1,983.0,983.0
+OI00001294,ORD0000662,P196,Zara White Denim Jacket,Clothing,Jackets,Zara,1,4542.0,4542.0
+OI00001295,ORD0000663,P110,H&M White Polyester Shirt,Clothing,Shirts,H&M,1,1438.0,1438.0
+OI00001296,ORD0000663,P111,Zara Blue Cotton Jacket,Clothing,Jackets,Zara,2,4201.0,8402.0
+OI00001297,ORD0000663,P084,H&M White Polyester Jeans,Clothing,Jeans,H&M,1,2041.0,2041.0
+OI00001298,ORD0000664,P198,Zara Black Polyester Jeans,Clothing,Jeans,Zara,1,2065.0,2065.0
+OI00001299,ORD0000664,P173,Zara Green Denim T-Shirt,Clothing,T-Shirts,Zara,1,473.0,473.0
+OI00001300,ORD0000664,P129,H&M Black Denim Jacket,Clothing,Jackets,H&M,1,4451.0,4451.0
+OI00001301,ORD0000665,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001302,ORD0000665,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001303,ORD0000666,P078,Zara Red Polyester Jeans,Clothing,Jeans,Zara,1,2265.0,2265.0
+OI00001304,ORD0000666,P195,H&M Green Denim Jeans,Clothing,Jeans,H&M,1,1812.0,1812.0
+OI00001305,ORD0000667,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00001306,ORD0000667,P109,UrbanCo Plastic Chair Large,Home,Furniture,UrbanCo,1,29504.0,29504.0
+OI00001307,ORD0000668,P042,Dell ion 32GB RAM 512GB SSD,Electronics,Laptop,Dell,1,44211.0,44211.0
+OI00001308,ORD0000668,P072,OnePlus Nord CE3 256GB Blue,Electronics,Smartphone,OnePlus,1,44563.0,44563.0
+OI00001309,ORD0000669,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,1,2943.0,2943.0
+OI00001310,ORD0000670,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00001311,ORD0000670,P124,H&M Red Cotton Jacket,Clothing,Jackets,H&M,1,4779.0,4779.0
+OI00001312,ORD0000670,P172,H&M Green Polyester Shirt,Clothing,Shirts,H&M,1,2109.0,2109.0
+OI00001313,ORD0000671,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001314,ORD0000671,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001315,ORD0000671,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001316,ORD0000672,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00001317,ORD0000672,P015,Nike Dumbbells,Sports,Equipment,Nike,1,4660.0,4660.0
+OI00001318,ORD0000673,P195,H&M Green Denim Jeans,Clothing,Jeans,H&M,1,1812.0,1812.0
+OI00001319,ORD0000674,P010,Samsung Phone Case,Electronics,Accessories,Samsung,1,1711.0,1711.0
+OI00001320,ORD0000675,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,2,914.0,1828.0
+OI00001321,ORD0000675,P019,H&M Green Denim T-Shirt,Clothing,T-Shirts,H&M,1,934.0,934.0
+OI00001322,ORD0000676,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00001323,ORD0000676,P139,UrbanCo Wooden Chair Large,Home,Furniture,UrbanCo,1,8748.0,8748.0
+OI00001324,ORD0000677,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00001325,ORD0000678,P189,H&M Red Polyester Shirt,Clothing,Shirts,H&M,1,2483.0,2483.0
+OI00001326,ORD0000678,P172,H&M Green Polyester Shirt,Clothing,Shirts,H&M,1,2109.0,2109.0
+OI00001327,ORD0000678,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00001328,ORD0000679,P132,Adidas Running Shoes Size 7,Sports,Shoes,Adidas,1,3001.0,3001.0
+OI00001329,ORD0000680,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,1,474.0,474.0
+OI00001330,ORD0000681,P085,UrbanCo Plastic Dining Table Large,Home,Furniture,UrbanCo,1,12303.0,12303.0
+OI00001331,ORD0000682,P101,H&M Blue Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1453.0,1453.0
+OI00001332,ORD0000682,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00001333,ORD0000682,P111,Zara Blue Cotton Jacket,Clothing,Jackets,Zara,1,4201.0,4201.0
+OI00001334,ORD0000683,P192,Zara Black Cotton Jacket,Clothing,Jackets,Zara,1,2258.0,2258.0
+OI00001335,ORD0000683,P110,H&M White Polyester Shirt,Clothing,Shirts,H&M,1,1438.0,1438.0
+OI00001336,ORD0000684,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001337,ORD0000684,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001338,ORD0000685,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001339,ORD0000685,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001340,ORD0000685,P034,Lakme Lipstick,Beauty,Makeup,Lakme,2,325.0,650.0
+OI00001341,ORD0000686,P095,H&M Black Denim Jeans,Clothing,Jeans,H&M,2,3649.0,7298.0
+OI00001342,ORD0000686,P175,Zara White Denim Jeans,Clothing,Jeans,Zara,1,2117.0,2117.0
+OI00001343,ORD0000686,P073,Zara Black Denim Shirt,Clothing,Shirts,Zara,1,663.0,663.0
+OI00001344,ORD0000687,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00001345,ORD0000688,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00001346,ORD0000689,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00001347,ORD0000690,P011,UrbanCo Wooden Sofa Small,Home,Furniture,UrbanCo,1,26505.0,26505.0
+OI00001348,ORD0000691,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,1,2943.0,2943.0
+OI00001349,ORD0000692,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,1,2086.0,2086.0
+OI00001350,ORD0000692,P064,Zara White Denim Shirt,Clothing,Shirts,Zara,1,2244.0,2244.0
+OI00001351,ORD0000693,P067,Boat Wireless Earbuds,Electronics,Headphones,Boat,1,2941.0,2941.0
+OI00001352,ORD0000693,P131,Samsung Galaxy S21 64GB Red,Electronics,Smartphone,Samsung,1,21334.0,21334.0
+OI00001353,ORD0000694,P191,H&M White Cotton Shirt,Clothing,Shirts,H&M,1,983.0,983.0
+OI00001354,ORD0000695,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,1,6273.0,6273.0
+OI00001355,ORD0000695,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00001356,ORD0000696,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001357,ORD0000696,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,2,1751.0,3502.0
+OI00001358,ORD0000697,P034,Lakme Lipstick,Beauty,Makeup,Lakme,2,325.0,650.0
+OI00001359,ORD0000697,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001360,ORD0000698,P017,Lakme Face Wash,Beauty,Skincare,Lakme,2,1574.0,3148.0
+OI00001361,ORD0000698,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001362,ORD0000699,P080,Boat Phone Case,Electronics,Accessories,Boat,1,1006.0,1006.0
+OI00001363,ORD0000699,P032,Samsung Galaxy S21 256GB Red,Electronics,Smartphone,Samsung,1,74099.0,74099.0
+OI00001364,ORD0000699,P130,Apple G21 128GB Black,Electronics,Smartphone,Apple,1,67400.0,67400.0
+OI00001365,ORD0000700,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00001366,ORD0000701,P175,Zara White Denim Jeans,Clothing,Jeans,Zara,1,2117.0,2117.0
+OI00001367,ORD0000701,P082,H&M Green Denim Jacket,Clothing,Jackets,H&M,1,3964.0,3964.0
+OI00001368,ORD0000701,P062,H&M Green Polyester Jacket,Clothing,Jackets,H&M,1,6565.0,6565.0
+OI00001369,ORD0000702,P107,Zara Black Polyester T-Shirt,Clothing,T-Shirts,Zara,1,616.0,616.0
+OI00001370,ORD0000703,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00001371,ORD0000703,P046,Nike Running Shoes Size 8,Sports,Shoes,Nike,1,5354.0,5354.0
+OI00001372,ORD0000704,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001373,ORD0000704,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001374,ORD0000705,P058,Puma Running Shoes Size 8,Sports,Shoes,Puma,1,7047.0,7047.0
+OI00001375,ORD0000705,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00001376,ORD0000705,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00001377,ORD0000706,P044,H&M White Denim Jacket,Clothing,Jackets,H&M,2,5683.0,11366.0
+OI00001378,ORD0000706,P189,H&M Red Polyester Shirt,Clothing,Shirts,H&M,1,2483.0,2483.0
+OI00001379,ORD0000706,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00001380,ORD0000707,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001381,ORD0000707,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001382,ORD0000708,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00001383,ORD0000709,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,2,1859.0,3718.0
+OI00001384,ORD0000709,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001385,ORD0000709,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001386,ORD0000710,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001387,ORD0000711,P192,Zara Black Cotton Jacket,Clothing,Jackets,Zara,1,2258.0,2258.0
+OI00001388,ORD0000711,P078,Zara Red Polyester Jeans,Clothing,Jeans,Zara,1,2265.0,2265.0
+OI00001389,ORD0000711,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00001390,ORD0000712,P010,Samsung Phone Case,Electronics,Accessories,Samsung,1,1711.0,1711.0
+OI00001391,ORD0000712,P138,Apple Plus 11 256GB Green,Electronics,Smartphone,Apple,1,69730.0,69730.0
+OI00001392,ORD0000713,P175,Zara White Denim Jeans,Clothing,Jeans,Zara,1,2117.0,2117.0
+OI00001393,ORD0000713,P051,Zara Red Polyester T-Shirt,Clothing,T-Shirts,Zara,1,349.0,349.0
+OI00001394,ORD0000713,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,1,2943.0,2943.0
+OI00001395,ORD0000714,P093,Zara Green Polyester Jeans,Clothing,Jeans,Zara,1,1066.0,1066.0
+OI00001396,ORD0000715,P095,H&M Black Denim Jeans,Clothing,Jeans,H&M,1,3649.0,3649.0
+OI00001397,ORD0000716,P058,Puma Running Shoes Size 8,Sports,Shoes,Puma,1,7047.0,7047.0
+OI00001398,ORD0000717,P149,Zara Blue Denim Jacket,Clothing,Jackets,Zara,1,7491.0,7491.0
+OI00001399,ORD0000717,P194,Zara Blue Polyester Jeans,Clothing,Jeans,Zara,2,2697.0,5394.0
+OI00001400,ORD0000718,P153,UrbanCo Wooden Sofa Large,Home,Furniture,UrbanCo,1,11898.0,11898.0
+OI00001401,ORD0000718,P127,UrbanCo Metal Chair Medium,Home,Furniture,UrbanCo,1,21994.0,21994.0
+OI00001402,ORD0000719,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00001403,ORD0000719,P011,UrbanCo Wooden Sofa Small,Home,Furniture,UrbanCo,1,26505.0,26505.0
+OI00001404,ORD0000720,P148,Adidas Sneakers Size 7,Sports,Shoes,Adidas,1,3461.0,3461.0
+OI00001405,ORD0000721,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001406,ORD0000721,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001407,ORD0000721,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001408,ORD0000722,P046,Nike Running Shoes Size 8,Sports,Shoes,Nike,1,5354.0,5354.0
+OI00001409,ORD0000723,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001410,ORD0000723,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001411,ORD0000724,P190,Zara Green Cotton Jacket,Clothing,Jackets,Zara,1,2207.0,2207.0
+OI00001412,ORD0000725,P124,H&M Red Cotton Jacket,Clothing,Jackets,H&M,1,4779.0,4779.0
+OI00001413,ORD0000725,P192,Zara Black Cotton Jacket,Clothing,Jackets,Zara,1,2258.0,2258.0
+OI00001414,ORD0000725,P041,H&M Green Cotton Jacket,Clothing,Jackets,H&M,1,7336.0,7336.0
+OI00001415,ORD0000726,P195,H&M Green Denim Jeans,Clothing,Jeans,H&M,1,1812.0,1812.0
+OI00001416,ORD0000726,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,2,474.0,948.0
+OI00001417,ORD0000726,P022,H&M Red Cotton Shirt,Clothing,Shirts,H&M,1,2473.0,2473.0
+OI00001418,ORD0000727,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001419,ORD0000727,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001420,ORD0000728,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001421,ORD0000728,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001422,ORD0000729,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00001423,ORD0000729,P180,Zara White Denim T-Shirt,Clothing,T-Shirts,Zara,2,1446.0,2892.0
+OI00001424,ORD0000730,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00001425,ORD0000730,P137,H&M Red Denim T-Shirt,Clothing,T-Shirts,H&M,1,1174.0,1174.0
+OI00001426,ORD0000730,P057,H&M Blue Denim Jeans,Clothing,Jeans,H&M,2,1555.0,3110.0
+OI00001427,ORD0000731,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,1,2086.0,2086.0
+OI00001428,ORD0000731,P196,Zara White Denim Jacket,Clothing,Jackets,Zara,1,4542.0,4542.0
+OI00001429,ORD0000732,P064,Zara White Denim Shirt,Clothing,Shirts,Zara,1,2244.0,2244.0
+OI00001430,ORD0000732,P162,Zara Black Denim Jeans,Clothing,Jeans,Zara,1,3231.0,3231.0
+OI00001431,ORD0000733,P025,Lakme Foundation,Beauty,Makeup,Lakme,2,462.0,924.0
+OI00001432,ORD0000733,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001433,ORD0000734,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001434,ORD0000734,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001435,ORD0000735,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00001436,ORD0000736,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00001437,ORD0000737,P135,HP Book Air 16GB RAM 512GB SSD,Electronics,Laptop,HP,1,39299.0,39299.0
+OI00001438,ORD0000737,P199,Apple 18 128GB White,Electronics,Smartphone,Apple,1,44113.0,44113.0
+OI00001439,ORD0000737,P112,HP Pavilion 32GB RAM 256GB SSD,Electronics,Laptop,HP,1,45580.0,45580.0
+OI00001440,ORD0000738,P175,Zara White Denim Jeans,Clothing,Jeans,Zara,1,2117.0,2117.0
+OI00001441,ORD0000738,P137,H&M Red Denim T-Shirt,Clothing,T-Shirts,H&M,1,1174.0,1174.0
+OI00001442,ORD0000739,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00001443,ORD0000739,P192,Zara Black Cotton Jacket,Clothing,Jackets,Zara,1,2258.0,2258.0
+OI00001444,ORD0000739,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00001445,ORD0000740,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00001446,ORD0000741,P079,Boat Charger,Electronics,Accessories,Boat,1,379.0,379.0
+OI00001447,ORD0000742,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00001448,ORD0000742,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00001449,ORD0000743,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00001450,ORD0000744,P101,H&M Blue Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1453.0,1453.0
+OI00001451,ORD0000744,P149,Zara Blue Denim Jacket,Clothing,Jackets,Zara,1,7491.0,7491.0
+OI00001452,ORD0000744,P194,Zara Blue Polyester Jeans,Clothing,Jeans,Zara,1,2697.0,2697.0
+OI00001453,ORD0000745,P145,UrbanCo Metal Dining Table Medium,Home,Furniture,UrbanCo,1,26201.0,26201.0
+OI00001454,ORD0000745,P116,UrbanCo Plastic Chair Medium,Home,Furniture,UrbanCo,1,20112.0,20112.0
+OI00001455,ORD0000745,P178,UrbanCo Metal Sofa Small,Home,Furniture,UrbanCo,1,20907.0,20907.0
+OI00001456,ORD0000746,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001457,ORD0000746,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001458,ORD0000747,P064,Zara White Denim Shirt,Clothing,Shirts,Zara,1,2244.0,2244.0
+OI00001459,ORD0000747,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00001460,ORD0000747,P041,H&M Green Cotton Jacket,Clothing,Jackets,H&M,1,7336.0,7336.0
+OI00001461,ORD0000748,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00001462,ORD0000748,P195,H&M Green Denim Jeans,Clothing,Jeans,H&M,1,1812.0,1812.0
+OI00001463,ORD0000749,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001464,ORD0000749,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001465,ORD0000749,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001466,ORD0000750,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00001467,ORD0000750,P126,UrbanCo Wooden Sofa Medium,Home,Furniture,UrbanCo,1,5133.0,5133.0
+OI00001468,ORD0000750,P092,UrbanCo Wooden Chair Small,Home,Furniture,UrbanCo,1,17541.0,17541.0
+OI00001469,ORD0000751,P064,Zara White Denim Shirt,Clothing,Shirts,Zara,1,2244.0,2244.0
+OI00001470,ORD0000752,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001471,ORD0000752,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001472,ORD0000752,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001473,ORD0000753,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00001474,ORD0000753,P018,UrbanCo Metal Dining Table Large,Home,Furniture,UrbanCo,1,24543.0,24543.0
+OI00001475,ORD0000753,P153,UrbanCo Wooden Sofa Large,Home,Furniture,UrbanCo,1,11898.0,11898.0
+OI00001476,ORD0000754,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00001477,ORD0000754,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00001478,ORD0000754,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00001479,ORD0000755,P196,Zara White Denim Jacket,Clothing,Jackets,Zara,1,4542.0,4542.0
+OI00001480,ORD0000756,P060,Boat Bluetooth Headphones,Electronics,Headphones,Boat,1,4117.0,4117.0
+OI00001481,ORD0000757,P181,HP PS 16GB RAM 1TB SSD,Electronics,Laptop,HP,1,42181.0,42181.0
+OI00001482,ORD0000757,P086,Boat Power Bank,Electronics,Accessories,Boat,2,732.0,1464.0
+OI00001483,ORD0000758,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00001484,ORD0000758,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00001485,ORD0000758,P115,Nike Sports T-Shirt,Sports,Activewear,Nike,1,2606.0,2606.0
+OI00001486,ORD0000759,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00001487,ORD0000759,P100,Zara Green Cotton Shirt,Clothing,Shirts,Zara,1,2505.0,2505.0
+OI00001488,ORD0000759,P051,Zara Red Polyester T-Shirt,Clothing,T-Shirts,Zara,1,349.0,349.0
+OI00001489,ORD0000760,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001490,ORD0000760,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001491,ORD0000761,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00001492,ORD0000761,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00001493,ORD0000762,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00001494,ORD0000762,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00001495,ORD0000763,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001496,ORD0000764,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001497,ORD0000764,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001498,ORD0000765,P067,Boat Wireless Earbuds,Electronics,Headphones,Boat,1,2941.0,2941.0
+OI00001499,ORD0000765,P037,Apple MacBook Air 8GB RAM 512GB SSD,Electronics,Laptop,Apple,1,52804.0,52804.0
+OI00001500,ORD0000766,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,1,474.0,474.0
+OI00001501,ORD0000767,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00001502,ORD0000768,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001503,ORD0000768,P012,Nivea Foundation,Beauty,Makeup,Nivea,2,2237.0,4474.0
+OI00001504,ORD0000769,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001505,ORD0000769,P017,Lakme Face Wash,Beauty,Skincare,Lakme,2,1574.0,3148.0
+OI00001506,ORD0000769,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001507,ORD0000770,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001508,ORD0000770,P034,Lakme Lipstick,Beauty,Makeup,Lakme,2,325.0,650.0
+OI00001509,ORD0000770,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001510,ORD0000771,P194,Zara Blue Polyester Jeans,Clothing,Jeans,Zara,1,2697.0,2697.0
+OI00001511,ORD0000772,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00001512,ORD0000772,P082,H&M Green Denim Jacket,Clothing,Jackets,H&M,1,3964.0,3964.0
+OI00001513,ORD0000773,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001514,ORD0000773,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,2,1471.0,2942.0
+OI00001515,ORD0000773,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001516,ORD0000774,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00001517,ORD0000774,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,1,6273.0,6273.0
+OI00001518,ORD0000775,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001519,ORD0000776,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00001520,ORD0000777,P101,H&M Blue Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1453.0,1453.0
+OI00001521,ORD0000778,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00001522,ORD0000779,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00001523,ORD0000779,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,2,1041.0,2082.0
+OI00001524,ORD0000779,P061,H&M Black Polyester Shirt,Clothing,Shirts,H&M,1,1694.0,1694.0
+OI00001525,ORD0000780,P200,H&M Blue Denim Shirt,Clothing,Shirts,H&M,1,519.0,519.0
+OI00001526,ORD0000780,P120,Zara Black Polyester Jacket,Clothing,Jackets,Zara,1,6542.0,6542.0
+OI00001527,ORD0000780,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00001528,ORD0000781,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001529,ORD0000781,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001530,ORD0000781,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001531,ORD0000782,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001532,ORD0000782,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001533,ORD0000783,P079,Boat Charger,Electronics,Accessories,Boat,1,379.0,379.0
+OI00001534,ORD0000784,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00001535,ORD0000784,P196,Zara White Denim Jacket,Clothing,Jackets,Zara,1,4542.0,4542.0
+OI00001536,ORD0000785,P095,H&M Black Denim Jeans,Clothing,Jeans,H&M,1,3649.0,3649.0
+OI00001537,ORD0000786,P132,Adidas Running Shoes Size 7,Sports,Shoes,Adidas,1,3001.0,3001.0
+OI00001538,ORD0000787,P145,UrbanCo Metal Dining Table Medium,Home,Furniture,UrbanCo,1,26201.0,26201.0
+OI00001539,ORD0000788,P182,Zara Blue Cotton Shirt,Clothing,Shirts,Zara,1,1991.0,1991.0
+OI00001540,ORD0000788,P061,H&M Black Polyester Shirt,Clothing,Shirts,H&M,1,1694.0,1694.0
+OI00001541,ORD0000789,P107,Zara Black Polyester T-Shirt,Clothing,T-Shirts,Zara,1,616.0,616.0
+OI00001542,ORD0000789,P175,Zara White Denim Jeans,Clothing,Jeans,Zara,1,2117.0,2117.0
+OI00001543,ORD0000790,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00001544,ORD0000790,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00001545,ORD0000791,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001546,ORD0000791,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001547,ORD0000791,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001548,ORD0000792,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00001549,ORD0000793,P164,UrbanCo Metal Sofa Medium,Home,Furniture,UrbanCo,1,15712.0,15712.0
+OI00001550,ORD0000794,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001551,ORD0000794,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001552,ORD0000794,P003,Nivea Shampoo,Beauty,Haircare,Nivea,2,201.0,402.0
+OI00001553,ORD0000795,P101,H&M Blue Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1453.0,1453.0
+OI00001554,ORD0000796,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00001555,ORD0000796,P127,UrbanCo Metal Chair Medium,Home,Furniture,UrbanCo,1,21994.0,21994.0
+OI00001556,ORD0000797,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00001557,ORD0000798,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00001558,ORD0000798,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00001559,ORD0000799,P102,Samsung Galaxy S21 256GB Blue,Electronics,Smartphone,Samsung,1,78241.0,78241.0
+OI00001560,ORD0000800,P169,Nike Sneakers Size 10,Sports,Shoes,Nike,1,1381.0,1381.0
+OI00001561,ORD0000800,P150,Adidas Track Pants,Sports,Activewear,Adidas,1,2331.0,2331.0
+OI00001562,ORD0000801,P100,Zara Green Cotton Shirt,Clothing,Shirts,Zara,1,2505.0,2505.0
+OI00001563,ORD0000802,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00001564,ORD0000802,P127,UrbanCo Metal Chair Medium,Home,Furniture,UrbanCo,1,21994.0,21994.0
+OI00001565,ORD0000803,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001566,ORD0000803,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001567,ORD0000803,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001568,ORD0000804,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001569,ORD0000804,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001570,ORD0000805,P191,H&M White Cotton Shirt,Clothing,Shirts,H&M,1,983.0,983.0
+OI00001571,ORD0000805,P137,H&M Red Denim T-Shirt,Clothing,T-Shirts,H&M,1,1174.0,1174.0
+OI00001572,ORD0000806,P192,Zara Black Cotton Jacket,Clothing,Jackets,Zara,1,2258.0,2258.0
+OI00001573,ORD0000807,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00001574,ORD0000808,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00001575,ORD0000809,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00001576,ORD0000809,P152,Adidas Sneakers Size 9,Sports,Shoes,Adidas,1,7939.0,7939.0
+OI00001577,ORD0000810,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00001578,ORD0000810,P117,Nike Running Shoes Size 10,Sports,Shoes,Nike,1,5153.0,5153.0
+OI00001579,ORD0000811,P009,Nivea Lipstick,Beauty,Makeup,Nivea,2,2838.0,5676.0
+OI00001580,ORD0000811,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001581,ORD0000812,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001582,ORD0000812,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001583,ORD0000812,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001584,ORD0000813,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001585,ORD0000813,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001586,ORD0000814,P010,Samsung Phone Case,Electronics,Accessories,Samsung,1,1711.0,1711.0
+OI00001587,ORD0000814,P134,Dell H Pavilion 16GB RAM 256GB SSD,Electronics,Laptop,Dell,1,87510.0,87510.0
+OI00001588,ORD0000815,P086,Boat Power Bank,Electronics,Accessories,Boat,1,732.0,732.0
+OI00001589,ORD0000816,P003,Nivea Shampoo,Beauty,Haircare,Nivea,2,201.0,402.0
+OI00001590,ORD0000816,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001591,ORD0000817,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001592,ORD0000817,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001593,ORD0000817,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001594,ORD0000818,P085,UrbanCo Plastic Dining Table Large,Home,Furniture,UrbanCo,1,12303.0,12303.0
+OI00001595,ORD0000818,P018,UrbanCo Metal Dining Table Large,Home,Furniture,UrbanCo,1,24543.0,24543.0
+OI00001596,ORD0000818,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00001597,ORD0000819,P190,Zara Green Cotton Jacket,Clothing,Jackets,Zara,1,2207.0,2207.0
+OI00001598,ORD0000819,P064,Zara White Denim Shirt,Clothing,Shirts,Zara,1,2244.0,2244.0
+OI00001599,ORD0000819,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,2,724.0,1448.0
+OI00001600,ORD0000820,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001601,ORD0000820,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001602,ORD0000821,P162,Zara Black Denim Jeans,Clothing,Jeans,Zara,1,3231.0,3231.0
+OI00001603,ORD0000822,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00001604,ORD0000822,P166,H&M Black Cotton Jacket,Clothing,Jackets,H&M,1,4254.0,4254.0
+OI00001605,ORD0000822,P173,Zara Green Denim T-Shirt,Clothing,T-Shirts,Zara,1,473.0,473.0
+OI00001606,ORD0000823,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001607,ORD0000823,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001608,ORD0000824,P101,H&M Blue Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1453.0,1453.0
+OI00001609,ORD0000824,P198,Zara Black Polyester Jeans,Clothing,Jeans,Zara,1,2065.0,2065.0
+OI00001610,ORD0000825,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001611,ORD0000825,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001612,ORD0000826,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00001613,ORD0000826,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00001614,ORD0000827,P029,Adidas Running Shoes Size 8,Sports,Shoes,Adidas,1,2068.0,2068.0
+OI00001615,ORD0000827,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00001616,ORD0000828,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,2,370.0,740.0
+OI00001617,ORD0000828,P191,H&M White Cotton Shirt,Clothing,Shirts,H&M,1,983.0,983.0
+OI00001618,ORD0000829,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00001619,ORD0000830,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001620,ORD0000831,P153,UrbanCo Wooden Sofa Large,Home,Furniture,UrbanCo,1,11898.0,11898.0
+OI00001621,ORD0000831,P178,UrbanCo Metal Sofa Small,Home,Furniture,UrbanCo,1,20907.0,20907.0
+OI00001622,ORD0000831,P011,UrbanCo Wooden Sofa Small,Home,Furniture,UrbanCo,1,26505.0,26505.0
+OI00001623,ORD0000832,P080,Boat Phone Case,Electronics,Accessories,Boat,1,1006.0,1006.0
+OI00001624,ORD0000832,P114,JBL Wireless Earbuds,Electronics,Headphones,JBL,1,2898.0,2898.0
+OI00001625,ORD0000832,P072,OnePlus Nord CE3 256GB Blue,Electronics,Smartphone,OnePlus,1,44563.0,44563.0
+OI00001626,ORD0000833,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00001627,ORD0000833,P192,Zara Black Cotton Jacket,Clothing,Jackets,Zara,1,2258.0,2258.0
+OI00001628,ORD0000833,P084,H&M White Polyester Jeans,Clothing,Jeans,H&M,2,2041.0,4082.0
+OI00001629,ORD0000834,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00001630,ORD0000834,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00001631,ORD0000835,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001632,ORD0000836,P192,Zara Black Cotton Jacket,Clothing,Jackets,Zara,1,2258.0,2258.0
+OI00001633,ORD0000836,P084,H&M White Polyester Jeans,Clothing,Jeans,H&M,1,2041.0,2041.0
+OI00001634,ORD0000837,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001635,ORD0000837,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001636,ORD0000838,P033,UrbanCo Plastic Dining Table Small,Home,Furniture,UrbanCo,1,7598.0,7598.0
+OI00001637,ORD0000839,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00001638,ORD0000840,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001639,ORD0000841,P084,H&M White Polyester Jeans,Clothing,Jeans,H&M,1,2041.0,2041.0
+OI00001640,ORD0000841,P088,Zara Red Denim Jeans,Clothing,Jeans,Zara,1,3394.0,3394.0
+OI00001641,ORD0000842,P001,Samsung Charger,Electronics,Accessories,Samsung,1,1356.0,1356.0
+OI00001642,ORD0000842,P098,HP Air 32GB RAM 512GB SSD,Electronics,Laptop,HP,1,75632.0,75632.0
+OI00001643,ORD0000843,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00001644,ORD0000844,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00001645,ORD0000844,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00001646,ORD0000845,P080,Boat Phone Case,Electronics,Accessories,Boat,1,1006.0,1006.0
+OI00001647,ORD0000845,P130,Apple G21 128GB Black,Electronics,Smartphone,Apple,1,67400.0,67400.0
+OI00001648,ORD0000845,P042,Dell ion 32GB RAM 512GB SSD,Electronics,Laptop,Dell,1,44211.0,44211.0
+OI00001649,ORD0000846,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00001650,ORD0000846,P163,Zara White Polyester Shirt,Clothing,Shirts,Zara,1,636.0,636.0
+OI00001651,ORD0000847,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00001652,ORD0000847,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00001653,ORD0000848,P001,Samsung Charger,Electronics,Accessories,Samsung,1,1356.0,1356.0
+OI00001654,ORD0000848,P102,Samsung Galaxy S21 256GB Blue,Electronics,Smartphone,Samsung,1,78241.0,78241.0
+OI00001655,ORD0000849,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001656,ORD0000849,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001657,ORD0000849,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001658,ORD0000850,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00001659,ORD0000851,P158,HP Victus 16GB RAM 1TB SSD,Electronics,Laptop,HP,1,89315.0,89315.0
+OI00001660,ORD0000852,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001661,ORD0000852,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001662,ORD0000852,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001663,ORD0000853,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001664,ORD0000853,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001665,ORD0000854,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001666,ORD0000854,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001667,ORD0000854,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001668,ORD0000855,P079,Boat Charger,Electronics,Accessories,Boat,1,379.0,379.0
+OI00001669,ORD0000855,P040,Samsung Power Bank,Electronics,Accessories,Samsung,1,2575.0,2575.0
+OI00001670,ORD0000856,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00001671,ORD0000856,P144,UrbanCo Plastic Chair Small,Home,Furniture,UrbanCo,1,6908.0,6908.0
+OI00001672,ORD0000857,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001673,ORD0000858,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,1,2086.0,2086.0
+OI00001674,ORD0000858,P088,Zara Red Denim Jeans,Clothing,Jeans,Zara,1,3394.0,3394.0
+OI00001675,ORD0000859,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001676,ORD0000859,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001677,ORD0000860,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00001678,ORD0000860,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,1,6273.0,6273.0
+OI00001679,ORD0000860,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00001680,ORD0000861,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,1,2086.0,2086.0
+OI00001681,ORD0000861,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00001682,ORD0000862,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001683,ORD0000862,P009,Nivea Lipstick,Beauty,Makeup,Nivea,2,2838.0,5676.0
+OI00001684,ORD0000863,P142,UrbanCo Plastic Sofa Medium,Home,Furniture,UrbanCo,1,10982.0,10982.0
+OI00001685,ORD0000864,P031,Puma Sneakers Size 7,Sports,Shoes,Puma,1,7055.0,7055.0
+OI00001686,ORD0000864,P152,Adidas Sneakers Size 9,Sports,Shoes,Adidas,1,7939.0,7939.0
+OI00001687,ORD0000865,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001688,ORD0000865,P056,Lakme Shampoo,Beauty,Haircare,Lakme,2,952.0,1904.0
+OI00001689,ORD0000866,P126,UrbanCo Wooden Sofa Medium,Home,Furniture,UrbanCo,1,5133.0,5133.0
+OI00001690,ORD0000866,P018,UrbanCo Metal Dining Table Large,Home,Furniture,UrbanCo,1,24543.0,24543.0
+OI00001691,ORD0000866,P109,UrbanCo Plastic Chair Large,Home,Furniture,UrbanCo,1,29504.0,29504.0
+OI00001692,ORD0000867,P086,Boat Power Bank,Electronics,Accessories,Boat,1,732.0,732.0
+OI00001693,ORD0000867,P096,Apple H 32GB RAM 512GB SSD,Electronics,Laptop,Apple,1,70859.0,70859.0
+OI00001694,ORD0000868,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00001695,ORD0000868,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00001696,ORD0000868,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00001697,ORD0000869,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001698,ORD0000869,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001699,ORD0000869,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001700,ORD0000870,P162,Zara Black Denim Jeans,Clothing,Jeans,Zara,1,3231.0,3231.0
+OI00001701,ORD0000871,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00001702,ORD0000871,P182,Zara Blue Cotton Shirt,Clothing,Shirts,Zara,1,1991.0,1991.0
+OI00001703,ORD0000872,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001704,ORD0000872,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001705,ORD0000872,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001706,ORD0000873,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00001707,ORD0000874,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00001708,ORD0000874,P123,UrbanCo Wooden Dining Table Small,Home,Furniture,UrbanCo,1,26420.0,26420.0
+OI00001709,ORD0000875,P078,Zara Red Polyester Jeans,Clothing,Jeans,Zara,1,2265.0,2265.0
+OI00001710,ORD0000875,P062,H&M Green Polyester Jacket,Clothing,Jackets,H&M,1,6565.0,6565.0
+OI00001711,ORD0000875,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00001712,ORD0000876,P169,Nike Sneakers Size 10,Sports,Shoes,Nike,1,1381.0,1381.0
+OI00001713,ORD0000877,P196,Zara White Denim Jacket,Clothing,Jackets,Zara,1,4542.0,4542.0
+OI00001714,ORD0000878,P194,Zara Blue Polyester Jeans,Clothing,Jeans,Zara,1,2697.0,2697.0
+OI00001715,ORD0000878,P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,H&M,1,1070.0,1070.0
+OI00001716,ORD0000878,P191,H&M White Cotton Shirt,Clothing,Shirts,H&M,2,983.0,1966.0
+OI00001717,ORD0000879,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001718,ORD0000880,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,2,2943.0,5886.0
+OI00001719,ORD0000880,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00001720,ORD0000881,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001721,ORD0000881,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001722,ORD0000881,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001723,ORD0000882,P090,Zara Red Polyester Shirt,Clothing,Shirts,Zara,1,801.0,801.0
+OI00001724,ORD0000882,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00001725,ORD0000882,P019,H&M Green Denim T-Shirt,Clothing,T-Shirts,H&M,1,934.0,934.0
+OI00001726,ORD0000883,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001727,ORD0000883,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001728,ORD0000884,P182,Zara Blue Cotton Shirt,Clothing,Shirts,Zara,1,1991.0,1991.0
+OI00001729,ORD0000884,P095,H&M Black Denim Jeans,Clothing,Jeans,H&M,1,3649.0,3649.0
+OI00001730,ORD0000885,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001731,ORD0000885,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001732,ORD0000885,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001733,ORD0000886,P001,Samsung Charger,Electronics,Accessories,Samsung,1,1356.0,1356.0
+OI00001734,ORD0000886,P086,Boat Power Bank,Electronics,Accessories,Boat,1,732.0,732.0
+OI00001735,ORD0000887,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00001736,ORD0000887,P084,H&M White Polyester Jeans,Clothing,Jeans,H&M,1,2041.0,2041.0
+OI00001737,ORD0000888,P040,Samsung Power Bank,Electronics,Accessories,Samsung,1,2575.0,2575.0
+OI00001738,ORD0000888,P156,HP Victus 32GB RAM 1TB SSD,Electronics,Laptop,HP,1,80692.0,80692.0
+OI00001739,ORD0000888,P098,HP Air 32GB RAM 512GB SSD,Electronics,Laptop,HP,1,75632.0,75632.0
+OI00001740,ORD0000889,P117,Nike Running Shoes Size 10,Sports,Shoes,Nike,1,5153.0,5153.0
+OI00001741,ORD0000890,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00001742,ORD0000890,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00001743,ORD0000891,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00001744,ORD0000891,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00001745,ORD0000892,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001746,ORD0000893,P162,Zara Black Denim Jeans,Clothing,Jeans,Zara,1,3231.0,3231.0
+OI00001747,ORD0000894,P117,Nike Running Shoes Size 10,Sports,Shoes,Nike,1,5153.0,5153.0
+OI00001748,ORD0000895,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00001749,ORD0000895,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00001750,ORD0000896,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00001751,ORD0000897,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001752,ORD0000897,P012,Nivea Foundation,Beauty,Makeup,Nivea,2,2237.0,4474.0
+OI00001753,ORD0000897,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001754,ORD0000898,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001755,ORD0000899,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001756,ORD0000900,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001757,ORD0000901,P017,Lakme Face Wash,Beauty,Skincare,Lakme,2,1574.0,3148.0
+OI00001758,ORD0000901,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001759,ORD0000902,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00001760,ORD0000902,P031,Puma Sneakers Size 7,Sports,Shoes,Puma,1,7055.0,7055.0
+OI00001761,ORD0000902,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00001762,ORD0000903,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001763,ORD0000904,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001764,ORD0000904,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001765,ORD0000905,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00001766,ORD0000905,P075,Apple 8 256GB Black,Electronics,Smartphone,Apple,1,66064.0,66064.0
+OI00001767,ORD0000905,P091,Samsung 11 128GB Green,Electronics,Smartphone,Samsung,1,24796.0,24796.0
+OI00001768,ORD0000906,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00001769,ORD0000906,P057,H&M Blue Denim Jeans,Clothing,Jeans,H&M,1,1555.0,1555.0
+OI00001770,ORD0000907,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00001771,ORD0000908,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00001772,ORD0000908,P132,Adidas Running Shoes Size 7,Sports,Shoes,Adidas,1,3001.0,3001.0
+OI00001773,ORD0000909,P040,Samsung Power Bank,Electronics,Accessories,Samsung,1,2575.0,2575.0
+OI00001774,ORD0000909,P122,Dell Book 32GB RAM 256GB SSD,Electronics,Laptop,Dell,1,54670.0,54670.0
+OI00001775,ORD0000910,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00001776,ORD0000910,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,1,2943.0,2943.0
+OI00001777,ORD0000911,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00001778,ORD0000911,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00001779,ORD0000911,P106,H&M Green Polyester T-Shirt,Clothing,T-Shirts,H&M,1,806.0,806.0
+OI00001780,ORD0000912,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001781,ORD0000913,P152,Adidas Sneakers Size 9,Sports,Shoes,Adidas,1,7939.0,7939.0
+OI00001782,ORD0000914,P008,Sony Bluetooth Headphones,Electronics,Headphones,Sony,1,2561.0,2561.0
+OI00001783,ORD0000914,P112,HP Pavilion 32GB RAM 256GB SSD,Electronics,Laptop,HP,1,45580.0,45580.0
+OI00001784,ORD0000915,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00001785,ORD0000915,P093,Zara Green Polyester Jeans,Clothing,Jeans,Zara,1,1066.0,1066.0
+OI00001786,ORD0000915,P110,H&M White Polyester Shirt,Clothing,Shirts,H&M,1,1438.0,1438.0
+OI00001787,ORD0000916,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00001788,ORD0000916,P188,Adidas Sneakers Size 8,Sports,Shoes,Adidas,1,7253.0,7253.0
+OI00001789,ORD0000916,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00001790,ORD0000917,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00001791,ORD0000917,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00001792,ORD0000917,P015,Nike Dumbbells,Sports,Equipment,Nike,1,4660.0,4660.0
+OI00001793,ORD0000918,P071,Nike Sneakers Size 8,Sports,Shoes,Nike,1,4895.0,4895.0
+OI00001794,ORD0000918,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00001795,ORD0000918,P188,Adidas Sneakers Size 8,Sports,Shoes,Adidas,1,7253.0,7253.0
+OI00001796,ORD0000919,P132,Adidas Running Shoes Size 7,Sports,Shoes,Adidas,1,3001.0,3001.0
+OI00001797,ORD0000919,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00001798,ORD0000920,P058,Puma Running Shoes Size 8,Sports,Shoes,Puma,1,7047.0,7047.0
+OI00001799,ORD0000920,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,2,1414.0,2828.0
+OI00001800,ORD0000921,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001801,ORD0000922,P137,H&M Red Denim T-Shirt,Clothing,T-Shirts,H&M,2,1174.0,2348.0
+OI00001802,ORD0000922,P070,H&M Black Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1277.0,1277.0
+OI00001803,ORD0000922,P162,Zara Black Denim Jeans,Clothing,Jeans,Zara,1,3231.0,3231.0
+OI00001804,ORD0000923,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00001805,ORD0000923,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00001806,ORD0000923,P081,Adidas Dumbbells,Sports,Equipment,Adidas,1,5112.0,5112.0
+OI00001807,ORD0000924,P079,Boat Charger,Electronics,Accessories,Boat,1,379.0,379.0
+OI00001808,ORD0000924,P114,JBL Wireless Earbuds,Electronics,Headphones,JBL,1,2898.0,2898.0
+OI00001809,ORD0000925,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00001810,ORD0000925,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00001811,ORD0000926,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00001812,ORD0000927,P115,Nike Sports T-Shirt,Sports,Activewear,Nike,1,2606.0,2606.0
+OI00001813,ORD0000928,P052,Apple Air 8GB RAM 1TB SSD,Electronics,Laptop,Apple,1,40493.0,40493.0
+OI00001814,ORD0000929,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00001815,ORD0000929,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00001816,ORD0000929,P107,Zara Black Polyester T-Shirt,Clothing,T-Shirts,Zara,1,616.0,616.0
+OI00001817,ORD0000930,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00001818,ORD0000930,P022,H&M Red Cotton Shirt,Clothing,Shirts,H&M,1,2473.0,2473.0
+OI00001819,ORD0000930,P133,H&M Green Polyester Jeans,Clothing,Jeans,H&M,1,1292.0,1292.0
+OI00001820,ORD0000931,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00001821,ORD0000931,P157,H&M White Polyester T-Shirt,Clothing,T-Shirts,H&M,1,801.0,801.0
+OI00001822,ORD0000931,P044,H&M White Denim Jacket,Clothing,Jackets,H&M,1,5683.0,5683.0
+OI00001823,ORD0000932,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00001824,ORD0000932,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00001825,ORD0000933,P046,Nike Running Shoes Size 8,Sports,Shoes,Nike,1,5354.0,5354.0
+OI00001826,ORD0000933,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00001827,ORD0000934,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00001828,ORD0000934,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00001829,ORD0000934,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,1,6273.0,6273.0
+OI00001830,ORD0000935,P093,Zara Green Polyester Jeans,Clothing,Jeans,Zara,1,1066.0,1066.0
+OI00001831,ORD0000935,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00001832,ORD0000936,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00001833,ORD0000937,P044,H&M White Denim Jacket,Clothing,Jackets,H&M,1,5683.0,5683.0
+OI00001834,ORD0000937,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,1,2086.0,2086.0
+OI00001835,ORD0000938,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00001836,ORD0000939,P152,Adidas Sneakers Size 9,Sports,Shoes,Adidas,1,7939.0,7939.0
+OI00001837,ORD0000940,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001838,ORD0000940,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001839,ORD0000941,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001840,ORD0000941,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001841,ORD0000941,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001842,ORD0000942,P093,Zara Green Polyester Jeans,Clothing,Jeans,Zara,1,1066.0,1066.0
+OI00001843,ORD0000942,P090,Zara Red Polyester Shirt,Clothing,Shirts,Zara,1,801.0,801.0
+OI00001844,ORD0000943,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001845,ORD0000943,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001846,ORD0000943,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001847,ORD0000944,P180,Zara White Denim T-Shirt,Clothing,T-Shirts,Zara,1,1446.0,1446.0
+OI00001848,ORD0000944,P163,Zara White Polyester Shirt,Clothing,Shirts,Zara,2,636.0,1272.0
+OI00001849,ORD0000944,P041,H&M Green Cotton Jacket,Clothing,Jackets,H&M,1,7336.0,7336.0
+OI00001850,ORD0000945,P082,H&M Green Denim Jacket,Clothing,Jackets,H&M,1,3964.0,3964.0
+OI00001851,ORD0000946,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001852,ORD0000946,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00001853,ORD0000946,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001854,ORD0000947,P116,UrbanCo Plastic Chair Medium,Home,Furniture,UrbanCo,1,20112.0,20112.0
+OI00001855,ORD0000948,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001856,ORD0000948,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001857,ORD0000949,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00001858,ORD0000949,P132,Adidas Running Shoes Size 7,Sports,Shoes,Adidas,1,3001.0,3001.0
+OI00001859,ORD0000950,P127,UrbanCo Metal Chair Medium,Home,Furniture,UrbanCo,1,21994.0,21994.0
+OI00001860,ORD0000951,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00001861,ORD0000951,P053,Puma Dumbbells,Sports,Equipment,Puma,1,14598.0,14598.0
+OI00001862,ORD0000952,P018,UrbanCo Metal Dining Table Large,Home,Furniture,UrbanCo,1,24543.0,24543.0
+OI00001863,ORD0000953,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001864,ORD0000953,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001865,ORD0000953,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001866,ORD0000954,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001867,ORD0000954,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001868,ORD0000954,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001869,ORD0000955,P001,Samsung Charger,Electronics,Accessories,Samsung,1,1356.0,1356.0
+OI00001870,ORD0000955,P130,Apple G21 128GB Black,Electronics,Smartphone,Apple,1,67400.0,67400.0
+OI00001871,ORD0000955,P083,OnePlus 3 128GB White,Electronics,Smartphone,OnePlus,1,63280.0,63280.0
+OI00001872,ORD0000956,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001873,ORD0000956,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001874,ORD0000956,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001875,ORD0000957,P003,Nivea Shampoo,Beauty,Haircare,Nivea,2,201.0,402.0
+OI00001876,ORD0000957,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00001877,ORD0000957,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001878,ORD0000958,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001879,ORD0000958,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00001880,ORD0000958,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001881,ORD0000959,P024,UrbanCo Metal Chair Small,Home,Furniture,UrbanCo,1,25406.0,25406.0
+OI00001882,ORD0000960,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00001883,ORD0000960,P109,UrbanCo Plastic Chair Large,Home,Furniture,UrbanCo,1,29504.0,29504.0
+OI00001884,ORD0000961,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001885,ORD0000962,P184,Dell HP Pavilion 8GB RAM 1TB SSD,Electronics,Laptop,Dell,1,115198.0,115198.0
+OI00001886,ORD0000963,P139,UrbanCo Wooden Chair Large,Home,Furniture,UrbanCo,1,8748.0,8748.0
+OI00001887,ORD0000964,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00001888,ORD0000964,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00001889,ORD0000964,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,2,1397.0,2794.0
+OI00001890,ORD0000965,P039,Puma Track Pants,Sports,Activewear,Puma,1,1372.0,1372.0
+OI00001891,ORD0000966,P005,Nivea Face Wash,Beauty,Skincare,Nivea,2,1130.0,2260.0
+OI00001892,ORD0000966,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001893,ORD0000966,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001894,ORD0000967,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00001895,ORD0000967,P027,Zara Black Cotton Shirt,Clothing,Shirts,Zara,1,836.0,836.0
+OI00001896,ORD0000967,P162,Zara Black Denim Jeans,Clothing,Jeans,Zara,1,3231.0,3231.0
+OI00001897,ORD0000968,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00001898,ORD0000969,P165,UrbanCo Metal Sofa Large,Home,Furniture,UrbanCo,1,6328.0,6328.0
+OI00001899,ORD0000970,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00001900,ORD0000971,P191,H&M White Cotton Shirt,Clothing,Shirts,H&M,1,983.0,983.0
+OI00001901,ORD0000972,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00001902,ORD0000972,P051,Zara Red Polyester T-Shirt,Clothing,T-Shirts,Zara,1,349.0,349.0
+OI00001903,ORD0000973,P024,UrbanCo Metal Chair Small,Home,Furniture,UrbanCo,1,25406.0,25406.0
+OI00001904,ORD0000973,P109,UrbanCo Plastic Chair Large,Home,Furniture,UrbanCo,1,29504.0,29504.0
+OI00001905,ORD0000974,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001906,ORD0000975,P024,UrbanCo Metal Chair Small,Home,Furniture,UrbanCo,1,25406.0,25406.0
+OI00001907,ORD0000976,P019,H&M Green Denim T-Shirt,Clothing,T-Shirts,H&M,1,934.0,934.0
+OI00001908,ORD0000977,P127,UrbanCo Metal Chair Medium,Home,Furniture,UrbanCo,1,21994.0,21994.0
+OI00001909,ORD0000978,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001910,ORD0000978,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001911,ORD0000978,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00001912,ORD0000979,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00001913,ORD0000980,P114,JBL Wireless Earbuds,Electronics,Headphones,JBL,1,2898.0,2898.0
+OI00001914,ORD0000981,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00001915,ORD0000982,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00001916,ORD0000982,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00001917,ORD0000983,P101,H&M Blue Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1453.0,1453.0
+OI00001918,ORD0000983,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,2,2086.0,4172.0
+OI00001919,ORD0000983,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,1,2943.0,2943.0
+OI00001920,ORD0000984,P139,UrbanCo Wooden Chair Large,Home,Furniture,UrbanCo,1,8748.0,8748.0
+OI00001921,ORD0000984,P011,UrbanCo Wooden Sofa Small,Home,Furniture,UrbanCo,1,26505.0,26505.0
+OI00001922,ORD0000985,P024,UrbanCo Metal Chair Small,Home,Furniture,UrbanCo,1,25406.0,25406.0
+OI00001923,ORD0000986,P111,Zara Blue Cotton Jacket,Clothing,Jackets,Zara,1,4201.0,4201.0
+OI00001924,ORD0000987,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00001925,ORD0000987,P031,Puma Sneakers Size 7,Sports,Shoes,Puma,1,7055.0,7055.0
+OI00001926,ORD0000987,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00001927,ORD0000988,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00001928,ORD0000988,P058,Puma Running Shoes Size 8,Sports,Shoes,Puma,1,7047.0,7047.0
+OI00001929,ORD0000988,P132,Adidas Running Shoes Size 7,Sports,Shoes,Adidas,1,3001.0,3001.0
+OI00001930,ORD0000989,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00001931,ORD0000989,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00001932,ORD0000990,P165,UrbanCo Metal Sofa Large,Home,Furniture,UrbanCo,1,6328.0,6328.0
+OI00001933,ORD0000991,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00001934,ORD0000991,P070,H&M Black Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1277.0,1277.0
+OI00001935,ORD0000991,P129,H&M Black Denim Jacket,Clothing,Jackets,H&M,1,4451.0,4451.0
+OI00001936,ORD0000992,P111,Zara Blue Cotton Jacket,Clothing,Jackets,Zara,1,4201.0,4201.0
+OI00001937,ORD0000992,P149,Zara Blue Denim Jacket,Clothing,Jackets,Zara,1,7491.0,7491.0
+OI00001938,ORD0000993,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001939,ORD0000993,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00001940,ORD0000993,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00001941,ORD0000994,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00001942,ORD0000994,P169,Nike Sneakers Size 10,Sports,Shoes,Nike,1,1381.0,1381.0
+OI00001943,ORD0000994,P150,Adidas Track Pants,Sports,Activewear,Adidas,1,2331.0,2331.0
+OI00001944,ORD0000995,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,2,761.0,1522.0
+OI00001945,ORD0000995,P136,Zara Red Cotton Shirt,Clothing,Shirts,Zara,1,1369.0,1369.0
+OI00001946,ORD0000996,P165,UrbanCo Metal Sofa Large,Home,Furniture,UrbanCo,1,6328.0,6328.0
+OI00001947,ORD0000996,P127,UrbanCo Metal Chair Medium,Home,Furniture,UrbanCo,1,21994.0,21994.0
+OI00001948,ORD0000996,P142,UrbanCo Plastic Sofa Medium,Home,Furniture,UrbanCo,1,10982.0,10982.0
+OI00001949,ORD0000997,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00001950,ORD0000997,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00001951,ORD0000997,P188,Adidas Sneakers Size 8,Sports,Shoes,Adidas,1,7253.0,7253.0
+OI00001952,ORD0000998,P082,H&M Green Denim Jacket,Clothing,Jackets,H&M,1,3964.0,3964.0
+OI00001953,ORD0000998,P172,H&M Green Polyester Shirt,Clothing,Shirts,H&M,1,2109.0,2109.0
+OI00001954,ORD0000999,P118,H&M Black Denim Shirt,Clothing,Shirts,H&M,1,2807.0,2807.0
+OI00001955,ORD0000999,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00001956,ORD0000999,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00001957,ORD0001000,P165,UrbanCo Metal Sofa Large,Home,Furniture,UrbanCo,1,6328.0,6328.0
+OI00001958,ORD0001000,P127,UrbanCo Metal Chair Medium,Home,Furniture,UrbanCo,1,21994.0,21994.0
+OI00001959,ORD0001000,P144,UrbanCo Plastic Chair Small,Home,Furniture,UrbanCo,1,6908.0,6908.0
+OI00001960,ORD0001001,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00001961,ORD0001001,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00001962,ORD0001002,P045,Puma Running Shoes Size 10,Sports,Shoes,Puma,1,6410.0,6410.0
+OI00001963,ORD0001003,P166,H&M Black Cotton Jacket,Clothing,Jackets,H&M,1,4254.0,4254.0
+OI00001964,ORD0001003,P093,Zara Green Polyester Jeans,Clothing,Jeans,Zara,1,1066.0,1066.0
+OI00001965,ORD0001004,P107,Zara Black Polyester T-Shirt,Clothing,T-Shirts,Zara,2,616.0,1232.0
+OI00001966,ORD0001004,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,1,2943.0,2943.0
+OI00001967,ORD0001005,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00001968,ORD0001005,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00001969,ORD0001006,P153,UrbanCo Wooden Sofa Large,Home,Furniture,UrbanCo,1,11898.0,11898.0
+OI00001970,ORD0001006,P142,UrbanCo Plastic Sofa Medium,Home,Furniture,UrbanCo,1,10982.0,10982.0
+OI00001971,ORD0001007,P057,H&M Blue Denim Jeans,Clothing,Jeans,H&M,1,1555.0,1555.0
+OI00001972,ORD0001007,P019,H&M Green Denim T-Shirt,Clothing,T-Shirts,H&M,1,934.0,934.0
+OI00001973,ORD0001008,P026,UrbanCo Wall Art,Home,Decor,UrbanCo,1,1607.0,1607.0
+OI00001974,ORD0001008,P153,UrbanCo Wooden Sofa Large,Home,Furniture,UrbanCo,1,11898.0,11898.0
+OI00001975,ORD0001008,P142,UrbanCo Plastic Sofa Medium,Home,Furniture,UrbanCo,1,10982.0,10982.0
+OI00001976,ORD0001009,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00001977,ORD0001009,P058,Puma Running Shoes Size 8,Sports,Shoes,Puma,1,7047.0,7047.0
+OI00001978,ORD0001010,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,2,2943.0,5886.0
+OI00001979,ORD0001010,P190,Zara Green Cotton Jacket,Clothing,Jackets,Zara,2,2207.0,4414.0
+OI00001980,ORD0001010,P175,Zara White Denim Jeans,Clothing,Jeans,Zara,1,2117.0,2117.0
+OI00001981,ORD0001011,P196,Zara White Denim Jacket,Clothing,Jackets,Zara,1,4542.0,4542.0
+OI00001982,ORD0001012,P040,Samsung Power Bank,Electronics,Accessories,Samsung,1,2575.0,2575.0
+OI00001983,ORD0001012,P008,Sony Bluetooth Headphones,Electronics,Headphones,Sony,1,2561.0,2561.0
+OI00001984,ORD0001012,P131,Samsung Galaxy S21 64GB Red,Electronics,Smartphone,Samsung,1,21334.0,21334.0
+OI00001985,ORD0001013,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00001986,ORD0001014,P126,UrbanCo Wooden Sofa Medium,Home,Furniture,UrbanCo,1,5133.0,5133.0
+OI00001987,ORD0001014,P142,UrbanCo Plastic Sofa Medium,Home,Furniture,UrbanCo,1,10982.0,10982.0
+OI00001988,ORD0001015,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001989,ORD0001016,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00001990,ORD0001016,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00001991,ORD0001016,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00001992,ORD0001017,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001993,ORD0001017,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00001994,ORD0001017,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00001995,ORD0001018,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00001996,ORD0001018,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00001997,ORD0001019,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00001998,ORD0001019,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00001999,ORD0001019,P164,UrbanCo Metal Sofa Medium,Home,Furniture,UrbanCo,1,15712.0,15712.0
+OI00002000,ORD0001020,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00002001,ORD0001020,P031,Puma Sneakers Size 7,Sports,Shoes,Puma,1,7055.0,7055.0
+OI00002002,ORD0001021,P172,H&M Green Polyester Shirt,Clothing,Shirts,H&M,1,2109.0,2109.0
+OI00002003,ORD0001022,P149,Zara Blue Denim Jacket,Clothing,Jackets,Zara,1,7491.0,7491.0
+OI00002004,ORD0001022,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00002005,ORD0001023,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00002006,ORD0001024,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00002007,ORD0001024,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00002008,ORD0001024,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00002009,ORD0001025,P021,H&M Red Polyester T-Shirt,Clothing,T-Shirts,H&M,1,370.0,370.0
+OI00002010,ORD0001026,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00002011,ORD0001026,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00002012,ORD0001026,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00002013,ORD0001027,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00002014,ORD0001028,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00002015,ORD0001029,P090,Zara Red Polyester Shirt,Clothing,Shirts,Zara,1,801.0,801.0
+OI00002016,ORD0001029,P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,H&M,1,1070.0,1070.0
+OI00002017,ORD0001030,P169,Nike Sneakers Size 10,Sports,Shoes,Nike,1,1381.0,1381.0
+OI00002018,ORD0001030,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00002019,ORD0001031,P065,HP Pavilion 16GB RAM 512GB SSD,Electronics,Laptop,HP,1,39186.0,39186.0
+OI00002020,ORD0001031,P008,Sony Bluetooth Headphones,Electronics,Headphones,Sony,1,2561.0,2561.0
+OI00002021,ORD0001032,P024,UrbanCo Metal Chair Small,Home,Furniture,UrbanCo,1,25406.0,25406.0
+OI00002022,ORD0001032,P145,UrbanCo Metal Dining Table Medium,Home,Furniture,UrbanCo,1,26201.0,26201.0
+OI00002023,ORD0001033,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00002024,ORD0001033,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00002025,ORD0001034,P022,H&M Red Cotton Shirt,Clothing,Shirts,H&M,1,2473.0,2473.0
+OI00002026,ORD0001034,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00002027,ORD0001034,P149,Zara Blue Denim Jacket,Clothing,Jackets,Zara,1,7491.0,7491.0
+OI00002028,ORD0001035,P097,Zara Blue Polyester Jacket,Clothing,Jackets,Zara,1,5366.0,5366.0
+OI00002029,ORD0001035,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00002030,ORD0001036,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00002031,ORD0001037,P152,Adidas Sneakers Size 9,Sports,Shoes,Adidas,1,7939.0,7939.0
+OI00002032,ORD0001038,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00002033,ORD0001039,P019,H&M Green Denim T-Shirt,Clothing,T-Shirts,H&M,1,934.0,934.0
+OI00002034,ORD0001039,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00002035,ORD0001040,P173,Zara Green Denim T-Shirt,Clothing,T-Shirts,Zara,1,473.0,473.0
+OI00002036,ORD0001040,P111,Zara Blue Cotton Jacket,Clothing,Jackets,Zara,1,4201.0,4201.0
+OI00002037,ORD0001041,P125,Zara Blue Denim Jeans,Clothing,Jeans,Zara,1,2480.0,2480.0
+OI00002038,ORD0001041,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00002039,ORD0001041,P198,Zara Black Polyester Jeans,Clothing,Jeans,Zara,1,2065.0,2065.0
+OI00002040,ORD0001042,P190,Zara Green Cotton Jacket,Clothing,Jackets,Zara,1,2207.0,2207.0
+OI00002041,ORD0001042,P027,Zara Black Cotton Shirt,Clothing,Shirts,Zara,1,836.0,836.0
+OI00002042,ORD0001043,P013,OnePlus 13 256GB Black,Electronics,Smartphone,OnePlus,1,75619.0,75619.0
+OI00002043,ORD0001043,P104,OnePlus Galaxy S21 128GB Black,Electronics,Smartphone,OnePlus,1,20198.0,20198.0
+OI00002044,ORD0001044,P070,H&M Black Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1277.0,1277.0
+OI00002045,ORD0001044,P073,Zara Black Denim Shirt,Clothing,Shirts,Zara,1,663.0,663.0
+OI00002046,ORD0001044,P111,Zara Blue Cotton Jacket,Clothing,Jackets,Zara,1,4201.0,4201.0
+OI00002047,ORD0001045,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00002048,ORD0001045,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00002049,ORD0001046,P189,H&M Red Polyester Shirt,Clothing,Shirts,H&M,1,2483.0,2483.0
+OI00002050,ORD0001046,P163,Zara White Polyester Shirt,Clothing,Shirts,Zara,1,636.0,636.0
+OI00002051,ORD0001047,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00002052,ORD0001047,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00002053,ORD0001048,P129,H&M Black Denim Jacket,Clothing,Jackets,H&M,1,4451.0,4451.0
+OI00002054,ORD0001049,P157,H&M White Polyester T-Shirt,Clothing,T-Shirts,H&M,2,801.0,1602.0
+OI00002055,ORD0001049,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,1,2713.0,2713.0
+OI00002056,ORD0001050,P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,H&M,1,1070.0,1070.0
+OI00002057,ORD0001051,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00002058,ORD0001051,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00002059,ORD0001052,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00002060,ORD0001052,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00002061,ORD0001052,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00002062,ORD0001053,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00002063,ORD0001053,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00002064,ORD0001053,P058,Puma Running Shoes Size 8,Sports,Shoes,Puma,1,7047.0,7047.0
+OI00002065,ORD0001054,P029,Adidas Running Shoes Size 8,Sports,Shoes,Adidas,1,2068.0,2068.0
+OI00002066,ORD0001054,P020,Puma Yoga Mat,Sports,Equipment,Puma,1,12458.0,12458.0
+OI00002067,ORD0001055,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00002068,ORD0001056,P094,Samsung Galaxy S21 128GB Black,Electronics,Smartphone,Samsung,1,69095.0,69095.0
+OI00002069,ORD0001057,P159,Puma Sneakers Size 10,Sports,Shoes,Puma,1,4766.0,4766.0
+OI00002070,ORD0001057,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00002071,ORD0001057,P058,Puma Running Shoes Size 8,Sports,Shoes,Puma,1,7047.0,7047.0
+OI00002072,ORD0001058,P142,UrbanCo Plastic Sofa Medium,Home,Furniture,UrbanCo,1,10982.0,10982.0
+OI00002073,ORD0001059,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00002074,ORD0001060,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00002075,ORD0001060,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00002076,ORD0001060,P132,Adidas Running Shoes Size 7,Sports,Shoes,Adidas,1,3001.0,3001.0
+OI00002077,ORD0001061,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00002078,ORD0001061,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,1,474.0,474.0
+OI00002079,ORD0001062,P095,H&M Black Denim Jeans,Clothing,Jeans,H&M,1,3649.0,3649.0
+OI00002080,ORD0001063,P150,Adidas Track Pants,Sports,Activewear,Adidas,1,2331.0,2331.0
+OI00002081,ORD0001063,P197,Puma Sneakers Size 8,Sports,Shoes,Puma,1,6353.0,6353.0
+OI00002082,ORD0001064,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00002083,ORD0001065,P182,Zara Blue Cotton Shirt,Clothing,Shirts,Zara,1,1991.0,1991.0
+OI00002084,ORD0001065,P070,H&M Black Cotton T-Shirt,Clothing,T-Shirts,H&M,1,1277.0,1277.0
+OI00002085,ORD0001065,P100,Zara Green Cotton Shirt,Clothing,Shirts,Zara,1,2505.0,2505.0
+OI00002086,ORD0001066,P034,Lakme Lipstick,Beauty,Makeup,Lakme,2,325.0,650.0
+OI00002087,ORD0001066,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00002088,ORD0001067,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00002089,ORD0001067,P025,Lakme Foundation,Beauty,Makeup,Lakme,2,462.0,924.0
+OI00002090,ORD0001067,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00002091,ORD0001068,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00002092,ORD0001068,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00002093,ORD0001068,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00002094,ORD0001069,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00002095,ORD0001069,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,1,1859.0,1859.0
+OI00002096,ORD0001070,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00002097,ORD0001070,P009,Nivea Lipstick,Beauty,Makeup,Nivea,1,2838.0,2838.0
+OI00002098,ORD0001070,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00002099,ORD0001071,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00002100,ORD0001072,P043,JBL Bluetooth Headphones,Electronics,Headphones,JBL,1,1296.0,1296.0
+OI00002101,ORD0001072,P079,Boat Charger,Electronics,Accessories,Boat,2,379.0,758.0
+OI00002102,ORD0001072,P167,Dell Aspire 8GB RAM 512GB SSD,Electronics,Laptop,Dell,1,62238.0,62238.0
+OI00002103,ORD0001073,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00002104,ORD0001074,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00002105,ORD0001074,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00002106,ORD0001074,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00002107,ORD0001075,P063,UrbanCo Metal Chair Large,Home,Furniture,UrbanCo,1,4232.0,4232.0
+OI00002108,ORD0001076,P062,H&M Green Polyester Jacket,Clothing,Jackets,H&M,1,6565.0,6565.0
+OI00002109,ORD0001076,P146,H&M Blue Polyester Shirt,Clothing,Shirts,H&M,2,2713.0,5426.0
+OI00002110,ORD0001076,P035,Zara Red Denim Shirt,Clothing,Shirts,Zara,1,2759.0,2759.0
+OI00002111,ORD0001077,P139,UrbanCo Wooden Chair Large,Home,Furniture,UrbanCo,1,8748.0,8748.0
+OI00002112,ORD0001078,P195,H&M Green Denim Jeans,Clothing,Jeans,H&M,1,1812.0,1812.0
+OI00002113,ORD0001078,P019,H&M Green Denim T-Shirt,Clothing,T-Shirts,H&M,1,934.0,934.0
+OI00002114,ORD0001079,P177,Puma Sneakers Size 9,Sports,Shoes,Puma,1,5810.0,5810.0
+OI00002115,ORD0001080,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00002116,ORD0001080,P048,Nivea Moisturizer,Beauty,Skincare,Nivea,2,1859.0,3718.0
+OI00002117,ORD0001081,P085,UrbanCo Plastic Dining Table Large,Home,Furniture,UrbanCo,1,12303.0,12303.0
+OI00002118,ORD0001081,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00002119,ORD0001082,P052,Apple Air 8GB RAM 1TB SSD,Electronics,Laptop,Apple,1,40493.0,40493.0
+OI00002120,ORD0001082,P096,Apple H 32GB RAM 512GB SSD,Electronics,Laptop,Apple,1,70859.0,70859.0
+OI00002121,ORD0001083,P027,Zara Black Cotton Shirt,Clothing,Shirts,Zara,1,836.0,836.0
+OI00002122,ORD0001083,P041,H&M Green Cotton Jacket,Clothing,Jackets,H&M,1,7336.0,7336.0
+OI00002123,ORD0001084,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00002124,ORD0001085,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00002125,ORD0001085,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00002126,ORD0001085,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00002127,ORD0001086,P057,H&M Blue Denim Jeans,Clothing,Jeans,H&M,1,1555.0,1555.0
+OI00002128,ORD0001086,P061,H&M Black Polyester Shirt,Clothing,Shirts,H&M,1,1694.0,1694.0
+OI00002129,ORD0001086,P166,H&M Black Cotton Jacket,Clothing,Jackets,H&M,1,4254.0,4254.0
+OI00002130,ORD0001087,P159,Puma Sneakers Size 10,Sports,Shoes,Puma,1,4766.0,4766.0
+OI00002131,ORD0001087,P150,Adidas Track Pants,Sports,Activewear,Adidas,1,2331.0,2331.0
+OI00002132,ORD0001088,P099,UrbanCo Wooden Dining Table Medium,Home,Furniture,UrbanCo,1,15212.0,15212.0
+OI00002133,ORD0001088,P164,UrbanCo Metal Sofa Medium,Home,Furniture,UrbanCo,1,15712.0,15712.0
+OI00002134,ORD0001088,P139,UrbanCo Wooden Chair Large,Home,Furniture,UrbanCo,1,8748.0,8748.0
+OI00002135,ORD0001089,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00002136,ORD0001089,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00002137,ORD0001090,P154,OnePlus Nord 3 128GB Blue,Electronics,Smartphone,OnePlus,1,31820.0,31820.0
+OI00002138,ORD0001091,P062,H&M Green Polyester Jacket,Clothing,Jackets,H&M,2,6565.0,13130.0
+OI00002139,ORD0001091,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00002140,ORD0001091,P190,Zara Green Cotton Jacket,Clothing,Jackets,Zara,1,2207.0,2207.0
+OI00002141,ORD0001092,P005,Nivea Face Wash,Beauty,Skincare,Nivea,1,1130.0,1130.0
+OI00002142,ORD0001093,P012,Nivea Foundation,Beauty,Makeup,Nivea,1,2237.0,2237.0
+OI00002143,ORD0001093,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00002144,ORD0001093,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00002145,ORD0001094,P121,UrbanCo Plastic Sofa Large,Home,Furniture,UrbanCo,1,21106.0,21106.0
+OI00002146,ORD0001095,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00002147,ORD0001096,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00002148,ORD0001097,P050,H&M Green Cotton Jeans,Clothing,Jeans,H&M,1,2713.0,2713.0
+OI00002149,ORD0001097,P023,Zara White Cotton T-Shirt,Clothing,T-Shirts,Zara,1,474.0,474.0
+OI00002150,ORD0001097,P051,Zara Red Polyester T-Shirt,Clothing,T-Shirts,Zara,1,349.0,349.0
+OI00002151,ORD0001098,P060,Boat Bluetooth Headphones,Electronics,Headphones,Boat,1,4117.0,4117.0
+OI00002152,ORD0001098,P043,JBL Bluetooth Headphones,Electronics,Headphones,JBL,1,1296.0,1296.0
+OI00002153,ORD0001098,P013,OnePlus 13 256GB Black,Electronics,Smartphone,OnePlus,1,75619.0,75619.0
+OI00002154,ORD0001099,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00002155,ORD0001099,P059,H&M Black Denim T-Shirt,Clothing,T-Shirts,H&M,1,1070.0,1070.0
+OI00002156,ORD0001100,P170,H&M Green Cotton Shirt,Clothing,Shirts,H&M,1,761.0,761.0
+OI00002157,ORD0001101,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00002158,ORD0001102,P090,Zara Red Polyester Shirt,Clothing,Shirts,Zara,1,801.0,801.0
+OI00002159,ORD0001102,P129,H&M Black Denim Jacket,Clothing,Jackets,H&M,1,4451.0,4451.0
+OI00002160,ORD0001103,P043,JBL Bluetooth Headphones,Electronics,Headphones,JBL,1,1296.0,1296.0
+OI00002161,ORD0001103,P167,Dell Aspire 8GB RAM 512GB SSD,Electronics,Laptop,Dell,1,62238.0,62238.0
+OI00002162,ORD0001103,P158,HP Victus 16GB RAM 1TB SSD,Electronics,Laptop,HP,1,89315.0,89315.0
+OI00002163,ORD0001104,P195,H&M Green Denim Jeans,Clothing,Jeans,H&M,1,1812.0,1812.0
+OI00002164,ORD0001104,P124,H&M Red Cotton Jacket,Clothing,Jackets,H&M,1,4779.0,4779.0
+OI00002165,ORD0001104,P103,Zara Red Cotton Jacket,Clothing,Jackets,Zara,1,2086.0,2086.0
+OI00002166,ORD0001105,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00002167,ORD0001105,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00002168,ORD0001106,P178,UrbanCo Metal Sofa Small,Home,Furniture,UrbanCo,1,20907.0,20907.0
+OI00002169,ORD0001106,P024,UrbanCo Metal Chair Small,Home,Furniture,UrbanCo,1,25406.0,25406.0
+OI00002170,ORD0001107,P012,Nivea Foundation,Beauty,Makeup,Nivea,2,2237.0,4474.0
+OI00002171,ORD0001107,P025,Lakme Foundation,Beauty,Makeup,Lakme,1,462.0,462.0
+OI00002172,ORD0001107,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,2,877.0,1754.0
+OI00002173,ORD0001108,P163,Zara White Polyester Shirt,Clothing,Shirts,Zara,1,636.0,636.0
+OI00002174,ORD0001109,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00002175,ORD0001109,P005,Nivea Face Wash,Beauty,Skincare,Nivea,2,1130.0,2260.0
+OI00002176,ORD0001110,P060,Boat Bluetooth Headphones,Electronics,Headphones,Boat,1,4117.0,4117.0
+OI00002177,ORD0001110,P075,Apple 8 256GB Black,Electronics,Smartphone,Apple,1,66064.0,66064.0
+OI00002178,ORD0001110,P154,OnePlus Nord 3 128GB Blue,Electronics,Smartphone,OnePlus,1,31820.0,31820.0
+OI00002179,ORD0001111,P148,Adidas Sneakers Size 7,Sports,Shoes,Adidas,1,3461.0,3461.0
+OI00002180,ORD0001112,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00002181,ORD0001112,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00002182,ORD0001112,P189,H&M Red Polyester Shirt,Clothing,Shirts,H&M,1,2483.0,2483.0
+OI00002183,ORD0001113,P114,JBL Wireless Earbuds,Electronics,Headphones,JBL,1,2898.0,2898.0
+OI00002184,ORD0001113,P049,Dell XPS 16GB RAM 512GB SSD,Electronics,Laptop,Dell,1,36316.0,36316.0
+OI00002185,ORD0001114,P055,Sony Wireless Earbuds,Electronics,Headphones,Sony,1,3070.0,3070.0
+OI00002186,ORD0001114,P112,HP Pavilion 32GB RAM 256GB SSD,Electronics,Laptop,HP,1,45580.0,45580.0
+OI00002187,ORD0001115,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00002188,ORD0001116,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00002189,ORD0001117,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00002190,ORD0001117,P074,Nike Running Shoes Size 9,Sports,Shoes,Nike,1,4123.0,4123.0
+OI00002191,ORD0001117,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00002192,ORD0001118,P073,Zara Black Denim Shirt,Clothing,Shirts,Zara,1,663.0,663.0
+OI00002193,ORD0001119,P121,UrbanCo Plastic Sofa Large,Home,Furniture,UrbanCo,1,21106.0,21106.0
+OI00002194,ORD0001119,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00002195,ORD0001119,P085,UrbanCo Plastic Dining Table Large,Home,Furniture,UrbanCo,1,12303.0,12303.0
+OI00002196,ORD0001120,P111,Zara Blue Cotton Jacket,Clothing,Jackets,Zara,1,4201.0,4201.0
+OI00002197,ORD0001121,P083,OnePlus 3 128GB White,Electronics,Smartphone,OnePlus,1,63280.0,63280.0
+OI00002198,ORD0001121,P077,OnePlus C1 13 64GB Red,Electronics,Smartphone,OnePlus,1,35454.0,35454.0
+OI00002199,ORD0001122,P002,Nike Yoga Mat,Sports,Equipment,Nike,1,4345.0,4345.0
+OI00002200,ORD0001122,P054,Adidas Yoga Mat,Sports,Equipment,Adidas,1,5689.0,5689.0
+OI00002201,ORD0001122,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,1,6273.0,6273.0
+OI00002202,ORD0001123,P198,Zara Black Polyester Jeans,Clothing,Jeans,Zara,1,2065.0,2065.0
+OI00002203,ORD0001123,P200,H&M Blue Denim Shirt,Clothing,Shirts,H&M,1,519.0,519.0
+OI00002204,ORD0001124,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,2,648.0,1296.0
+OI00002205,ORD0001124,P014,Nike Track Pants,Sports,Activewear,Nike,1,1075.0,1075.0
+OI00002206,ORD0001124,P038,Adidas Running Shoes Size 9,Sports,Shoes,Adidas,1,1414.0,1414.0
+OI00002207,ORD0001125,P029,Adidas Running Shoes Size 8,Sports,Shoes,Adidas,1,2068.0,2068.0
+OI00002208,ORD0001125,P115,Nike Sports T-Shirt,Sports,Activewear,Nike,1,2606.0,2606.0
+OI00002209,ORD0001126,P121,UrbanCo Plastic Sofa Large,Home,Furniture,UrbanCo,1,21106.0,21106.0
+OI00002210,ORD0001127,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,1,6273.0,6273.0
+OI00002211,ORD0001127,P046,Nike Running Shoes Size 8,Sports,Shoes,Nike,1,5354.0,5354.0
+OI00002212,ORD0001128,P070,H&M Black Cotton T-Shirt,Clothing,T-Shirts,H&M,2,1277.0,2554.0
+OI00002213,ORD0001128,P084,H&M White Polyester Jeans,Clothing,Jeans,H&M,1,2041.0,2041.0
+OI00002214,ORD0001129,P080,Boat Phone Case,Electronics,Accessories,Boat,1,1006.0,1006.0
+OI00002215,ORD0001130,P174,Zara Green Polyester T-Shirt,Clothing,T-Shirts,Zara,1,724.0,724.0
+OI00002216,ORD0001130,P182,Zara Blue Cotton Shirt,Clothing,Shirts,Zara,1,1991.0,1991.0
+OI00002217,ORD0001131,P193,H&M Red Cotton Jeans,Clothing,Jeans,H&M,1,1646.0,1646.0
+OI00002218,ORD0001132,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00002219,ORD0001132,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00002220,ORD0001133,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00002221,ORD0001133,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,2,1083.0,2166.0
+OI00002222,ORD0001134,P010,Samsung Phone Case,Electronics,Accessories,Samsung,1,1711.0,1711.0
+OI00002223,ORD0001134,P075,Apple 8 256GB Black,Electronics,Smartphone,Apple,1,66064.0,66064.0
+OI00002224,ORD0001135,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00002225,ORD0001135,P179,Zara Black Polyester Shirt,Clothing,Shirts,Zara,1,2943.0,2943.0
+OI00002226,ORD0001136,P029,Adidas Running Shoes Size 8,Sports,Shoes,Adidas,1,2068.0,2068.0
+OI00002227,ORD0001137,P017,Lakme Face Wash,Beauty,Skincare,Lakme,1,1574.0,1574.0
+OI00002228,ORD0001137,P034,Lakme Lipstick,Beauty,Makeup,Lakme,1,325.0,325.0
+OI00002229,ORD0001138,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00002230,ORD0001138,P064,Zara White Denim Shirt,Clothing,Shirts,Zara,1,2244.0,2244.0
+OI00002231,ORD0001138,P140,Zara Red Denim T-Shirt,Clothing,T-Shirts,Zara,1,914.0,914.0
+OI00002232,ORD0001139,P033,UrbanCo Plastic Dining Table Small,Home,Furniture,UrbanCo,1,7598.0,7598.0
+OI00002233,ORD0001139,P011,UrbanCo Wooden Sofa Small,Home,Furniture,UrbanCo,1,26505.0,26505.0
+OI00002234,ORD0001140,P108,H&M White Denim T-Shirt,Clothing,T-Shirts,H&M,1,1041.0,1041.0
+OI00002235,ORD0001141,P176,Apple Mac Air 16GB RAM 256GB SSD,Electronics,Laptop,Apple,1,71910.0,71910.0
+OI00002236,ORD0001142,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,1,877.0,877.0
+OI00002237,ORD0001142,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00002238,ORD0001142,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00002239,ORD0001143,P016,UrbanCo Cookware Set,Home,Kitchen,UrbanCo,1,8363.0,8363.0
+OI00002240,ORD0001144,P006,UrbanCo Lamp,Home,Decor,UrbanCo,1,2790.0,2790.0
+OI00002241,ORD0001145,P079,Boat Charger,Electronics,Accessories,Boat,1,379.0,379.0
+OI00002242,ORD0001145,P043,JBL Bluetooth Headphones,Electronics,Headphones,JBL,1,1296.0,1296.0
+OI00002243,ORD0001145,P185,Samsung Galaxy S21 64GB Blue,Electronics,Smartphone,Samsung,2,34209.0,68418.0
+OI00002244,ORD0001146,P150,Adidas Track Pants,Sports,Activewear,Adidas,1,2331.0,2331.0
+OI00002245,ORD0001146,P183,Nike Sneakers Size 9,Sports,Shoes,Nike,1,1083.0,1083.0
+OI00002246,ORD0001146,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,2,1397.0,2794.0
+OI00002247,ORD0001147,P068,Puma Sports T-Shirt,Sports,Activewear,Puma,1,648.0,648.0
+OI00002248,ORD0001147,P117,Nike Running Shoes Size 10,Sports,Shoes,Nike,1,5153.0,5153.0
+OI00002249,ORD0001148,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00002250,ORD0001148,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00002251,ORD0001149,P155,Adidas Sports T-Shirt,Sports,Activewear,Adidas,1,1397.0,1397.0
+OI00002252,ORD0001150,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00002253,ORD0001151,P169,Nike Sneakers Size 10,Sports,Shoes,Nike,1,1381.0,1381.0
+OI00002254,ORD0001151,P046,Nike Running Shoes Size 8,Sports,Shoes,Nike,1,5354.0,5354.0
+OI00002255,ORD0001151,P066,Puma Running Shoes Size 7,Sports,Shoes,Puma,1,6273.0,6273.0
+OI00002256,ORD0001152,P173,Zara Green Denim T-Shirt,Clothing,T-Shirts,Zara,1,473.0,473.0
+OI00002257,ORD0001153,P007,Lakme Hair Oil,Beauty,Haircare,Lakme,1,1471.0,1471.0
+OI00002258,ORD0001153,P003,Nivea Shampoo,Beauty,Haircare,Nivea,1,201.0,201.0
+OI00002259,ORD0001153,P056,Lakme Shampoo,Beauty,Haircare,Lakme,1,952.0,952.0
+OI00002260,ORD0001154,P004,UrbanCo Mixer,Home,Kitchen,UrbanCo,1,3983.0,3983.0
+OI00002261,ORD0001155,P036,Nivea Hair Oil,Beauty,Haircare,Nivea,2,877.0,1754.0
+OI00002262,ORD0001155,P119,Lakme Moisturizer,Beauty,Skincare,Lakme,1,1751.0,1751.0
+OI00002263,ORD0001156,P144,UrbanCo Plastic Chair Small,Home,Furniture,UrbanCo,1,6908.0,6908.0
