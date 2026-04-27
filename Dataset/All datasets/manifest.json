@@ -1,5 +1,5 @@
 {
-  "dataset_name": "seed_2025_12_to_2026_04",
+  "dataset_name": "seed_2025_12_22_to_2026_04_20",
   "description": "Initial synthetic dataset snapshot covering events, transactions, order items, products, and returns.",
   "continuation_anchor": {
     "table": "transactions",
