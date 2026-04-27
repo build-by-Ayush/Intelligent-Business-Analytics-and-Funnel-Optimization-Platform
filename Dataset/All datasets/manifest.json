@@ -1,37 +1,38 @@
 {
-  "dataset_name": "seed_2025_12_22_to_2026_04_20",
+  "dataset_name": "seed_2025_12_to_2026_04",
   "description": "Initial synthetic dataset snapshot covering events, transactions, order items, products, and returns.",
   "continuation_anchor": {
     "table": "transactions",
-    "last_timestamp": "2026-04-20 21:29:00",
-    "last_id": "ORD0001156"
+    "last_timestamp": "2026-05-20 20:11:27",
+    "last_id": "ORD0001446"
   },
   "tables": {
     "events": {
-      "row_count": 27238,
-      "last_timestamp": "2026-04-20 23:00:00",
+      "row_count": 34170,
+      "last_timestamp": "2026-05-20 22:39:55",
       "last_id": "EVT0027238"
     },
     "transactions": {
-      "row_count": 1156,
-      "last_timestamp": "2026-04-20 21:29:00",
-      "last_id": "ORD0001156"
+      "row_count": 1446,
+      "last_timestamp": "2026-05-20 20:11:27",
+      "last_id": "ORD0001446"
     },
     "order_items": {
-      "row_count": 2263,
-      "last_id": "OI00002263"
+      "row_count": 2829,
+      "last_id": "OI00002829"
     },
     "returns": {
-      "row_count": 239,
-      "last_order_timestamp": "2026-04-20 20:56:00",
-      "last_request_timestamp": "2026-04-30 15:37:00",
-      "last_resolution_timestamp": "2026-05-04 20:56:00",
-      "last_id": "RET0000239"
+      "row_count": 295,
+      "last_order_timestamp": "2026-05-20 20:11:27",
+      "last_request_timestamp": "2026-05-27 20:11:27",
+      "last_resolution_timestamp": "2026-06-01 08:16:21",
+      "last_id": "RET0000295"
     },
     "products": {
       "row_count": 200,
       "last_id": "P200",
       "static": true
     }
-  }
+  },
+  "last_generated_window": "2026_04_21_to_2026_05_20"
 }
