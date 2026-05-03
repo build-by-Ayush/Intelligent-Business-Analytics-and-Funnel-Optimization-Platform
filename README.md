@@ -60,6 +60,16 @@ The analytical core of the system uses a rule-based inference engine to monitor 
 
 ---
 
+# Project Snapshots
+<p align="center">
+  <img src="Images/Overview 1.png" width="400">
+  <img src="Images/Funnel 1.png" width="400">
+  <img src="Images/Return 1.png" width="400">
+  <img src="Images/Product 1.png" width="400">
+</p>
+
+---
+
 ## 🚀 How to Use the Platform
 
 1. **Overview**: Review overall business health and regional performance  
