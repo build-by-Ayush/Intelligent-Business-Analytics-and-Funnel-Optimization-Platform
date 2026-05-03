@@ -397,15 +397,32 @@ def build_category_month_table(item_level: pd.DataFrame, metric: str, top_n_cate
 
 
 @st.cache_data
-def build_target_achievement(item_level: pd.DataFrame, target_metric: str) -> tuple[float, float, float, pd.DataFrame, str]:
+def build_target_achievement(item_level: pd.DataFrame, target_metric: str) -> tuple[float, float, float, float, float, pd.DataFrame, str]:
     monthly = build_monthly_metric(item_level, target_metric)
     if monthly.empty:
-        return 0.0, 0.0, 0.0, monthly, target_metric
+        return 0.0, 0.0, 0.0, 0.0, 0.0, monthly, target_metric
 
     current_value = float(monthly.iloc[-1]["value"])
-    benchmark_value = float(monthly.iloc[:-1]["value"].mean()) if len(monthly) > 1 else current_value
-    achievement = safe_divide(current_value, benchmark_value) * 100
-    return current_value, benchmark_value, achievement, monthly, target_metric
+
+    if len(monthly) > 1:
+        previous_month_value = float(monthly.iloc[-2]["value"])
+        benchmark_value = float(monthly.iloc[:-1]["value"].mean())
+    else:
+        previous_month_value = current_value
+        benchmark_value = current_value
+
+    achievement_vs_previous = safe_divide(current_value, previous_month_value) * 100
+    achievement_vs_benchmark = safe_divide(current_value, benchmark_value) * 100
+
+    return (
+        current_value,
+        previous_month_value,
+        benchmark_value,
+        achievement_vs_previous,
+        achievement_vs_benchmark,
+        monthly,
+        target_metric,
+    )
 
 
 @st.cache_data
@@ -603,7 +620,7 @@ def render():
     )
     top_n = st.sidebar.slider("Top products shown", 5, 15, 10)
 
-    current_value, benchmark_value, target_achievement, target_monthly, target_label = build_target_achievement(item_level, target_metric)
+    current_value, previous_month_value, benchmark_value, target_achievement_prev, target_achievement_bench, target_monthly, target_label = build_target_achievement(item_level, target_metric)
     trend_df = build_monthly_metric(item_level, trend_metric)
     category_summary_df = build_category_summary(item_level, category_metric)
     category_month_df = build_category_topline(item_level, category_metric)
@@ -638,10 +655,10 @@ def render():
     with c5:
         st.markdown(
             stat_card(
-                "Target Achievement %",
-                f"{target_achievement:.1f}%",
-                f"Current {target_title} vs monthly benchmark",
-                subtitle_positive=target_achievement >= 100,
+                f"Prev Month {target_title} Achievement %",
+                f"{target_achievement_prev:.1f}%",
+                f"Current vs Prev month ({compact_currency(previous_month_value)})",
+                subtitle_positive=target_achievement_prev >= 100,
             ),
             unsafe_allow_html=True,
         )
@@ -655,11 +672,11 @@ def render():
             f'<div class="section-subtitle">{target_title} performance in the latest month vs the historical monthly benchmark.</div>',
             unsafe_allow_html=True,
         )
-        max_axis = max(150.0, math.ceil(max(target_achievement, 100.0) * 1.2 / 10.0) * 10.0)
+        max_axis = max(150.0, math.ceil(max(target_achievement_bench, 100.0) * 1.2 / 10.0) * 10.0)
         gauge = go.Figure(
             go.Indicator(
                 mode="gauge+number+delta",
-                value=target_achievement,
+                value=target_achievement_bench,
                 number={"suffix": "%"},
                 delta={"reference": 100, "relative": True, "valueformat": ".1f"},
                 title={"text": ""},
