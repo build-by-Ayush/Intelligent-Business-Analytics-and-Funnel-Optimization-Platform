@@ -4,8 +4,9 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from src.data_loader import load_data
+from src.data_loader import get_data_version, load_data
 from src.navigation import render_header_with_nav
+from src.metrics import build_item_financials, net_merchandise_sales
 
 
 st.set_page_config(
@@ -190,8 +191,9 @@ st.markdown(
 )
 
 
-@st.cache_data
 def load_all_data():
+    # src.data_loader owns the shared cache so the same loaded tables can be reused
+    # across dashboard pages rather than cached separately in each page module.
     return load_data()
 
 
@@ -230,59 +232,144 @@ def stat_card(
     """
 
 
-@st.cache_data
-def build_session_sequences(events: pd.DataFrame):
-    df = events.copy()
-    df["event_timestamp_dt"] = pd.to_datetime(df["event_timestamp"], dayfirst=True, errors="coerce")
-    df = df.sort_values(["session_id", "event_timestamp_dt", "event_step"])
+@st.cache_data(show_spinner=False)
+def build_event_analytics(data_version: tuple, _events: pd.DataFrame):
+    """Prepare session positions, segment metadata, friction metrics, and product event counts once.
 
-    seq_map = (
-        df.groupby("session_id")["event_type"]
-        .apply(lambda s: list(dict.fromkeys(s.dropna().tolist())))
-        .to_dict()
+    data_version is based on source-file paths, modification times, and sizes. The large
+    events DataFrame is deliberately excluded from Streamlit's cache-key hashing; changing
+    any source CSV changes data_version and invalidates this result.
+    """
+    required = [
+        "session_id",
+        "event_timestamp",
+        "event_step",
+        "event_type",
+        "traffic_source",
+        "device_type",
+        "region",
+    ]
+    df = _events.loc[:, required].copy()
+
+    if not pd.api.types.is_datetime64_any_dtype(df["event_timestamp"]):
+        df["event_timestamp_dt"] = pd.to_datetime(
+            df["event_timestamp"], errors="coerce", dayfirst=False
+        )
+    else:
+        df["event_timestamp_dt"] = df["event_timestamp"]
+
+    # Sessions with no session_id were excluded by the original groupby logic.
+    df = df.dropna(subset=["session_id"])
+    df = df.sort_values(
+        ["session_id", "event_timestamp_dt", "event_step"],
+        kind="mergesort",
     )
 
-    meta = (
-        df.groupby("session_id", as_index=True)
+    # Keep the first occurrence of each event type within a session, matching the old
+    # list(dict.fromkeys(...)) event-sequence semantics.
+    df["_event_position"] = df.groupby("session_id", sort=False).cumcount()
+    first_events = df.dropna(subset=["event_type"]).drop_duplicates(
+        ["session_id", "event_type"], keep="first"
+    )
+    first_positions = first_events.pivot(
+        index="session_id", columns="event_type", values="_event_position"
+    )
+    first_positions.columns.name = None
+
+    session_meta = (
+        df.groupby("session_id", as_index=False, sort=True)
         .agg(
             traffic_source=("traffic_source", "first"),
             device_type=("device_type", "first"),
             region=("region", "first"),
             start_time=("event_timestamp_dt", "min"),
         )
-        .reset_index()
     )
+    # Retain sessions with no non-null event_type, as the original sequence map did.
+    first_positions = first_positions.reindex(session_meta["session_id"].tolist())
+    first_positions.index.name = "session_id"
 
-    return seq_map, meta, df
+    # Vectorised consecutive-event timing replaces the nested Python session/event loops.
+    timed = df.dropna(subset=["event_timestamp_dt"]).copy()
+    grouped = timed.groupby("session_id", sort=False)
+    timed["_previous_time"] = grouped["event_timestamp_dt"].shift(1)
+    timed["_previous_type"] = grouped["event_type"].shift(1)
+    transitions = timed.loc[timed["_previous_time"].notna()].copy()
+
+    if transitions.empty:
+        friction_table = pd.DataFrame(
+            columns=["transition", "median_minutes", "p75_minutes", "observations"]
+        )
+    else:
+        transitions["transition"] = (
+            transitions["_previous_type"].astype(str)
+            + " → "
+            + transitions["event_type"].astype(str)
+        )
+        transitions["minutes"] = (
+            transitions["event_timestamp_dt"] - transitions["_previous_time"]
+        ).dt.total_seconds().div(60).clip(lower=0)
+        friction_table = (
+            transitions.groupby("transition", as_index=False)
+            .agg(
+                median_minutes=("minutes", "median"),
+                p75_minutes=("minutes", lambda values: values.quantile(0.75)),
+                observations=("minutes", "size"),
+            )
+            .sort_values("median_minutes", ascending=False)
+            .reset_index(drop=True)
+        )
+
+    # One grouped aggregation supplies the per-product session counts for view, cart,
+    # and purchase, instead of scanning the full events table three separate times.
+    product_event_rows = _events.loc[
+        _events["event_type"].isin(["view", "add_to_cart", "purchase"]),
+        ["product_id", "event_type", "session_id"],
+    ]
+    product_event_counts = (
+        product_event_rows.groupby(["product_id", "event_type"])["session_id"]
+        .nunique()
+        .unstack(fill_value=0)
+    )
+    product_event_counts.columns.name = None
+    product_event_counts.index.name = "product_id"
+
+    return first_positions, session_meta, friction_table, product_event_counts
 
 
-@st.cache_data
-def build_session_funnel(events: pd.DataFrame, stages: list[str]) -> pd.DataFrame:
-    seq_map, _, _ = build_session_sequences(events)
+def build_session_funnel(first_positions: pd.DataFrame, stages: list[str]) -> pd.DataFrame:
+    """Calculate sequential stage counts from each session's first occurrence positions."""
+    if first_positions.empty:
+        return pd.DataFrame(columns=["step", "sessions", "conversion_rate", "dropoff_rate"])
 
-    remaining_sessions = set(seq_map.keys())
     rows = []
-    last_positions = {sid: -1 for sid in remaining_sessions}
+    eligible = pd.Series(True, index=first_positions.index)
+    previous_position = None
 
     for idx, stage in enumerate(stages):
-        matched = set()
-        for sid in list(remaining_sessions):
-            seq = seq_map.get(sid, [])
-            try:
-                position = seq.index(stage, last_positions[sid] + 1)
-            except ValueError:
-                continue
-            matched.add(sid)
-            last_positions[sid] = position
+        if stage in first_positions.columns:
+            position = first_positions[stage]
+        else:
+            position = pd.Series(float("nan"), index=first_positions.index)
 
-        sessions = len(matched)
+        stage_present = position.notna()
+        if idx == 0:
+            eligible = stage_present
+        else:
+            eligible = eligible & stage_present & position.gt(previous_position)
+
+        sessions = int(eligible.sum())
         if idx == 0:
             conversion = 1.0
             dropoff = 0.0
         else:
-            prev_sessions = rows[-1]["sessions"]
-            conversion = safe_divide(sessions, prev_sessions)
-            dropoff = 1 - conversion
+            previous_sessions = rows[-1]["sessions"]
+            if previous_sessions > 0:
+                conversion = sessions / previous_sessions
+                dropoff = 1.0 - conversion
+            else:
+                conversion = 0.0
+                dropoff = 0.0
 
         rows.append(
             {
@@ -292,125 +379,117 @@ def build_session_funnel(events: pd.DataFrame, stages: list[str]) -> pd.DataFram
                 "dropoff_rate": dropoff,
             }
         )
-        remaining_sessions = matched
+        previous_position = position
 
     return pd.DataFrame(rows)
 
 
-@st.cache_data
-def build_segment_dropoff_heatmap(events: pd.DataFrame, dimension: str, stages: list[str]) -> pd.DataFrame:
-    seq_map, meta, _ = build_session_sequences(events)
-    meta = meta[["session_id", dimension]].dropna()
-    segments = meta[dimension].astype(str).unique().tolist()
+def build_segment_dropoff_heatmap(
+    first_positions: pd.DataFrame,
+    session_meta: pd.DataFrame,
+    dimension: str,
+    transitions: list[tuple[str, str]],
+) -> pd.DataFrame:
+    """Vectorised drop-off calculation for selected source-to-target transitions."""
+    meta = session_meta[["session_id", dimension]].dropna(subset=[dimension]).copy()
+    meta[dimension] = meta[dimension].astype(str)
+    segment_order = meta[dimension].drop_duplicates().tolist()
+    transition_labels = [f"{source} → {target}" for source, target in transitions]
+    matrix = pd.DataFrame(index=transition_labels, columns=segment_order, dtype=float)
 
-    transitions = [f"{stages[i]} → {stages[i+1]}" for i in range(len(stages) - 1)]
-    matrix = pd.DataFrame(index=transitions, columns=segments, dtype=float)
+    segment_by_session = meta.set_index("session_id")[dimension].reindex(first_positions.index)
 
-    for segment in segments:
-        segment_sessions = set(meta.loc[meta[dimension].astype(str) == segment, "session_id"].tolist())
-        if not segment_sessions:
-            continue
+    for (source, target), label in zip(transitions, transition_labels):
+        if source in first_positions.columns:
+            source_position = first_positions[source]
+            source_reached = source_position.notna()
+        else:
+            source_position = pd.Series(float("nan"), index=first_positions.index)
+            source_reached = pd.Series(False, index=first_positions.index)
 
-        prev_sessions = segment_sessions
-        last_positions = {sid: -1 for sid in prev_sessions if sid in seq_map}
+        if target in first_positions.columns:
+            target_position = first_positions[target]
+            target_after_source = target_position.notna() & target_position.gt(source_position)
+        else:
+            target_after_source = pd.Series(False, index=first_positions.index)
 
-        step_counts = []
-        for stage in stages:
-            matched = set()
-            for sid in list(prev_sessions):
-                seq = seq_map.get(sid, [])
-                try:
-                    position = seq.index(stage, last_positions.get(sid, -1) + 1)
-                except ValueError:
-                    continue
-                matched.add(sid)
-                last_positions[sid] = position
-            step_counts.append(len(matched))
-            prev_sessions = matched
+        for segment in segment_order:
+            in_segment = segment_by_session.eq(segment)
+            denominator_mask = in_segment & source_reached
+            denominator = int(denominator_mask.sum())
+            if denominator:
+                numerator = int((denominator_mask & target_after_source).sum())
+                matrix.loc[label, segment] = (1.0 - numerator / denominator) * 100.0
+            else:
+                # Keep the existing dashboard convention for a segment with no source events.
+                matrix.loc[label, segment] = 0.0
 
-        for i in range(len(step_counts) - 1):
-            prev_val = step_counts[i]
-            next_val = step_counts[i + 1]
-            conversion = safe_divide(next_val, prev_val)
-            dropoff = 1 - conversion
-            matrix.loc[transitions[i], segment] = dropoff * 100
-
-    return matrix.fillna(0)
+    return matrix.fillna(0.0)
 
 
-@st.cache_data
-def build_friction_table(events: pd.DataFrame) -> pd.DataFrame:
-    df = events.copy()
-    df["event_timestamp_dt"] = pd.to_datetime(df["event_timestamp"], dayfirst=True, errors="coerce")
-    df = df.sort_values(["session_id", "event_timestamp_dt", "event_step"])
-
-    rows = []
-    for session_id, group in df.groupby("session_id"):
-        group = group.dropna(subset=["event_timestamp_dt"])
-        if len(group) < 2:
-            continue
-        times = group["event_timestamp_dt"].tolist()
-        types = group["event_type"].tolist()
-
-        for i in range(len(times) - 1):
-            transition = f"{types[i]} → {types[i+1]}"
-            minutes = (times[i + 1] - times[i]).total_seconds() / 60.0
-            rows.append({"session_id": session_id, "transition": transition, "minutes": max(minutes, 0)})
-
-    out = pd.DataFrame(rows)
-    if out.empty:
-        return out
-
-    summary = (
-        out.groupby("transition", as_index=False)
+@st.cache_data(show_spinner=False)
+def build_product_funnel(
+    order_items: pd.DataFrame,
+    products: pd.DataFrame,
+    transactions: pd.DataFrame,
+    returns: pd.DataFrame,
+    product_event_counts: pd.DataFrame,
+    top_n: int = 5,
+) -> pd.DataFrame:
+    # Item-level sales use the shared net-merchandise-sales definition.
+    item_financials = build_item_financials(order_items, products, transactions)
+    item_sales = (
+        item_financials.groupby(["product_id", "product_name", "category"], as_index=False)
         .agg(
-            median_minutes=("minutes", "median"),
-            p75_minutes=("minutes", lambda s: s.quantile(0.75)),
-            observations=("minutes", "size"),
-        )
-        .sort_values("median_minutes", ascending=False)
-    )
-    return summary
-
-
-@st.cache_data
-def build_product_funnel(order_items: pd.DataFrame, returns: pd.DataFrame, events: pd.DataFrame, top_n: int = 5) -> pd.DataFrame:
-    views = (
-        events.loc[events["event_type"] == "view"]
-        .groupby(["product_id", "product_name", "category"], as_index=False)
-        .agg(views=("session_id", "nunique"))
-    )
-    carts = (
-        events.loc[events["event_type"] == "add_to_cart"]
-        .groupby(["product_id", "product_name", "category"], as_index=False)
-        .agg(carts=("session_id", "nunique"))
-    )
-    purchases = (
-        order_items.groupby(["product_id", "product_name", "category"], as_index=False)
-        .agg(
-            purchases=("order_item_id", "nunique"),
-            revenue=("total_price", "sum"),
+            order_item_count=("order_item_id", "nunique"),
+            units_sold=("quantity", "sum"),
+            revenue=("net_merchandise_sales", "sum"),
         )
     )
-    returned = (
-        returns.groupby("product_id", as_index=False)
-        .agg(returned_items=("order_item_id", "nunique"))
+
+    event_counts = product_event_counts.reset_index()
+    event_counts = event_counts.rename(
+        columns={"view": "views", "add_to_cart": "carts", "purchase": "purchases"}
     )
+    for column in ["views", "carts", "purchases"]:
+        if column not in event_counts.columns:
+            event_counts[column] = 0
+
+    if returns.empty:
+        returned = pd.DataFrame(columns=["product_id", "returned_units"])
+    elif "return_quantity" in returns.columns:
+        return_units = returns.copy()
+        return_units["return_quantity"] = pd.to_numeric(
+            return_units["return_quantity"], errors="coerce"
+        ).fillna(0)
+        # Every row is a request; pending/rejected requests remain included.
+        returned = return_units.groupby("product_id", as_index=False).agg(
+            returned_units=("return_quantity", "sum")
+        )
+    else:
+        raise KeyError(
+            "returns must contain 'return_quantity' to calculate a unit-based return-request rate."
+        )
 
     df = (
-        purchases.merge(views, on=["product_id", "product_name", "category"], how="left")
-        .merge(carts, on=["product_id", "product_name", "category"], how="left")
+        item_sales.merge(
+            event_counts[["product_id", "views", "carts", "purchases"]],
+            on="product_id",
+            how="left",
+        )
         .merge(returned, on="product_id", how="left")
-        .fillna(0)
     )
 
-    df["view_to_cart"] = df.apply(lambda row: safe_divide(row["carts"], row["views"]), axis=1)
-    df["cart_to_purchase"] = df.apply(lambda row: safe_divide(row["purchases"], row["carts"]), axis=1)
-    df["view_to_purchase"] = df.apply(lambda row: safe_divide(row["purchases"], row["views"]), axis=1)
-    df["return_rate"] = df.apply(lambda row: safe_divide(row["returned_items"], row["purchases"]), axis=1)
+    for column in ["purchases", "views", "carts", "returned_units", "units_sold", "order_item_count"]:
+        df[column] = pd.to_numeric(df[column], errors="coerce").fillna(0).astype(int)
 
-    df = df.sort_values(["purchases", "revenue"], ascending=[False, False]).head(top_n).copy()
-    return df
+    df["view_to_cart"] = df["carts"].div(df["views"].where(df["views"].ne(0))).fillna(0.0)
+    df["cart_to_purchase"] = df["purchases"].div(df["carts"].where(df["carts"].ne(0))).fillna(0.0)
+    df["view_to_purchase"] = df["purchases"].div(df["views"].where(df["views"].ne(0))).fillna(0.0)
+    df["return_rate"] = df["returned_units"].div(df["units_sold"].where(df["units_sold"].ne(0))).fillna(0.0)
+
+    # Preserve the existing product ranking and table grain.
+    return df.sort_values(["order_item_count", "revenue"], ascending=[False, False]).head(top_n).copy()
 
 
 @st.cache_data
@@ -439,14 +518,31 @@ def build_funnel_insights(session_funnel: pd.DataFrame, product_funnel: pd.DataF
 
 def render():
     events, order_items, products, returns, transactions = load_all_data()
-    stages = ["visit", "search", "view", "add_to_cart", "checkout_start", "purchase"]
+    # Search remains optional in the core conversion funnel.
+    stages = ["visit", "view", "add_to_cart", "checkout_start", "purchase"]
 
-    session_funnel = build_session_funnel(events, stages)
-    device_heatmap = build_segment_dropoff_heatmap(events, "device_type", stages)
-    traffic_heatmap = build_segment_dropoff_heatmap(events, "traffic_source", stages)
-    region_heatmap = build_segment_dropoff_heatmap(events, "region", stages)
-    friction_table = build_friction_table(events)
-    product_funnel = build_product_funnel(order_items, returns, events, top_n=5)
+    # One cached pass over events supplies all session, friction, segment, and product-event data.
+    first_positions, session_meta, friction_table, product_event_counts = build_event_analytics(
+        get_data_version(), events
+    )
+    session_funnel = build_session_funnel(first_positions, stages)
+    heatmap_transitions = [
+        ("search", "add_to_cart"),
+        ("view", "add_to_cart"),
+        ("checkout_start", "purchase"),
+    ]
+    device_heatmap = build_segment_dropoff_heatmap(
+        first_positions, session_meta, "device_type", heatmap_transitions
+    )
+    traffic_heatmap = build_segment_dropoff_heatmap(
+        first_positions, session_meta, "traffic_source", heatmap_transitions
+    )
+    region_heatmap = build_segment_dropoff_heatmap(
+        first_positions, session_meta, "region", heatmap_transitions
+    )
+    product_funnel = build_product_funnel(
+        order_items, products, transactions, returns, product_event_counts, top_n=5
+    )
     funnel_insights = build_funnel_insights(session_funnel, product_funnel, friction_table)
 
     total_visit = int(session_funnel.iloc[0]["sessions"]) if not session_funnel.empty else 0
@@ -467,7 +563,7 @@ def render():
     max_drop_value = max_drop_row["dropoff_rate"]
     max_drop_step = max_drop_row["step"]
 
-    total_revenue = order_items["total_price"].sum()
+    total_revenue = net_merchandise_sales(transactions)
     revenue_per_visit = safe_divide(total_revenue, total_visit)
 
     view_row = session_funnel.loc[session_funnel["step"] == "view"]
@@ -502,7 +598,7 @@ def render():
     with c3:
         st.markdown(stat_card("Cart → Purchase", f"{cart_to_purchase * 100:.2f}%"), unsafe_allow_html=True)
     with c4:
-        st.markdown(stat_card("Avg Step Friction", f"{avg_friction:.2f} min"), unsafe_allow_html=True)
+        st.markdown(stat_card("Avg Median Delay", f"{avg_friction:.2f} min"), unsafe_allow_html=True)
 
     st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
 
@@ -527,7 +623,8 @@ def render():
     funnel_fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
 
     device_conv = (
-        events.groupby("device_type")["session_id"]
+        events.loc[events["event_type"] == "visit"]
+        .groupby("device_type")["session_id"]
         .nunique()
         .reset_index(name="visits")
     )
@@ -580,24 +677,24 @@ def render():
     with left:
         st.markdown('<div class="section-title">Core Conversion Funnel</div>', unsafe_allow_html=True)
         st.markdown(
-            '<div class="section-subtitle">Ordered customer journey with absolute users and step conversion.</div>',
+            '<div class="section-subtitle">Ordered session journey with session counts and step conversion.</div>',
             unsafe_allow_html=True,
         )
-        st.plotly_chart(funnel_fig, use_container_width=True)
+        st.plotly_chart(funnel_fig, width="stretch")
 
     with right:
         st.markdown('<div class="section-title">Device Conversion</div>', unsafe_allow_html=True)
         st.markdown(
-            '<div class="section-subtitle">Conversion rate by device type (purchase / visit).</div>',
+            '<div class="section-subtitle">Session conversion rate by device (purchase sessions / visit sessions).</div>',
             unsafe_allow_html=True,
         )
-        st.plotly_chart(fig_dev, use_container_width=True)
+        st.plotly_chart(fig_dev, width="stretch")
 
     st.markdown("<div style='height: 6px;'></div>", unsafe_allow_html=True)
 
     st.markdown('<div class="section-title">Drop-off Heatmap</div>', unsafe_allow_html=True)
     st.markdown(
-        '<div class="section-subtitle">Where the funnel weakens across device, traffic source, and region.</div>',
+        '<div class="section-subtitle">Drop-off across search-to-cart, view-to-cart, and checkout-to-purchase transitions by device, traffic source, and region.</div>',
         unsafe_allow_html=True,
     )
     heat_tabs = st.tabs(["Device Type", "Traffic Source", "Region"])
@@ -621,6 +718,7 @@ def render():
                     labels=dict(x="Segment", y="Step Transition", color="Drop-off %"),
                     template="plotly_dark",
                 )
+                fig.update_traces(xgap=1, ygap=1)
                 fig.update_layout(
                     height=420,
                     margin=dict(l=10, r=10, t=20, b=10),
@@ -628,7 +726,7 @@ def render():
                     plot_bgcolor=PAGE_BG,
                     font=dict(color=TEXT),
                 )
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig, width="stretch")
 
     st.markdown("<div style='height: 6px;'></div>", unsafe_allow_html=True)
 
@@ -636,7 +734,7 @@ def render():
     with left:
         st.markdown('<div class="section-title">Top Product Funnel Table</div>', unsafe_allow_html=True)
         st.markdown(
-            '<div class="section-subtitle">Top 5 products by purchase volume, with view/cart/purchase and return signals.</div>',
+            '<div class="section-subtitle">Top 5 products by purchased item volume, with event-based session conversion and unit-based return-request signals.</div>',
             unsafe_allow_html=True,
         )
         if product_funnel.empty:
@@ -661,8 +759,14 @@ def render():
                     "return_rate",
                     "revenue",
                 ]
-            ]
-            st.dataframe(display, use_container_width=True, hide_index=True)
+            ].rename(
+                columns={
+                    "purchases": "purchase_sessions",
+                    "return_rate": "return_request_rate",
+                    "revenue": "net_merchandise_sales",
+                }
+            )
+            st.dataframe(display, width="stretch", hide_index=True)
 
         st.markdown('<div class="section-title">Key Funnel Signals</div>', unsafe_allow_html=True)
         k1, k2, k3 = st.columns(3)
@@ -681,7 +785,7 @@ def render():
         with k2:
             st.markdown(
                 stat_card(
-                    "Revenue per Visit",
+                    "Net Sales per Visit",
                     f"₹{revenue_per_visit:,.2f}",
                     subtitle="Business value per session",
                     subtitle_positive=True,
@@ -703,7 +807,7 @@ def render():
     with right:
         st.markdown('<div class="section-title">Behavioral Friction</div>', unsafe_allow_html=True)
         st.markdown(
-            '<div class="section-subtitle">Median time delay between user actions; long delays imply hesitation or friction.</div>',
+            '<div class="section-subtitle">Median time between actions; long gaps flag transitions to review but do not identify the cause.</div>',
             unsafe_allow_html=True,
         )
         if friction_table.empty:
@@ -734,7 +838,7 @@ def render():
             )
             fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
             fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
     st.markdown("<div style='height: 10px;'></div>", unsafe_allow_html=True)
 
@@ -749,12 +853,12 @@ def render():
                 <div class="checkout-item">
                     <div class="checkout-label">Checkout Start Sessions</div>
                     <div class="checkout-value">{checkout_count:,}</div>
-                    <div class="checkout-note">Users who reached the final purchase stage</div>
+                    <div class="checkout-note">Sessions that initiated checkout</div>
                 </div>
                 <div class="checkout-item">
                     <div class="checkout-label">Purchase Sessions</div>
                     <div class="checkout-value">{purchase_count:,}</div>
-                    <div class="checkout-note">Users who completed the transaction</div>
+                    <div class="checkout-note">Sessions that completed a purchase</div>
                 </div>
                 <div class="checkout-item">
                     <div class="checkout-label">Highest Friction Transition</div>
@@ -787,9 +891,8 @@ def render():
             priority=120,
             title="Low Overall Conversion",
             body=(
-                f"Only <strong>{overall_conversion * 100:.1f}%</strong> of visits are turning into purchases. "
-                f"This means most users are leaving before the funnel reaches the final stage. "
-                f"The issue is likely broader than one isolated step and should be treated as a full funnel conversion problem."
+                f"<strong>{overall_conversion * 100:.1f}%</strong> of visit sessions reached purchase through the required funnel sequence. "
+                f"This shows a large gap between visits and completed purchases. Review the stage counts and segment patterns before assigning a cause."
             ),
             chart_renderer=None,
         )
@@ -799,8 +902,8 @@ def render():
             priority=110,
             title="Checkout Abandonment Warning",
             body=(
-                f"About <strong>{checkout_abandonment * 100:.1f}%</strong> of users leave after checkout begins. "
-                f"This suggests friction in the final purchase step, such as payment hesitation, trust issues, or a confusing checkout flow."
+                f"<strong>{checkout_abandonment * 100:.1f}%</strong> of sessions that reached checkout did not reach purchase in the funnel sequence. "
+                f"Payment, trust, delivery costs, or checkout usability are possible areas to investigate; this metric alone does not identify the reason."
             ),
             chart_renderer=None,
         )
@@ -836,14 +939,14 @@ def render():
             )
             fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
             fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
         add_insight(
             priority=100,
             title="Critical Drop-Off Stage",
             body=(
-                f"The largest drop happens at <strong>{max_drop_step}</strong>, where the funnel loses a major share of users. "
-                f"This indicates a strong point of friction in the journey and should be reviewed first."
+                f"The largest observed stage-to-stage decline occurs at <strong>{max_drop_step}</strong>, where session count falls by <strong>{max_drop_value * 100:.1f}%</strong> versus the previous stage. "
+                f"This localizes the largest count loss, but does not establish why it occurred."
             ),
             chart_renderer=render_dropoff_chart,
         )
@@ -885,15 +988,15 @@ def render():
                 )
                 fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
                 fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig, width="stretch")
 
             add_insight(
                 priority=90,
                 title="Device Conversion Gap",
                 body=(
-                    f"Conversion is noticeably weaker on <strong>{worst['device_type']}</strong> compared with "
-                    f"<strong>{best['device_type']}</strong>. The gap is about <strong>{spread * 100:.1f} percentage points</strong>, "
-                    f"which suggests a device-specific experience issue."
+                    f"Observed conversion is lower on <strong>{worst['device_type']}</strong> than on "
+                    f"<strong>{best['device_type']}</strong> by about <strong>{spread * 100:.1f} percentage points</strong>. "
+                    f"Treat this as a segment difference to investigate; it does not by itself prove a device-specific experience issue."
                 ),
                 chart_renderer=render_device_chart,
             )
@@ -932,15 +1035,14 @@ def render():
                 )
                 fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
                 fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig, width="stretch")
 
             add_insight(
                 priority=80,
                 title="High User Friction",
                 body=(
-                    f"Users take the longest time between <strong>{slowest['transition']}</strong>. "
-                    f"The median delay is <strong>{slowest['median_minutes']:.1f} minutes</strong>, which suggests hesitation "
-                    f"or confusion at this stage."
+                    f"The longest observed median gap is between <strong>{slowest['transition']}</strong>. "
+                    f"The median delay is <strong>{slowest['median_minutes']:.1f} minutes</strong>. Timing alone cannot distinguish hesitation from normal browsing or other behavior."
                 ),
                 chart_renderer=render_friction_chart,
             )

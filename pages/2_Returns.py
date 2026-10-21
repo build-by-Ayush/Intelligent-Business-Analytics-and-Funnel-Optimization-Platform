@@ -7,6 +7,7 @@ import streamlit as st
 
 from src.data_loader import load_data
 from src.navigation import render_header_with_nav
+from src.metrics import build_item_financials, build_return_financials, net_merchandise_sales
 
 
 st.set_page_config(
@@ -260,55 +261,109 @@ def stat_card(
     """
 
 
+def _parse_dates(series: pd.Series) -> pd.Series:
+    """Parse ISO timestamps first, then support other common date formats."""
+    raw = series.astype("string").str.strip()
+    parsed = pd.to_datetime(raw, format="ISO8601", errors="coerce")
+    unresolved = parsed.isna() & raw.notna() & raw.ne("")
+    if unresolved.any():
+        parsed.loc[unresolved] = pd.to_datetime(raw.loc[unresolved], dayfirst=True, errors="coerce")
+    return parsed
+
+
 @st.cache_data
 def parse_return_dates(returns: pd.DataFrame) -> pd.DataFrame:
     df = returns.copy()
-    df["order_timestamp_dt"] = pd.to_datetime(df["order_timestamp"], errors="coerce")
-    df["return_request_dt"] = pd.to_datetime(df["return_request_date"], errors="coerce")
-    df["return_date_dt"] = pd.to_datetime(df["return_date"], errors="coerce")
-    df["order_to_request_days"] = (df["return_request_dt"] - df["order_timestamp_dt"]).dt.total_seconds() / 86400.0
-    df["request_to_resolution_days"] = (df["return_date_dt"] - df["return_request_dt"]).dt.total_seconds() / 86400.0
-    df["order_to_resolution_days"] = (df["return_date_dt"] - df["order_timestamp_dt"]).dt.total_seconds() / 86400.0
+    for col in ["order_timestamp", "return_request_date", "return_date"]:
+        if col in df.columns:
+            df[{"order_timestamp": "order_timestamp_dt", "return_request_date": "return_request_dt", "return_date": "return_date_dt"}[col]] = _parse_dates(df[col])
+        else:
+            df[{"order_timestamp": "order_timestamp_dt", "return_request_date": "return_request_dt", "return_date": "return_date_dt"}[col]] = pd.NaT
+
+    df["order_to_request_days"] = (
+        df["return_request_dt"] - df["order_timestamp_dt"]
+    ).dt.total_seconds() / 86400.0
+
+    status = df["return_status"].astype("string").str.strip().str.lower() if "return_status" in df.columns else pd.Series("", index=df.index, dtype="string")
+    resolved = status.isin(["approved", "rejected", "resolved", "completed"])
+
+    df["request_to_resolution_days"] = (
+        df["return_date_dt"] - df["return_request_dt"]
+    ).dt.total_seconds() / 86400.0
+    df["request_to_resolution_days"] = df["request_to_resolution_days"].where(resolved)
+
+    df["order_to_resolution_days"] = (
+        df["return_date_dt"] - df["order_timestamp_dt"]
+    ).dt.total_seconds() / 86400.0
+    df["order_to_resolution_days"] = df["order_to_resolution_days"].where(resolved)
+
+    # Negative durations indicate invalid chronology and must not affect cycle metrics.
+    for col in ["order_to_request_days", "request_to_resolution_days", "order_to_resolution_days"]:
+        df[col] = df[col].where(df[col] >= 0)
     return df
 
 
 @st.cache_data
 def build_return_trend(transactions: pd.DataFrame, returns: pd.DataFrame) -> pd.DataFrame:
+    """Daily return-request volume, independent of orders placed on that day."""
     tx = transactions.copy()
-    tx["order_date_dt"] = pd.to_datetime(tx["order_date"], dayfirst=True, errors="coerce")
+    tx["order_date_dt"] = _parse_dates(tx["order_date"] if "order_date" in tx.columns else tx.get("order_timestamp", pd.Series(dtype="object")))
     rt = parse_return_dates(returns)
 
-    max_date = max(tx["order_date_dt"].max(), rt["return_request_dt"].max())
-    if pd.isna(max_date):
-        return pd.DataFrame(columns=["date", "orders", "returns", "refund_amount", "return_rate"])
+    date_candidates = [
+        date for date in [tx["order_date_dt"].max(), rt["return_request_dt"].max()]
+        if pd.notna(date)
+    ]
+    if not date_candidates:
+        return pd.DataFrame(columns=["date", "orders", "return_requests", "requested_units", "refund_amount"])
 
+    max_date = max(date_candidates).normalize()
     start_date = (max_date.to_period("M") - 3).to_timestamp()
     tx = tx.loc[tx["order_date_dt"] >= start_date].copy()
     rt = rt.loc[rt["return_request_dt"] >= start_date].copy()
 
-    daily_orders = tx.groupby(tx["order_date_dt"].dt.date)["order_id"].nunique().reset_index(name="orders")
-    daily_orders.rename(columns={"order_date_dt": "date"}, inplace=True)
-    daily_orders["date"] = pd.to_datetime(daily_orders["date"])
+    daily_orders = (
+        tx.groupby(tx["order_date_dt"].dt.normalize())["order_id"]
+        .nunique()
+        .rename("orders")
+        .rename_axis("date")
+        .reset_index()
+    )
+    refund_col = "approved_refund_amount" if "approved_refund_amount" in rt.columns else "refund_amount"
+    if "return_quantity" in rt.columns:
+        rt["return_quantity"] = pd.to_numeric(rt["return_quantity"], errors="coerce").fillna(0)
+    else:
+        rt["return_quantity"] = 0
+    if refund_col not in rt.columns:
+        rt[refund_col] = 0.0
 
-    daily_returns = rt.groupby(rt["return_request_dt"].dt.date)["return_id"].nunique().reset_index(name="returns")
-    daily_returns.rename(columns={"return_request_dt": "date"}, inplace=True)
-    daily_returns["date"] = pd.to_datetime(daily_returns["date"])
+    daily_returns = (
+        rt.groupby(rt["return_request_dt"].dt.normalize(), dropna=True)
+        .agg(
+            return_requests=("return_id", "nunique"),
+            requested_units=("return_quantity", "sum"),
+            refund_amount=(refund_col, "sum"),
+        )
+        .rename_axis("date")
+        .reset_index()
+    )
 
-    daily_refunds = rt.groupby(rt["return_request_dt"].dt.date)["refund_amount"].sum().reset_index(name="refund_amount")
-    daily_refunds.rename(columns={"return_request_dt": "date"}, inplace=True)
-    daily_refunds["date"] = pd.to_datetime(daily_refunds["date"])
-
-    trend = daily_orders.merge(daily_returns, on="date", how="outer").merge(daily_refunds, on="date", how="outer").fillna(0)
-    trend["return_rate"] = trend.apply(lambda row: safe_divide(row["returns"], row["orders"]), axis=1)
-    trend = trend.sort_values("date")
-    return trend
+    calendar = pd.DataFrame({"date": pd.date_range(start=start_date, end=max_date, freq="D")})
+    trend = calendar.merge(daily_orders, on="date", how="left").merge(daily_returns, on="date", how="left")
+    for col in ["orders", "return_requests", "requested_units", "refund_amount"]:
+        trend[col] = trend[col].fillna(0)
+    return trend.sort_values("date").reset_index(drop=True)
 
 
 @st.cache_data
 def build_return_reason_distribution(returns: pd.DataFrame) -> pd.DataFrame:
+    df = returns.copy()
+    refund_col = "approved_refund_amount" if "approved_refund_amount" in df.columns else "refund_amount"
+    if refund_col not in df.columns:
+        df[refund_col] = 0.0
     return (
-        returns.groupby("return_reason", as_index=False)
-        .agg(count=("return_id", "nunique"), refund_amount=("refund_amount", "sum"))
+        df.groupby("return_reason", as_index=False)
+        .agg(count=("return_id", "nunique"), refund_amount=(refund_col, "sum"))
         .sort_values("count", ascending=False)
     )
 
@@ -348,73 +403,104 @@ def build_reason_category_heatmap(returns: pd.DataFrame) -> pd.DataFrame:
 
 
 @st.cache_data
-def build_segment_return_rates(transactions: pd.DataFrame, returns: pd.DataFrame, dimension: str) -> pd.DataFrame:
-    tx = transactions[["order_id", dimension]].drop_duplicates().copy()
-    tx[dimension] = tx[dimension].astype(str)
+def build_segment_return_rates(
+    transactions: pd.DataFrame,
+    order_items: pd.DataFrame,
+    returns: pd.DataFrame,
+    dimension: str,
+) -> pd.DataFrame:
+    """Return-requested units divided by units sold within each segment."""
+    if dimension not in transactions.columns or "quantity" not in order_items.columns:
+        return pd.DataFrame(columns=[dimension, "total_orders", "sold_units", "returned_orders", "return_units_requested", "return_rate"])
 
-    total_orders = tx.groupby(dimension)["order_id"].nunique().reset_index(name="total_orders")
-    returned_orders = (
-        returns[["order_id"]]
-        .drop_duplicates()
-        .merge(tx, on="order_id", how="left")
-        .groupby(dimension)["order_id"]
-        .nunique()
-        .reset_index(name="returned_orders")
+    tx_lookup = transactions[["order_id", dimension]].drop_duplicates(subset=["order_id"]).copy()
+    tx_lookup[dimension] = tx_lookup[dimension].astype("string")
+    tx_lookup = tx_lookup.dropna(subset=[dimension])
+
+    sold = order_items[["order_id", "quantity"]].copy()
+    sold["quantity"] = pd.to_numeric(sold["quantity"], errors="coerce").fillna(0)
+    sold = sold.merge(tx_lookup, on="order_id", how="left", validate="many_to_one").dropna(subset=[dimension])
+    total_orders = tx_lookup.groupby(dimension, as_index=False).agg(total_orders=("order_id", "nunique"))
+    sold_units = sold.groupby(dimension, as_index=False).agg(sold_units=("quantity", "sum"))
+
+    rt = returns.copy()
+    if "return_quantity" not in rt.columns:
+        rt["return_quantity"] = 0
+    rt["return_quantity"] = pd.to_numeric(rt["return_quantity"], errors="coerce").fillna(0)
+    requested = rt[["order_id", "return_quantity"]].merge(
+        tx_lookup, on="order_id", how="left", validate="many_to_one"
+    ).dropna(subset=[dimension])
+    request_summary = requested.groupby(dimension, as_index=False).agg(
+        returned_orders=("order_id", "nunique"),
+        return_units_requested=("return_quantity", "sum"),
     )
 
-    df = total_orders.merge(returned_orders, on=dimension, how="left").fillna(0)
-    df["return_rate"] = df.apply(lambda row: safe_divide(row["returned_orders"], row["total_orders"]), axis=1)
-    return df.sort_values("return_rate", ascending=False)
+    df = total_orders.merge(sold_units, on=dimension, how="left").merge(request_summary, on=dimension, how="left")
+    for col in ["sold_units", "returned_orders", "return_units_requested"]:
+        df[col] = df[col].fillna(0)
+    df["return_rate"] = df.apply(lambda row: safe_divide(row["return_units_requested"], row["sold_units"]), axis=1)
+    return df.sort_values("return_rate", ascending=False).reset_index(drop=True)
 
 
 @st.cache_data
-def build_product_return_table(order_items: pd.DataFrame, returns: pd.DataFrame, transactions: pd.DataFrame) -> pd.DataFrame:
-    oi = order_items.copy()
-    tx = transactions[["order_id", "estimated_profit", "order_date"]].copy()
-    tx["order_date"] = pd.to_datetime(tx["order_date"], dayfirst=True, errors="coerce")
-
-    order_item_value = oi.groupby("order_id")["total_price"].transform("sum")
-    oi["item_share"] = oi["total_price"] / order_item_value.replace(0, pd.NA)
-
-    oi = oi.merge(tx, on="order_id", how="left")
-    oi["allocated_profit"] = oi["estimated_profit"].fillna(0) * oi["item_share"].fillna(0)
-
-    ret = returns[["order_item_id", "refund_amount", "return_reason", "return_status", "return_request_date", "return_date"]].copy()
-    ret["return_request_date"] = pd.to_datetime(ret["return_request_date"], errors="coerce")
-    ret["return_date"] = pd.to_datetime(ret["return_date"], errors="coerce")
-
-    item_level = oi.merge(ret, on="order_item_id", how="left")
-    item_level["is_returned"] = item_level["return_reason"].notna()
-    item_level["return_cycle_days"] = (item_level["return_date"] - item_level["order_date"]).dt.total_seconds() / 86400.0
-
-    grouped = (
-        item_level.groupby(["product_id", "product_name", "category", "brand"], as_index=False)
+def build_product_return_table(
+    order_items: pd.DataFrame,
+    products: pd.DataFrame,
+    returns: pd.DataFrame,
+    transactions: pd.DataFrame,
+) -> pd.DataFrame:
+    """Product sales/profit with request rates based on requested units / units sold."""
+    item_financials = build_item_financials(order_items, products, transactions)
+    product_keys = ["product_id", "product_name", "category", "brand"]
+    sales = (
+        item_financials.groupby(product_keys, as_index=False)
         .agg(
-            purchases=("order_item_id", "nunique"),
-            returns=("is_returned", "sum"),
-            revenue=("total_price", "sum"),
-            refund_amount=("refund_amount", "sum"),
-            allocated_profit=("allocated_profit", "sum"),
-            avg_return_cycle_days=("return_cycle_days", "mean"),
+            units_sold=("quantity", "sum"),
+            revenue=("net_merchandise_sales", "sum"),
+            allocated_profit=("gross_profit", "sum"),
         )
     )
 
-    grouped["return_rate"] = grouped.apply(lambda row: safe_divide(row["returns"], row["purchases"]), axis=1)
-    grouped["net_profit_after_returns"] = grouped["allocated_profit"].fillna(0) - grouped["refund_amount"].fillna(0)
+    rt = parse_return_dates(returns)
+    refund_col = "approved_refund_amount" if "approved_refund_amount" in rt.columns else "refund_amount"
+    if refund_col not in rt.columns:
+        rt[refund_col] = 0.0
+    if "return_quantity" not in rt.columns:
+        rt["return_quantity"] = 0
+    rt["return_quantity"] = pd.to_numeric(rt["return_quantity"], errors="coerce").fillna(0)
+    return_keys = [col for col in product_keys if col in rt.columns]
+    if rt.empty or not return_keys:
+        return_summary = pd.DataFrame(columns=product_keys + ["return_requests", "return_units_requested", "refund_amount", "avg_return_cycle_days"])
+    else:
+        return_summary = (
+            rt.groupby(return_keys, as_index=False)
+            .agg(
+                return_requests=("return_id", "nunique"),
+                return_units_requested=("return_quantity", "sum"),
+                refund_amount=(refund_col, "sum"),
+                avg_return_cycle_days=("order_to_resolution_days", "mean"),
+            )
+        )
 
-    return grouped.sort_values(["return_rate", "refund_amount"], ascending=[False, False])
+    grouped = sales.merge(return_summary, on=product_keys, how="left")
+    for col in ["return_requests", "return_units_requested", "refund_amount"]:
+        grouped[col] = grouped[col].fillna(0)
+    grouped["return_rate"] = grouped.apply(
+        lambda row: safe_divide(row["return_units_requested"], row["units_sold"]), axis=1
+    )
+    grouped["net_profit_after_returns"] = grouped["allocated_profit"].fillna(0) - grouped["refund_amount"].fillna(0)
+    return grouped.sort_values(["return_rate", "refund_amount"], ascending=[False, False]).reset_index(drop=True)
 
 
 @st.cache_data
 def build_return_lag_table(returns: pd.DataFrame) -> pd.DataFrame:
     rt = parse_return_dates(returns)
-    lag = rt[["order_to_request_days", "request_to_resolution_days", "order_to_resolution_days"]].copy()
+    lag = rt[["order_to_request_days", "request_to_resolution_days"]].copy()
     lag = lag.melt(var_name="lag_type", value_name="days").dropna()
     lag["lag_type"] = lag["lag_type"].map(
         {
             "order_to_request_days": "Order → Request",
             "request_to_resolution_days": "Request → Resolution",
-            "order_to_resolution_days": "Order → Resolution",
         }
     )
     return lag
@@ -449,47 +535,58 @@ def build_top_risks(return_products: pd.DataFrame, return_reasons: pd.DataFrame,
 
 @st.cache_data
 def build_order_level_metrics(order_items: pd.DataFrame, returns: pd.DataFrame, transactions: pd.DataFrame) -> dict:
-    total_orders = transactions["order_id"].nunique()
-    total_revenue = float(transactions["total_amount"].sum())
-    total_refund_amount = float(returns["refund_amount"].sum())
+    total_orders = transactions["order_id"].nunique() if "order_id" in transactions.columns else 0
+    total_revenue = net_merchandise_sales(transactions)
+    refund_col = "approved_refund_amount" if "approved_refund_amount" in returns.columns else "refund_amount"
+    approved_returns = returns["return_status"].astype("string").str.strip().str.lower().eq("approved") if "return_status" in returns.columns else pd.Series(False, index=returns.index)
+    if refund_col in returns.columns:
+        refund_values = pd.to_numeric(returns[refund_col], errors="coerce").fillna(0)
+    else:
+        refund_values = pd.Series(0.0, index=returns.index)
+    total_refund_amount = float(refund_values.where(approved_returns, 0).sum())
     refund_rate = safe_divide(total_refund_amount, total_revenue)
-    return_rate = safe_divide(returns["order_item_id"].nunique(), order_items["order_item_id"].nunique())
+
+    sold_units = float(pd.to_numeric(order_items.get("quantity", pd.Series(0, index=order_items.index)), errors="coerce").fillna(0).sum())
+    requested_units = float(pd.to_numeric(returns.get("return_quantity", pd.Series(0, index=returns.index)), errors="coerce").fillna(0).sum())
+    return_rate = safe_divide(requested_units, sold_units)
     net_revenue_after_returns = total_revenue - total_refund_amount
-    pending = returns[returns["return_status"].eq("pending")].copy()
-    pending_exposure = 0.0
-    if not pending.empty:
-        pending_join = pending.merge(order_items[["order_item_id", "total_price"]], on="order_item_id", how="left")
-        pending_exposure = float(pending_join["total_price"].fillna(0).sum())
+
+    pending = returns[returns["return_status"].astype("string").str.strip().str.lower().eq("pending")].copy() if "return_status" in returns.columns else returns.iloc[0:0].copy()
+    exposure_col = "calculated_refund_amount" if "calculated_refund_amount" in pending.columns else refund_col
+    pending_exposure = float(pd.to_numeric(pending.get(exposure_col, pd.Series(0, index=pending.index)), errors="coerce").fillna(0).sum())
 
     return {
-        "total_orders": total_orders,
-        "total_revenue": total_revenue,
+        "total_orders": int(total_orders),
+        "total_revenue": float(total_revenue),
         "total_refund_amount": total_refund_amount,
         "refund_rate": refund_rate,
         "return_rate": return_rate,
-        "net_revenue_after_returns": net_revenue_after_returns,
+        "net_revenue_after_returns": float(net_revenue_after_returns),
         "pending_exposure": pending_exposure,
+        "total_units_sold": sold_units,
+        "total_return_units_requested": requested_units,
+        "return_requests": int(returns["return_id"].nunique()) if "return_id" in returns.columns else int(len(returns)),
     }
+
 
 
 def render():
     events, order_items, products, returns, transactions = load_all_data()
-    return_trend = build_return_trend(transactions, returns)
-    return_reason_dist = build_return_reason_distribution(returns)
-    reason_category_matrix = build_reason_category_heatmap(returns)
-    product_table = build_product_return_table(order_items, returns, transactions)
-    lag_table = build_return_lag_table(returns)
-    order_metrics = build_order_level_metrics(order_items, returns, transactions)
+    return_financials = build_return_financials(order_items, products, transactions, returns)
+    return_trend = build_return_trend(transactions, return_financials)
+    return_reason_dist = build_return_reason_distribution(return_financials)
+    reason_category_matrix = build_reason_category_heatmap(return_financials)
+    product_table = build_product_return_table(order_items, products, return_financials, transactions)
+    lag_table = build_return_lag_table(return_financials)
+    order_metrics = build_order_level_metrics(order_items, return_financials, transactions)
 
-    device_return_rates = build_segment_return_rates(transactions, returns, "device_type")
-    source_return_rates = build_segment_return_rates(transactions, returns, "traffic_source")
-    region_return_rates = build_segment_return_rates(transactions, returns, "region")
+    device_return_rates = build_segment_return_rates(transactions, order_items, return_financials, "device_type")
+    source_return_rates = build_segment_return_rates(transactions, order_items, return_financials, "traffic_source")
+    region_return_rates = build_segment_return_rates(transactions, order_items, return_financials, "region")
 
     top_risks = build_top_risks(product_table, return_reason_dist, device_return_rates)
 
-    total_returned_items = int(returns["order_item_id"].nunique())
-    total_sold_items = int(order_items["order_item_id"].nunique())
-    return_rate = safe_divide(total_returned_items, total_sold_items)
+    return_rate = order_metrics["return_rate"]
 
     total_revenue = order_metrics["total_revenue"]
     total_refund_amount = order_metrics["total_refund_amount"]
@@ -497,9 +594,10 @@ def render():
     net_revenue_after_returns = order_metrics["net_revenue_after_returns"]
     pending_exposure = order_metrics["pending_exposure"]
 
-    rt = parse_return_dates(returns)
-    median_cycle = float(rt["order_to_resolution_days"].median()) if not rt.empty else 0.0
-    p75_cycle = float(rt["order_to_resolution_days"].quantile(0.75)) if not rt.empty else 0.0
+    rt = parse_return_dates(return_financials)
+    resolved_cycles = rt["order_to_resolution_days"].dropna() if not rt.empty else pd.Series(dtype="float64")
+    median_cycle = float(resolved_cycles.median()) if not resolved_cycles.empty else 0.0
+    p75_cycle = float(resolved_cycles.quantile(0.75)) if not resolved_cycles.empty else 0.0
 
     approved = int((returns["return_status"] == "approved").sum())
     pending_count = int((returns["return_status"] == "pending").sum())
@@ -514,11 +612,11 @@ def render():
 
     c1, c2, c3, c4 = st.columns(4)
     with c1:
-        st.markdown(stat_card("Return Rate", format_pct(return_rate)), unsafe_allow_html=True)
+        st.markdown(stat_card("Return Request Rate (Units)", format_pct(return_rate)), unsafe_allow_html=True)
     with c2:
         st.markdown(stat_card("Refund Rate", format_pct(refund_rate)), unsafe_allow_html=True)
     with c3:
-        st.markdown(stat_card("Net Revenue After Returns", compact_currency(net_revenue_after_returns)), unsafe_allow_html=True)
+        st.markdown(stat_card("Net Sales After Refunds", compact_currency(net_revenue_after_returns)), unsafe_allow_html=True)
     with c4:
         st.markdown(stat_card("Pending Refund Exposure", compact_currency(pending_exposure)), unsafe_allow_html=True)
 
@@ -530,38 +628,38 @@ def render():
     with c6:
         st.markdown(stat_card("P75 Return Cycle", f"{p75_cycle:.1f} days"), unsafe_allow_html=True)
     with c7:
-        st.markdown(stat_card("Approved Returns", compact_number(approved)), unsafe_allow_html=True)
+        st.markdown(stat_card("Approved Requests", compact_number(approved)), unsafe_allow_html=True)
     with c8:
-        st.markdown(stat_card("Pending Returns", compact_number(pending_count)), unsafe_allow_html=True)
+        st.markdown(stat_card("Pending Requests", compact_number(pending_count)), unsafe_allow_html=True)
 
     st.write("")
 
     st.markdown('<div class="section-title">Return Activity Trend</div>', unsafe_allow_html=True)
     st.markdown(
-        '<div class="section-subtitle">Daily return rate over the latest four months. The trend uses the same dark analytical language as the rest of the dashboard.</div>',
+        '<div class="section-subtitle">Daily return-request count over the latest four months. Request volume is shown by request date, not divided by orders placed on that same day.</div>',
         unsafe_allow_html=True,
     )
     if not return_trend.empty:
         trend_fig = px.line(
             return_trend,
             x="date",
-            y="return_rate",
+            y="return_requests",
             markers=True,
             template="plotly_dark",
-            hover_data={"orders": True, "returns": True, "refund_amount": ":.2f", "return_rate": ":.2%"},
+            hover_data={"orders": True, "return_requests": True, "requested_units": True, "refund_amount": ":.2f"},
         )
         trend_fig.update_traces(line=dict(width=3, color=LINE_COL), marker=dict(size=7, color=LINE_COL))
         trend_fig.update_layout(
             height=430,
             margin=dict(l=10, r=10, t=20, b=10),
-            yaxis_tickformat=".0%",
+            yaxis_title="Return Requests",
             paper_bgcolor=PAGE_BG,
             plot_bgcolor=PAGE_BG,
             font=dict(color=TEXT),
         )
         trend_fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-        trend_fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-        st.plotly_chart(trend_fig, use_container_width=True)
+        trend_fig.update_yaxes(title_text="Return Requests", gridcolor="#3F3F46", zerolinecolor="#3F3F46")
+        st.plotly_chart(trend_fig, width="stretch")
 
     st.write("")
 
@@ -598,12 +696,12 @@ def render():
                 paper_bgcolor=PAGE_BG,
                 plot_bgcolor=PAGE_BG,
                 font=dict(color=TEXT),
-                xaxis_title="Return Count",
+                xaxis_title="Return Request Count",
                 yaxis_title="",
             )
             reasons_fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
             reasons_fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-            st.plotly_chart(reasons_fig, use_container_width=True)
+            st.plotly_chart(reasons_fig, width="stretch")
 
     with right2:
         st.markdown('<div class="section-title">Bundled Reason × Category Heatmap</div>', unsafe_allow_html=True)
@@ -627,7 +725,7 @@ def render():
                 plot_bgcolor=PAGE_BG,
                 font=dict(color=TEXT),
             )
-            st.plotly_chart(heat_fig, use_container_width=True)
+            st.plotly_chart(heat_fig, width="stretch")
 
     st.write("")
 
@@ -638,8 +736,8 @@ def render():
     )
     if not product_table.empty:
         prod_display = product_table.copy()
-        prod_display["purchases"] = prod_display["purchases"].map(compact_number)
-        prod_display["returns"] = prod_display["returns"].map(compact_number)
+        prod_display["units_sold"] = prod_display["units_sold"].map(compact_number)
+        prod_display["return_units_requested"] = prod_display["return_units_requested"].map(compact_number)
         prod_display["return_rate"] = prod_display["return_rate"].map(format_pct)
         prod_display["avg_return_cycle_days"] = prod_display["avg_return_cycle_days"].map(lambda x: f"{x:.1f}" if pd.notna(x) else "-")
         for col in ["revenue", "refund_amount", "allocated_profit", "net_profit_after_returns"]:
@@ -649,8 +747,8 @@ def render():
             "product_name",
             "category",
             "brand",
-            "purchases",
-            "returns",
+            "units_sold",
+            "return_units_requested",
             "return_rate",
             "revenue",
             "refund_amount",
@@ -659,13 +757,13 @@ def render():
             "avg_return_cycle_days",
         ]].head(8)
 
-        st.dataframe(prod_display, use_container_width=True, hide_index=True)
+        st.dataframe(prod_display, width="stretch", hide_index=True)
 
     st.write("")
 
     st.markdown('<div class="section-title">Segment Risk View</div>', unsafe_allow_html=True)
     st.markdown(
-        '<div class="section-subtitle">Return rate by device, traffic source, and region.</div>',
+        '<div class="section-subtitle">Return-requested units as a share of units sold, by device, traffic source, and region.</div>',
         unsafe_allow_html=True,
     )
     seg_left, seg_mid, seg_right = st.columns(3, gap="large")
@@ -696,11 +794,11 @@ def render():
                 margin=dict(l=10, r=10, t=20, b=10),
                 showlegend=False,
                 yaxis_tickformat=".0%",
-                yaxis_title="Return Rate",
+                yaxis_title="Return Request Rate",
             )
             fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
             fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
     with seg_mid:
         if not source_return_rates.empty:
@@ -728,11 +826,11 @@ def render():
                 margin=dict(l=10, r=10, t=20, b=10),
                 showlegend=False,
                 yaxis_tickformat=".0%",
-                yaxis_title="Return Rate",
+                yaxis_title="Return Request Rate",
             )
             fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
             fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
     with seg_right:
         if not region_return_rates.empty:
@@ -760,11 +858,11 @@ def render():
                 margin=dict(l=10, r=10, t=20, b=10),
                 showlegend=False,
                 yaxis_tickformat=".0%",
-                yaxis_title="Return Rate",
+                yaxis_title="Return Request Rate",
             )
             fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
             fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
     st.write("")
 
@@ -824,7 +922,7 @@ def render():
         )
         fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
         fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     st.write("")
 
@@ -877,7 +975,7 @@ def render():
             }
         )
 
-    rt = parse_return_dates(returns).copy()
+    rt = parse_return_dates(return_financials).copy()
     rt = rt.dropna(subset=["return_request_dt"])
 
     if not rt.empty:
@@ -891,7 +989,7 @@ def render():
             rt.groupby(["product_name", "date"], as_index=False)
             .agg(
                 returns=("return_id", "nunique"),
-                refund_amount=("refund_amount", "sum"),
+                refund_amount=("approved_refund_amount", "sum"),
             )
         )
 
@@ -940,11 +1038,13 @@ def render():
                 recent_total = int(prod_shift.loc[prod_shift["product_name"] == top_prod, "recent_returns"].iloc[0])
                 baseline_total = float(prod_shift.loc[prod_shift["product_name"] == top_prod, "baseline_returns"].iloc[0])
 
+                recent_daily_avg = float(prod_shift.loc[prod_shift["product_name"] == top_prod, "recent_daily_avg"].iloc[0])
+                baseline_daily_avg = float(prod_shift.loc[prod_shift["product_name"] == top_prod, "baseline_daily_avg"].iloc[0])
                 body = (
-                    f"<strong>{top_prod}</strong> is showing a recent rise in return activity. "
-                    f"The last 7 days recorded <strong>{recent_total}</strong> returns, compared with a baseline of "
-                    f"<strong>{baseline_total:.0f}</strong> over the prior 21 days. "
-                    f"This suggests a possible product-quality, expectation, or packaging issue."
+                    f"<strong>{top_prod}</strong> has a higher recent return-request volume. "
+                    f"The last 7 days averaged <strong>{recent_daily_avg:.2f} requests per day</strong>, compared with "
+                    f"<strong>{baseline_daily_avg:.2f} per day</strong> over the prior 21 days. "
+                    f"Review its recent return reasons and customer feedback; this pattern alone does not establish a cause."
                 )
 
                 def render_product_chart(series=series):
@@ -961,14 +1061,14 @@ def render():
                         height=290,
                         margin=dict(l=10, r=10, t=20, b=10),
                         xaxis_title="Date",
-                        yaxis_title="Return Count",
+                        yaxis_title="Return Request Count",
                         paper_bgcolor=PAGE_BG,
                         plot_bgcolor=PAGE_BG,
                         font=dict(color=TEXT),
                     )
                     fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
                     fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(fig, width="stretch")
 
                 add_insight(
                     priority=100,
@@ -1001,11 +1101,11 @@ def render():
         best_row = best_df.sort_values("return_rate", ascending=True).iloc[0]
 
         body = (
-            f"Return performance varies across <strong>{best_label.lower()}</strong>. "
+            f"Return-request unit rates vary across <strong>{best_label.lower()}</strong>. "
             f"The highest-risk segment is <strong>{worst_row.iloc[0]}</strong> at "
             f"<strong>{worst_row['return_rate'] * 100:.1f}%</strong>, while the lowest-risk segment is "
             f"<strong>{best_row.iloc[0]}</strong> at <strong>{best_row['return_rate'] * 100:.1f}%</strong>. "
-            f"This points to acquisition-quality, delivery, or expectation differences between segments."
+            f"This is an observed segment difference, not proof of a cause; investigate the mix of products, return reasons, and customer journeys in the higher-rate segment."
         )
 
         def render_segment_chart(best_df=best_df, best_label=best_label):
@@ -1030,7 +1130,7 @@ def render():
                 height=290,
                 margin=dict(l=10, r=10, t=20, b=10),
                 xaxis_title=best_label,
-                yaxis_title="Return Rate",
+                yaxis_title="Return Request Rate",
                 yaxis_tickformat=".0%",
                 paper_bgcolor=PAGE_BG,
                 plot_bgcolor=PAGE_BG,
@@ -1039,7 +1139,7 @@ def render():
             )
             fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
             fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
         add_insight(
             priority=90,
@@ -1070,7 +1170,7 @@ def render():
                 body = (
                     f"The return mix is shifting toward <strong>{top_shift['reason_group']}</strong>. "
                     f"Its share increased by <strong>{top_shift['share_change'] * 100:.1f} percentage points</strong> "
-                    f"versus the prior period. This usually indicates a recurring root cause rather than isolated noise."
+                    f"versus the prior period. This is a change in the observed reason mix; review the underlying requests before attributing it to a specific cause."
                 )
 
                 add_insight(
@@ -1093,11 +1193,14 @@ def render():
 
         slowest_lag = lag_summary.iloc[0]
         if float(slowest_lag["median_days"]) >= 3.0:
+            if slowest_lag["lag_type"] == "Request → Resolution":
+                lag_interpretation = "This measures elapsed time after the request; investigate the resolution workflow if the delay is operationally excessive."
+            else:
+                lag_interpretation = "This interval includes the time before a customer requests a return, so it should not be interpreted as processing time."
             body = (
-                f"Return processing is slowest at <strong>{slowest_lag['lag_type']}</strong>. "
-                f"The median delay is <strong>{slowest_lag['median_days']:.1f} days</strong>, with p75 at "
-                f"<strong>{slowest_lag['p75_days']:.1f} days</strong>. "
-                f"This suggests operational friction in return handling."
+                f"The longest median interval is <strong>{slowest_lag['lag_type']}</strong>. "
+                f"The median is <strong>{slowest_lag['median_days']:.1f} days</strong>, with p75 at "
+                f"<strong>{slowest_lag['p75_days']:.1f} days</strong>. {lag_interpretation}"
             )
 
             def render_lag_chart(lag_summary=lag_summary):
@@ -1145,7 +1248,7 @@ def render():
                 )
                 fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
                 fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig, width="stretch")
 
             add_insight(
                 priority=70,

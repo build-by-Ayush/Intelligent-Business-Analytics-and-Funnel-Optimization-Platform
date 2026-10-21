@@ -9,6 +9,7 @@ import streamlit as st
 
 from src.data_loader import load_data
 from src.navigation import render_header_with_nav
+from src.metrics import build_item_financials
 
 
 st.set_page_config(
@@ -207,11 +208,11 @@ def safe_divide(numerator, denominator):
 
 def pretty_metric_label(metric: str) -> str:
     mapping = {
-        "revenue": "Revenue",
-        "profit": "Profit",
+        "revenue": "Net Merc Sales",
+        "profit": "Gross Profit",
         "orders": "Orders",
         "units_sold": "Units Sold",
-        "return_rate": "Return Rate",
+        "return_rate": "Return Request Rate",
     }
     return mapping.get(metric, metric.replace("_", " ").title())
 
@@ -284,29 +285,128 @@ def prettify_category_name(name: str) -> str:
 
 
 @st.cache_data
-def build_item_level_table(order_items: pd.DataFrame, returns: pd.DataFrame, transactions: pd.DataFrame) -> pd.DataFrame:
-    oi = order_items.copy()
-    tx = transactions[["order_id", "estimated_profit", "order_date", "total_amount"]].copy()
-    tx["order_date"] = pd.to_datetime(tx["order_date"], dayfirst=True, errors="coerce")
+def build_item_level_table(
+    order_items: pd.DataFrame,
+    returns: pd.DataFrame,
+    transactions: pd.DataFrame,
+    products: pd.DataFrame | None = None,
+) -> pd.DataFrame:
+    """Build an item-grain table with standardized financials and return requests.
 
-    oi = oi.merge(tx, on="order_id", how="left")
+    Sales are merchandise value after allocated order discounts, excluding tax
+    and shipping. All return requests contribute to requested-return units;
+    only approved requests contribute to the refund amount.
+    """
+    tx = transactions.copy()
 
-    order_total = oi.groupby("order_id")["total_price"].transform("sum")
-    oi["item_share"] = oi["total_price"] / order_total.replace(0, pd.NA)
-    oi["allocated_profit"] = oi["estimated_profit"].fillna(0) * oi["item_share"].fillna(0)
+    # Support both the original transaction schema and the revised pipeline
+    # schema. The shared metrics helper uses estimated_cost only as a fallback
+    # when a product-level cost is missing.
+    if "estimated_cost" not in tx.columns:
+        if "merchandise_cost" in tx.columns:
+            tx["estimated_cost"] = pd.to_numeric(tx["merchandise_cost"], errors="coerce")
+        else:
+            profit_col = next(
+                (c for c in ["estimated_profit", "estimated_profit_before_returns"] if c in tx.columns),
+                None,
+            )
+            if profit_col is not None:
+                if {"subtotal", "discount_amount"}.issubset(tx.columns):
+                    net_sales = (
+                        pd.to_numeric(tx["subtotal"], errors="coerce").fillna(0)
+                        - pd.to_numeric(tx["discount_amount"], errors="coerce").fillna(0)
+                    )
+                else:
+                    total = pd.to_numeric(tx["total_amount"], errors="coerce") if "total_amount" in tx.columns else pd.Series(0.0, index=tx.index)
+                    tax = pd.to_numeric(tx["tax_amount"], errors="coerce") if "tax_amount" in tx.columns else pd.Series(0.0, index=tx.index)
+                    shipping_col = "shipping_fee" if "shipping_fee" in tx.columns else "shipping_cost"
+                    shipping = pd.to_numeric(tx[shipping_col], errors="coerce") if shipping_col in tx.columns else pd.Series(0.0, index=tx.index)
+                    net_sales = total.fillna(0) - tax.fillna(0) - shipping.fillna(0)
+                tx["estimated_cost"] = net_sales - pd.to_numeric(tx[profit_col], errors="coerce").fillna(0)
 
-    ret = returns[["order_item_id", "return_quantity", "refund_amount", "return_reason", "return_status", "return_request_date", "return_date"]].copy()
-    ret["return_quantity"] = ret["return_quantity"].fillna(0)
-    ret["refund_amount"] = ret["refund_amount"].fillna(0)
-    ret["return_request_date"] = pd.to_datetime(ret["return_request_date"], errors="coerce")
-    ret["return_date"] = pd.to_datetime(ret["return_date"], errors="coerce")
+    item_level = build_item_financials(order_items, products, tx)
 
-    item_level = oi.merge(ret, on="order_item_id", how="left")
-    item_level["return_quantity"] = item_level["return_quantity"].fillna(0)
-    item_level["refund_amount"] = item_level["refund_amount"].fillna(0)
-    item_level["month"] = item_level["order_date"].dt.to_period("M").dt.to_timestamp()
+    if item_level.empty:
+        item_level["return_quantity"] = pd.Series(dtype="float64")
+        item_level["refund_amount"] = pd.Series(dtype="float64")
+        item_level["return_request_count"] = pd.Series(dtype="int64")
+        item_level["avg_return_cycle_days"] = pd.Series(dtype="float64")
+        item_level["month"] = pd.Series(dtype="datetime64[ns]")
+        return item_level
+
+    item_lookup = item_level[["order_item_id", "unit_net_price", "order_date"]].drop_duplicates(
+        subset=["order_item_id"]
+    )
+
+    if returns.empty:
+        return_summary = pd.DataFrame(
+            columns=["order_item_id", "return_quantity", "refund_amount", "return_request_count", "avg_return_cycle_days"]
+        )
+    else:
+        ret = returns.copy()
+        ret["return_quantity"] = (
+            pd.to_numeric(ret["return_quantity"], errors="coerce").fillna(0)
+            if "return_quantity" in ret.columns else 0.0
+        )
+        ret["refund_amount"] = (
+            pd.to_numeric(ret["refund_amount"], errors="coerce").fillna(0)
+            if "refund_amount" in ret.columns else 0.0
+        )
+        ret["_status_normalized"] = (
+            ret["return_status"].astype(str).str.strip().str.lower()
+            if "return_status" in ret.columns else ""
+        )
+
+        for col in ["return_request_date", "return_date"]:
+            if col in ret.columns:
+                raw = ret[col].astype("string").str.strip()
+                parsed = pd.to_datetime(raw, format="ISO8601", errors="coerce")
+                unresolved = parsed.isna() & raw.notna() & raw.ne("")
+                if unresolved.any():
+                    parsed.loc[unresolved] = pd.to_datetime(raw.loc[unresolved], dayfirst=True, errors="coerce")
+                ret[col] = parsed
+            else:
+                ret[col] = pd.NaT
+
+        ret = ret.merge(item_lookup, on="order_item_id", how="left", validate="many_to_one")
+        ret["calculated_refund_amount"] = (
+            pd.to_numeric(ret["unit_net_price"], errors="coerce").fillna(0)
+            * ret["return_quantity"]
+        )
+        # Do not count pending or rejected requests as actual refunds.
+        ret["approved_refund_amount"] = ret["calculated_refund_amount"].where(
+            ret["_status_normalized"].eq("approved"), 0.0
+        )
+
+        # A resolution cycle exists only when a request has an actual resolution
+        # date. Pending requests must not be treated as completed.
+        ret["return_cycle_days"] = (
+            ret["return_date"] - ret["order_date"]
+        ).dt.total_seconds() / 86400.0
+        unresolved_status = ret["_status_normalized"].eq("pending")
+        ret.loc[unresolved_status, "return_cycle_days"] = pd.NA
+
+        count_col = "return_id" if "return_id" in ret.columns else "order_item_id"
+        return_summary = (
+            ret.groupby("order_item_id", as_index=False)
+            .agg(
+                return_quantity=("return_quantity", "sum"),
+                refund_amount=("approved_refund_amount", "sum"),
+                return_request_count=(count_col, "nunique"),
+                avg_return_cycle_days=("return_cycle_days", "mean"),
+            )
+        )
+
+    item_level = item_level.merge(return_summary, on="order_item_id", how="left", validate="one_to_one")
+    item_level["return_quantity"] = pd.to_numeric(item_level["return_quantity"], errors="coerce").fillna(0)
+    item_level["refund_amount"] = pd.to_numeric(item_level["refund_amount"], errors="coerce").fillna(0)
+    item_level["return_request_count"] = pd.to_numeric(item_level["return_request_count"], errors="coerce").fillna(0).astype(int)
+    item_level["avg_return_cycle_days"] = pd.to_numeric(item_level["avg_return_cycle_days"], errors="coerce")
+    item_level["month"] = pd.to_datetime(item_level["order_date"], errors="coerce").dt.to_period("M").dt.to_timestamp()
     item_level["is_returned"] = item_level["return_quantity"] > 0
 
+    # Backward-compatible names used elsewhere on this page.
+    item_level["allocated_profit"] = item_level["gross_profit"]
     return item_level
 
 
@@ -317,8 +417,8 @@ def build_product_health(item_level: pd.DataFrame) -> pd.DataFrame:
         .agg(
             orders=("order_id", "nunique"),
             units_sold=("quantity", "sum"),
-            revenue=("total_price", "sum"),
-            profit=("allocated_profit", "sum"),
+            revenue=("net_merchandise_sales", "sum"),
+            profit=("gross_profit", "sum"),
             returned_units=("return_quantity", "sum"),
             refund_amount=("refund_amount", "sum"),
             latest_order=("order_date", "max"),
@@ -326,28 +426,43 @@ def build_product_health(item_level: pd.DataFrame) -> pd.DataFrame:
     )
 
     df["profit_margin"] = df.apply(lambda row: safe_divide(row["profit"], row["revenue"]), axis=1)
+    # Return request rate includes requests of every status and is unit-based.
     df["return_rate"] = df.apply(lambda row: safe_divide(row["returned_units"], row["units_sold"]), axis=1)
     df["net_profit_after_returns"] = df["profit"] - df["refund_amount"]
-    df["net_margin_after_returns"] = df.apply(lambda row: safe_divide(row["net_profit_after_returns"], row["revenue"]), axis=1)
+    df["net_margin_after_returns"] = df.apply(
+        lambda row: safe_divide(row["net_profit_after_returns"], row["revenue"]), axis=1
+    )
 
     return df.sort_values(["revenue", "profit"], ascending=[False, False])
 
 
 @st.cache_data
-def build_monthly_metric(item_level: pd.DataFrame, metric: str) -> pd.DataFrame:
+def build_monthly_metric(item_level: pd.DataFrame, metric: str, matched_mtd: bool = False) -> pd.DataFrame:
     base = item_level.copy()
+    if base.empty:
+        return pd.DataFrame(columns=["month", "value"])
+
+    if matched_mtd and "order_date" in base.columns:
+        latest_date = pd.to_datetime(base["order_date"], errors="coerce").max()
+        if pd.notna(latest_date):
+            base = base.loc[pd.to_datetime(base["order_date"], errors="coerce").dt.day <= latest_date.day].copy()
 
     if metric == "revenue":
-        out = base.groupby("month", as_index=False)["total_price"].sum().rename(columns={"total_price": "value"})
+        out = base.groupby("month", as_index=False)["net_merchandise_sales"].sum().rename(columns={"net_merchandise_sales": "value"})
     elif metric == "profit":
-        out = base.groupby("month", as_index=False)["allocated_profit"].sum().rename(columns={"allocated_profit": "value"})
+        out = base.groupby("month", as_index=False)["gross_profit"].sum().rename(columns={"gross_profit": "value"})
     elif metric == "orders":
         out = base.groupby("month", as_index=False)["order_id"].nunique().rename(columns={"order_id": "value"})
     elif metric == "units_sold":
         out = base.groupby("month", as_index=False)["quantity"].sum().rename(columns={"quantity": "value"})
     elif metric == "return_rate":
-        grouped = base.groupby("month", as_index=False).agg(units_sold=("quantity", "sum"), returned_units=("return_quantity", "sum"))
-        grouped["value"] = grouped.apply(lambda row: safe_divide(row["returned_units"], row["units_sold"]), axis=1)
+        grouped = base.groupby("month", as_index=False).agg(
+            units_sold=("quantity", "sum"),
+            return_requested_units=("return_quantity", "sum"),
+        )
+        grouped["value"] = grouped.apply(
+            lambda row: safe_divide(row["return_requested_units"], row["units_sold"]), axis=1
+        )
         out = grouped[["month", "value"]]
     else:
         raise ValueError(f"Unsupported metric: {metric}")
@@ -355,11 +470,30 @@ def build_monthly_metric(item_level: pd.DataFrame, metric: str) -> pd.DataFrame:
     return out.sort_values("month")
 
 
+def _metric_for_period(item_level: pd.DataFrame, metric: str, start_date, end_date) -> float:
+    dates = pd.to_datetime(item_level["order_date"], errors="coerce")
+    start_date = pd.Timestamp(start_date).normalize()
+    end_date = pd.Timestamp(end_date).normalize()
+    base = item_level.loc[dates.ge(start_date) & dates.le(end_date)].copy()
+
+    if metric == "revenue":
+        return float(base["net_merchandise_sales"].sum())
+    if metric == "profit":
+        return float(base["gross_profit"].sum())
+    if metric == "orders":
+        return float(base["order_id"].nunique())
+    if metric == "units_sold":
+        return float(base["quantity"].sum())
+    if metric == "return_rate":
+        return float(safe_divide(base["return_quantity"].sum(), base["quantity"].sum()))
+    raise ValueError(f"Unsupported metric: {metric}")
+
+
 @st.cache_data
 def build_category_summary(item_level: pd.DataFrame, metric: str, top_n_categories: int = 4) -> pd.DataFrame:
     metric_map = {
-        "revenue": "total_price",
-        "profit": "allocated_profit",
+        "revenue": "net_merchandise_sales",
+        "profit": "gross_profit",
         "units_sold": "quantity",
     }
     base_col = metric_map[metric]
@@ -379,8 +513,8 @@ def build_category_summary(item_level: pd.DataFrame, metric: str, top_n_categori
 @st.cache_data
 def build_category_month_table(item_level: pd.DataFrame, metric: str, top_n_categories: int = 4) -> pd.DataFrame:
     metric_map = {
-        "revenue": "total_price",
-        "profit": "allocated_profit",
+        "revenue": "net_merchandise_sales",
+        "profit": "gross_profit",
         "units_sold": "quantity",
     }
     base_col = metric_map[metric]
@@ -398,20 +532,30 @@ def build_category_month_table(item_level: pd.DataFrame, metric: str, top_n_cate
 
 @st.cache_data
 def build_target_achievement(item_level: pd.DataFrame, target_metric: str) -> tuple[float, float, float, float, float, pd.DataFrame, str]:
-    monthly = build_monthly_metric(item_level, target_metric)
-    if monthly.empty:
-        return 0.0, 0.0, 0.0, 0.0, 0.0, monthly, target_metric
+    monthly_full = build_monthly_metric(item_level, target_metric, matched_mtd=False)
+    if monthly_full.empty or item_level.empty:
+        return 0.0, 0.0, 0.0, 0.0, 0.0, monthly_full, target_metric
 
-    current_value = float(monthly.iloc[-1]["value"])
+    latest_date = pd.to_datetime(item_level["order_date"], errors="coerce").max()
+    if pd.isna(latest_date):
+        return 0.0, 0.0, 0.0, 0.0, 0.0, monthly_full, target_metric
 
-    if len(monthly) > 1:
-        previous_month_value = float(monthly.iloc[-2]["value"])
-        benchmark_value = float(monthly.iloc[:-1]["value"].mean())
-    else:
-        previous_month_value = current_value
-        benchmark_value = current_value
+    latest_month_start = latest_date.to_period("M").to_timestamp()
+    current_value = _metric_for_period(item_level, target_metric, latest_month_start, latest_date)
+
+    previous_month_start = latest_month_start - pd.DateOffset(months=1)
+    previous_month_day = min(latest_date.day, previous_month_start.days_in_month)
+    previous_month_end = previous_month_start + pd.Timedelta(days=previous_month_day - 1)
+    previous_month_value = _metric_for_period(
+        item_level, target_metric, previous_month_start, previous_month_end
+    )
+
+    historical_full_months = monthly_full.loc[monthly_full["month"] < latest_month_start, "value"]
+    benchmark_value = float(historical_full_months.mean()) if not historical_full_months.empty else current_value
 
     achievement_vs_previous = safe_divide(current_value, previous_month_value) * 100
+    # The gauge compares current MTD progress with the average full-month value,
+    # which acts as a monthly goalpost rather than a matched-day comparison.
     achievement_vs_benchmark = safe_divide(current_value, benchmark_value) * 100
 
     return (
@@ -420,7 +564,7 @@ def build_target_achievement(item_level: pd.DataFrame, target_metric: str) -> tu
         benchmark_value,
         achievement_vs_previous,
         achievement_vs_benchmark,
-        monthly,
+        monthly_full,
         target_metric,
     )
 
@@ -482,18 +626,34 @@ def format_compact_number(value: float) -> str:
     return f"{value:,.0f}"
 
 
-def build_category_topline(item_level: pd.DataFrame, metric: str, top_n_categories: int = 4) -> pd.DataFrame:
+def build_category_topline(
+    item_level: pd.DataFrame,
+    metric: str,
+    top_n_categories: int = 4,
+    matched_mtd: bool = False,
+) -> pd.DataFrame:
     metric_map = {
-        "revenue": "total_price",
-        "profit": "allocated_profit",
+        "revenue": "net_merchandise_sales",
+        "profit": "gross_profit",
         "units_sold": "quantity",
     }
     base_col = metric_map[metric]
+    base = item_level.copy()
+    if matched_mtd and not base.empty and "order_date" in base.columns:
+        latest_date = pd.to_datetime(base["order_date"], errors="coerce").max()
+        if pd.notna(latest_date):
+            base = base.loc[
+                pd.to_datetime(base["order_date"], errors="coerce").dt.day <= latest_date.day
+            ].copy()
     top_categories = (
-        item_level.groupby("category")[base_col].sum().sort_values(ascending=False).head(top_n_categories).index.tolist()
+        item_level.groupby("category")[base_col]
+        .sum()
+        .sort_values(ascending=False)
+        .head(top_n_categories)
+        .index.tolist()
     )
     return (
-        item_level[item_level["category"].isin(top_categories)]
+        base[base["category"].isin(top_categories)]
         .groupby(["month", "category"], as_index=False)[base_col]
         .sum()
         .rename(columns={base_col: "value"})
@@ -589,7 +749,7 @@ def build_category_treemap(category_summary_df: pd.DataFrame) -> go.Figure:
 
 def render():
     events, order_items, products, returns, transactions = load_all_data()
-    item_level = build_item_level_table(order_items, returns, transactions)
+    item_level = build_item_level_table(order_items, returns, transactions, products)
     product_health = build_product_health(item_level)
     key_signals = build_key_signals(product_health)
 
@@ -621,9 +781,9 @@ def render():
     top_n = st.sidebar.slider("Top products shown", 5, 15, 10)
 
     current_value, previous_month_value, benchmark_value, target_achievement_prev, target_achievement_bench, target_monthly, target_label = build_target_achievement(item_level, target_metric)
-    trend_df = build_monthly_metric(item_level, trend_metric)
+    trend_df = build_monthly_metric(item_level, trend_metric, matched_mtd=True)
     category_summary_df = build_category_summary(item_level, category_metric)
-    category_month_df = build_category_topline(item_level, category_metric)
+    category_month_df = build_category_topline(item_level, category_metric, matched_mtd=True)
     rank_df = build_top_products_table(product_health, ranking_metric, top_n)
     scatter_df = build_scatter_data(product_health)
 
@@ -645,19 +805,19 @@ def render():
 
     c1, c2, c3, c4, c5 = st.columns(5)
     with c1:
-        st.markdown(stat_card("Total Revenue", compact_currency(total_revenue)), unsafe_allow_html=True)
+        st.markdown(stat_card("Net Merchandise Sales", compact_currency(total_revenue)), unsafe_allow_html=True)
     with c2:
-        st.markdown(stat_card("Total Profit", compact_currency(total_profit)), unsafe_allow_html=True)
+        st.markdown(stat_card("Gross Profit", compact_currency(total_profit)), unsafe_allow_html=True)
     with c3:
         st.markdown(stat_card("Profit Margin %", f"{profit_margin * 100:.2f}%"), unsafe_allow_html=True)
     with c4:
-        st.markdown(stat_card("Return Rate %", f"{return_rate * 100:.2f}%"), unsafe_allow_html=True)
+        st.markdown(stat_card("Return Request Rate %", f"{return_rate * 100:.2f}%"), unsafe_allow_html=True)
     with c5:
         st.markdown(
             stat_card(
-                f"Prev Month {target_title} Achievement %",
+                f"Prev Month {target_title} Ach. %",
                 f"{target_achievement_prev:.1f}%",
-                f"Current vs Prev month ({compact_currency(previous_month_value)})",
+                f"Cur. MTD vs prev-month MTD ({compact_currency(previous_month_value) if target_metric in ('revenue', 'profit') else compact_number(previous_month_value)})",
                 subtitle_positive=target_achievement_prev >= 100,
             ),
             unsafe_allow_html=True,
@@ -669,7 +829,7 @@ def render():
     with left:
         st.markdown('<div class="section-title">Target Attainment</div>', unsafe_allow_html=True)
         st.markdown(
-            f'<div class="section-subtitle">{target_title} performance in the latest month vs the historical monthly benchmark.</div>',
+            f'<div class="section-subtitle">Current month-to-date progress vs the average of complete historical months.</div>',
             unsafe_allow_html=True,
         )
         max_axis = max(150.0, math.ceil(max(target_achievement_bench, 100.0) * 1.2 / 10.0) * 10.0)
@@ -700,12 +860,12 @@ def render():
             font=dict(color=TEXT),
             margin=dict(l=10, r=10, t=0, b=10),
         )
-        st.plotly_chart(gauge, use_container_width=True)
+        st.plotly_chart(gauge, width="stretch")
 
     with right:
         st.markdown(f'<div class="section-title">Monthly {metric_title} Trend</div>', unsafe_allow_html=True)
         st.markdown(
-            f'<div class="section-subtitle">Switch between revenue, profit, order count, units sold, and return rate.</div>',
+            f'<div class="section-subtitle">Month-to-date values are compared through the same day-of-month across months.</div>',
             unsafe_allow_html=True,
         )
         if not trend_df.empty:
@@ -737,7 +897,7 @@ def render():
             )
             fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
             fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
     st.markdown("<div style='height: 12px;'></div>", unsafe_allow_html=True)
 
@@ -750,12 +910,12 @@ def render():
         )
         if not category_summary_df.empty:
             fig = build_category_treemap(category_summary_df)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
     with right2:
-        st.markdown('<div class="section-title">Revenue vs Profit</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-title">Net Merchandise Sales vs Gross Profit</div>', unsafe_allow_html=True)
         st.markdown(
-            '<div class="section-subtitle">Bubble size = units sold, color = return rate. This identifies stars, risks, and weak products.</div>',
+            '<div class="section-subtitle">Bubble size = units sold, color = return-request rate. This identifies stars, risks, and weak products.</div>',
             unsafe_allow_html=True,
         )
         if not scatter_df.empty:
@@ -778,6 +938,13 @@ def render():
                 },
                 template="plotly_dark",
                 color_continuous_scale="Oranges",
+                labels={
+                    "revenue": "Net Merchandise Sales",
+                    "profit": "Gross Profit",
+                    "return_rate": "Return Request Rate",
+                    "units_sold": "Units Sold",
+                    "profit_margin": "Profit Margin",
+                },
             )
             fig.update_traces(marker=dict(line=dict(color=PAGE_BG, width=1.0), opacity=0.92))
             fig.update_layout(
@@ -786,17 +953,17 @@ def render():
                 paper_bgcolor=PAGE_BG,
                 plot_bgcolor=PAGE_BG,
                 font=dict(color=TEXT),
-                xaxis_title="Revenue",
-                yaxis_title="Profit",
+                xaxis_title="Net Merchandise Sales",
+                yaxis_title="Gross Profit",
             )
             fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
             fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
     st.markdown("<div style='height: 12px;'></div>", unsafe_allow_html=True)
 
     st.markdown(f'<div class="section-title">Monthly {category_title} Contribution Over Time</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-subtitle">Monthly contribution of the top categories for the selected metric.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-subtitle">Monthly contribution of the top categories, compared through the same day-of-month across months.</div>', unsafe_allow_html=True)
     if not category_month_df.empty:
         fig = px.area(
             category_month_df,
@@ -818,7 +985,7 @@ def render():
         )
         fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
         fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     st.markdown("<div style='height: 12px;'></div>", unsafe_allow_html=True)
 
@@ -840,17 +1007,25 @@ def render():
             "refund_amount",
             "net_profit_after_returns",
         ]].copy()
+        display = display.rename(columns={
+            "revenue": "Net Merchandise Sales",
+            "profit": "Gross Profit",
+            "profit_margin": "Gross Profit Margin",
+            "return_rate": "Return Request Rate",
+            "refund_amount": "Approved Refund Amount",
+            "net_profit_after_returns": "Gross Profit After Refunds",
+        })
 
         display["orders"] = display["orders"].map(compact_number)
         display["units_sold"] = display["units_sold"].map(compact_number)
-        display["revenue"] = display["revenue"].map(compact_currency)
-        display["profit"] = display["profit"].map(compact_currency)
-        display["profit_margin"] = display["profit_margin"].map(lambda x: f"{x:.2%}")
-        display["return_rate"] = display["return_rate"].map(lambda x: f"{x:.2%}")
-        display["refund_amount"] = display["refund_amount"].map(compact_currency)
-        display["net_profit_after_returns"] = display["net_profit_after_returns"].map(compact_currency)
+        display["Net Merchandise Sales"] = display["Net Merchandise Sales"].map(compact_currency)
+        display["Gross Profit"] = display["Gross Profit"].map(compact_currency)
+        display["Gross Profit Margin"] = display["Gross Profit Margin"].map(lambda x: f"{x:.2%}")
+        display["Return Request Rate"] = display["Return Request Rate"].map(lambda x: f"{x:.2%}")
+        display["Approved Refund Amount"] = display["Approved Refund Amount"].map(compact_currency)
+        display["Gross Profit After Refunds"] = display["Gross Profit After Refunds"].map(compact_currency)
 
-        st.dataframe(display, use_container_width=True, hide_index=True)
+        st.dataframe(display, width="stretch", hide_index=True)
 
     st.markdown("<div style='height: 12px;'></div>", unsafe_allow_html=True)
 
@@ -863,14 +1038,14 @@ def render():
             </div>
             <div class="product-strip-grid">
                 <div class="product-item">
-                    <div class="product-label">Top Revenue Product</div>
+                    <div class="product-label">Top Net Sales Product</div>
                     <div class="product-value">{key_signals["top_revenue_product"]}</div>
-                    <div class="product-note">Highest contribution by revenue</div>
+                    <div class="product-note">Highest contribution by net merchandise sales</div>
                 </div>
                 <div class="product-item">
-                    <div class="product-label">Top Profit Product</div>
+                    <div class="product-label">Top Gross Profit Product</div>
                     <div class="product-value">{key_signals["top_profit_product"]}</div>
-                    <div class="product-note">Highest contribution by profit</div>
+                    <div class="product-note">Highest contribution by gross profit</div>
                 </div>
                 <div class="product-item">
                     <div class="product-label">Highest Margin Product</div>
@@ -903,11 +1078,20 @@ def render():
             }
         )
 
+    latest_available_date = pd.to_datetime(item_level["order_date"], errors="coerce").max()
+    insight_item_level = item_level.copy()
+    if pd.notna(latest_available_date):
+        # Compare matching month-to-date windows to avoid flagging a partial
+        # current month against complete historical months.
+        insight_item_level = insight_item_level.loc[
+            pd.to_datetime(insight_item_level["order_date"], errors="coerce").dt.day <= latest_available_date.day
+        ].copy()
+
     monthly_product = (
-        item_level.groupby(["month", "product_id", "product_name", "category", "subcategory", "brand"], as_index=False)
+        insight_item_level.groupby(["month", "product_id", "product_name", "category", "subcategory", "brand"], as_index=False)
         .agg(
-            revenue=("total_price", "sum"),
-            profit=("allocated_profit", "sum"),
+            revenue=("net_merchandise_sales", "sum"),
+            profit=("gross_profit", "sum"),
             units_sold=("quantity", "sum"),
             returned_units=("return_quantity", "sum"),
         )
@@ -915,10 +1099,10 @@ def render():
     )
 
     monthly_category = (
-        item_level.groupby(["month", "category"], as_index=False)
+        insight_item_level.groupby(["month", "category"], as_index=False)
         .agg(
-            revenue=("total_price", "sum"),
-            profit=("allocated_profit", "sum"),
+            revenue=("net_merchandise_sales", "sum"),
+            profit=("gross_profit", "sum"),
             units_sold=("quantity", "sum"),
         )
         .sort_values("month")
@@ -983,10 +1167,10 @@ def render():
                 series.columns = ["month", "revenue"]
 
                 body = (
-                    f"<strong>{top_prod['product_name']}</strong> has shown a sharp drop in sales in the latest month. "
-                    f"Revenue fell from about <strong>₹{top_prod['baseline_revenue']:,.2f}</strong> on average in the previous months "
+                    f"<strong>{top_prod['product_name']}</strong> has shown a drop in net merchandise sales in the latest matched month-to-date period. "
+                    f"Net merchandise sales fell from about <strong>₹{top_prod['baseline_revenue']:,.2f}</strong> on average in the previous months "
                     f"to <strong>₹{top_prod['recent_revenue']:,.2f}</strong> in the current month. "
-                    f"This suggests a sudden sales erosion rather than a normal fluctuation."
+                    f"This is an observed decline in the matched month-to-date period; investigate inventory, pricing, promotion, and demand before assigning a cause."
                 )
 
                 def render_product_drop_chart(series=series):
@@ -1002,14 +1186,14 @@ def render():
                         height=290,
                         margin=dict(l=10, r=10, t=20, b=10),
                         xaxis_title="Month",
-                        yaxis_title="Revenue",
+                        yaxis_title="Net Merchandise Sales",
                         paper_bgcolor=PAGE_BG,
                         plot_bgcolor=PAGE_BG,
                         font=dict(color=TEXT),
                     )
                     fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
                     fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(fig, width="stretch")
 
                 add_insight(
                     priority=120,
@@ -1055,10 +1239,10 @@ def render():
                 cat_series.columns = ["month", "revenue"]
 
                 body = (
-                    f"<strong>{top_cat['category']}</strong> is showing a noticeable sales decline in the latest month. "
-                    f"Revenue dropped from about <strong>₹{top_cat['baseline_revenue']:,.2f}</strong> on average to "
+                    f"<strong>{top_cat['category']}</strong> is showing a net merchandise sales decline in the latest matched month-to-date period. "
+                    f"Net merchandise sales dropped from about <strong>₹{top_cat['baseline_revenue']:,.2f}</strong> on average to "
                     f"<strong>₹{top_cat['recent_revenue']:,.2f}</strong>. "
-                    f"This points to a category-level slowdown that may need attention."
+                    f"This is an observed decline in the matched month-to-date period; investigate category mix, availability, promotions, and demand before assigning a cause."
                 )
 
                 def render_category_drop_chart(cat_series=cat_series):
@@ -1074,14 +1258,14 @@ def render():
                         height=290,
                         margin=dict(l=10, r=10, t=20, b=10),
                         xaxis_title="Month",
-                        yaxis_title="Revenue",
+                        yaxis_title="Net Merchandise Sales",
                         paper_bgcolor=PAGE_BG,
                         plot_bgcolor=PAGE_BG,
                         font=dict(color=TEXT),
                     )
                     fig.update_xaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
                     fig.update_yaxes(gridcolor="#3F3F46", zerolinecolor="#3F3F46")
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(fig, width="stretch")
 
                 add_insight(
                     priority=110,
@@ -1102,9 +1286,9 @@ def render():
                     priority=90,
                     title="High Return Risk Product",
                     body=(
-                        f"<strong>{risky['product_name']}</strong> is generating strong sales but also shows a high return rate of "
+                        f"<strong>{risky['product_name']}</strong> is generating strong sales but also shows a high return-request rate of "
                         f"<strong>{risky['return_rate'] * 100:.1f}%</strong>. "
-                        f"This suggests the product may be facing quality, expectation, or description mismatch issues."
+                        f"Review its return reasons and request history before attributing the rate to quality, expectations, or product information."
                     ),
                     chart_renderer=None,
                 )
